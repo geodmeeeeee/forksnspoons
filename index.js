@@ -71,6 +71,7 @@ const games=[
 {title:"Fortzone",img:"images/Fortzone.png",url:"games/Fortzone/index.html",cat:"shooter"},
 {title:"Friday Night Funkin",img:"images/Friday Night Funkin.png",url:"games/friday night funkin/index.html",cat:"rhythm"},
 {title:"Geometry Dash",img:"images/Geometry dash.png",url:"games/Geometry Dash/index.html",cat:"rhythm"},
+{title:"Gladihoppers",img:"images/Gladihoppers.png",url:"games/Gladihoppers/index.html",cat:"fighting"},
 {title:"Golden eye 007",img:"images/Golden Eye 007.png",url:"games/Golden Eye 007/index.html",cat:"shooter"},
 {title:"Grand Theft Auto",img:"images/grand theft auto.png",url:"games/Grand Theft Auto/index.html",cat:"shooter,driving,open world"},
 {title:"Grand Theft Auto Vice City",img:"images/grand theft auto vice city.png",url:"games/grand theft auto vice city/index.html",cat:"shooter,driving,open world"},
