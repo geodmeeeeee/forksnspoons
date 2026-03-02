@@ -71,7 +71,7 @@ const games=[
 {title:"Five Nights at Freddys 3",img:"images/five nights at freddys 3.png",url:"games/Five Nights at Freddys 3/index.html",cat:"horror"},
 {title:"Fortzone",img:"images/Fortzone.png",url:"games/Fortzone/index.html",cat:"shooter"},
 {title:"Friday Night Funkin",img:"images/Friday Night Funkin.png",url:"games/friday night funkin/index.html",cat:"rhythm"},
-{title:"Fruit Ninja",img:"images/Fruit Ninja .png",url:"games/Fruit Ninja/index.html",cat:"arcade"},
+{title:"Fruit Ninja",img:"images/Fruit Ninja.png",url:"games/Fruit Ninja/index.html",cat:"arcade"},
 {title:"Geometry Dash",img:"images/Geometry dash.png",url:"games/Geometry Dash/index.html",cat:"rhythm"},
 {title:"Gladihoppers",img:"images/Gladihoppers.png",url:"games/Gladihoppers/index.html",cat:"fighting"},
 {title:"Golden eye 007",img:"images/Golden Eye 007.png",url:"games/Golden Eye 007/index.html",cat:"shooter"},
