@@ -25,7 +25,7 @@ userCountDisplay=document.getElementById("userCount")
 tooltip=document.getElementById("tooltip")
 }
 
-const gameCategories=["all","puzzle","fighting","shooter","driving","platformer","sports","horror","multiplayer","sandbox","rhythm","simulator","runner","clicker","rpg","survival","open world"]
+const gameCategories=["all","puzzle","fighting","shooter","driving","platformer","sports","horror","multiplayer","sandbox","rhythm","simulator","runner","clicker","rpg","survival","open world","arcade"]
 const movieCategories=["all","comedy","horror","sci-fi"]
 
 // MacBook-specific optimizations
@@ -56,6 +56,7 @@ const games=[
 {title:"Candy Crush",img:"images/Candy Crush.png",url:"games/Candy Crush/index.html",cat:"puzzle"},
 {title:"Celeste",img:"images/Celeste.jpeg",url:"games/Celeste/index.html",cat:"platformer"},
 {title:"Countmaster Stickman Games",img:"images/Countmaster Stickman Games.png",url:"games/Countmaster stickman games/index.html",cat:"runner"},
+{title:"Doblox",img:"images/Doblox.png",url:"games/Doblox/index.html",cat:"multiplayer"},
 {title:"Doge Miner",img:"images/Doge Miner.png",url:"games/Doge Miner/index.html",cat:"Clicker"},
 {title:"Doge Miner 2",img:"images/Doge Miner 2.png",url:"games/Doge Miner 2/index.html",cat:"Clicker"},
 {title:"Doom 64",img:"images/Doom 64.png",url:"games/Doom 64/index.html",cat:"shooter"},
@@ -70,6 +71,7 @@ const games=[
 {title:"Five Nights at Freddys 3",img:"images/five nights at freddys 3.png",url:"games/Five Nights at Freddys 3/index.html",cat:"horror"},
 {title:"Fortzone",img:"images/Fortzone.png",url:"games/Fortzone/index.html",cat:"shooter"},
 {title:"Friday Night Funkin",img:"images/Friday Night Funkin.png",url:"games/friday night funkin/index.html",cat:"rhythm"},
+{title:"Fruit Ninja",img:"images/Fruit Ninja .png",url:"games/Fruit Ninja/index.html",cat:"arcade"},
 {title:"Geometry Dash",img:"images/Geometry dash.png",url:"games/Geometry Dash/index.html",cat:"rhythm"},
 {title:"Gladihoppers",img:"images/Gladihoppers.png",url:"games/Gladihoppers/index.html",cat:"fighting"},
 {title:"Golden eye 007",img:"images/Golden Eye 007.png",url:"games/Golden Eye 007/index.html",cat:"shooter"},
