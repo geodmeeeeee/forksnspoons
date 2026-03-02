@@ -367,6 +367,30 @@ font-size:40px;
 opacity:1;
 }
 
+/* Game Opening Animation */
+@keyframes gameOpen{
+0%{
+opacity:0;
+transform:scale(0.95) translateY(20px);
+}
+100%{
+opacity:1;
+transform:scale(1) translateY(0);
+}
+}
+
+/* Game Closing Animation */
+@keyframes gameClose{
+0%{
+opacity:1;
+transform:scale(1) translateY(0);
+}
+100%{
+opacity:0;
+transform:scale(0.95) translateY(20px);
+}
+}
+
 #player{
 position:fixed;
 top:0;
@@ -381,6 +405,15 @@ flex-direction:column;
 align-items:stretch;
 justify-content:flex-start;
 z-index:10;
+}
+
+#player.opening{
+display:flex;
+animation:gameOpen 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#player.closing{
+animation:gameClose 0.3s cubic-bezier(0.36, 0, 0.66, -0.56);
 }
 
 #player iframe{

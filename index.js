@@ -288,12 +288,23 @@ function initializeLazyLoading(){
 
 function openGame(u){
 player.style.display="flex"
+player.classList.remove("closing")
 frame.src=u
+// Trigger animation on next frame to ensure display:flex is applied first
+requestAnimationFrame(()=>{
+player.classList.add("opening")
+})
 }
 
 function closeGame(){
+player.classList.remove("opening")
+player.classList.add("closing")
+// Wait for animation to complete before hiding
+setTimeout(()=>{
 player.style.display="none"
 frame.src=""
+player.classList.remove("closing")
+},300)
 }
 
 function full(){
