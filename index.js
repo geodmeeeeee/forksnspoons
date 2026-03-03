@@ -64,6 +64,7 @@ const games=[
 {title:"Call Of Duty Black Ops",img:"images/Call Of Duty Black Ops.png",url:"games/Call Of Duty Black Ops/index.html",cat:"shooter"},
 {title:"Candy Crush",img:"images/Candy Crush.png",url:"games/Candy Crush/index.html",cat:"puzzle"},
 {title:"Celeste",img:"images/Celeste.jpeg",url:"games/Celeste/index.html",cat:"platformer"},
+{title:"Color Water Sort 3D",img:"images/Color Water Sort 3D.jpeg",url:"games/Color Water Sort 3D/index.html",cat:"puzzle"},
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"arcade"},
 {title:"Countmaster Stickman Games",img:"images/Countmaster Stickman Games.png",url:"games/Countmaster stickman games/index.html",cat:"runner"},
 {title:"Crazy Cattle 3D",img:"images/Crazy Cattle 3D.png",url:"games/Crazy Cattle 3D/index.html",cat:"action"},
