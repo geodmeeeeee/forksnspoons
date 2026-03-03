@@ -19,7 +19,7 @@ userCountDisplay=document.getElementById("userCount")
 tooltip=document.getElementById("tooltip")
 }
 
-const gameCategories=["all","puzzle","fighting","shooter","driving","platformer","sports","horror","multiplayer","sandbox","rhythm","simulator","runner","clicker","rpg","survival","open world","arcade"]
+const gameCategories=["all","puzzle","fighting","shooter","driving","platformer","sports","horror","multiplayer","sandbox","rhythm","simulator","runner","clicker","rpg","survival","open world","arcade","3D"]
 const movieCategories=["all","comedy","horror","sci-fi"]
 
 // MacBook-specific optimizations
@@ -44,13 +44,14 @@ const games=[
 {title:"Bad Time Simulator",img:"images/Sans.jpeg",url:"games/Bad Time Simulator/index.html",cat:"fighting"},
 {title:"Bitlife",img:"images/Bitlife.png",url:"games/Bitlife/index.html",cat:"simulator"},
 {title:"Bridge Race",img:"images/Bridge Race.png",url:"games/Bridge Race/index.html",cat:"runner"},
-{title:"Build Now.gg",img:"images/Build Nowgg.png",url:"games/Build Now.gg/index.html",cat:"shooter"},
+{title:"Build Now.gg",img:"images/Build Nowgg.png",url:"games/Build Now.gg/index.html",cat:"shooter,3D"},
 {title:"Burgen Truck 201X",img:"images/Burgen Truck 201x.png",url:"games/Burgen Truck 201X/index.html",cat:"driving"},
 {title:"Call Of Duty Black Ops",img:"images/Call Of Duty Black Ops.png",url:"games/Call Of Duty Black Ops/index.html",cat:"shooter"},
 {title:"Candy Crush",img:"images/Candy Crush.png",url:"games/Candy Crush/index.html",cat:"puzzle"},
 {title:"Celeste",img:"images/Celeste.jpeg",url:"games/Celeste/index.html",cat:"platformer"},
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"arcade"},
 {title:"Countmaster Stickman Games",img:"images/Countmaster Stickman Games.png",url:"games/Countmaster stickman games/index.html",cat:"runner"},
+{title:"Crazy Cattle 3D",img:"images/Crazy Cattle 3D.png",url:"games/Crazy Cattle 3D/index.html",cat:"3D"},
 {title:"Doblox",img:"images/Doblox.png",url:"games/Doblox/index.html",cat:"multiplayer"},
 {title:"Doge Miner",img:"images/Doge Miner.png",url:"games/Doge Miner/index.html",cat:"Clicker"},
 {title:"Doge Miner 2",img:"images/Doge Miner 2.png",url:"games/Doge Miner 2/index.html",cat:"Clicker"},
