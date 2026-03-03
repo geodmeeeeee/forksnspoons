@@ -2,14 +2,9 @@ let tab="games"
 let previousTab="games"
 let cat="all"
 let searchTimeout
-let performanceMode=false
-let fpsCounterActive=false
-let frameCount=0
-let lastTime=performance.now()
-let fps=0
 
 // Cache DOM elements for better performance
-let grid,filterMenu,search,frame,player,secret,gamesTab,moviesTab,fpsValue,tooltip
+let grid,filterMenu,search,frame,player,secret,gamesTab,moviesTab,tooltip
 
 function initializeDOMReferences(){
 grid=document.getElementById("grid")
@@ -20,7 +15,6 @@ player=document.getElementById("player")
 secret=document.getElementById("secret")
 gamesTab=document.getElementById("gamesTab")
 moviesTab=document.getElementById("moviesTab")
-fpsValue=document.getElementById("fps-value")
 userCountDisplay=document.getElementById("userCount")
 tooltip=document.getElementById("tooltip")
 }
@@ -162,16 +156,6 @@ function toggleFilter(){
 filterMenu.classList.toggle("show")
 }
 
-function togglePerformanceMode(){
-performanceMode=document.getElementById("performanceMode").checked
-// Start/stop FPS counter based on performance mode
-if(performanceMode&&!fpsCounterActive){
-startFPSCounter()
-}else if(!performanceMode&&fpsCounterActive){
-stopFPSCounter()
-}
-}
-
 function setCat(c){
 cat=c
 render()
@@ -218,29 +202,7 @@ initializeLazyLoading()
 }
 
 // Lazy Loading with Intersection Observer
-// helper that applies a 5‑second timeout and switches to text on failure
 function loadImageWithTimeout(img, src, title) {
-    // if performance mode is disabled, just load normally
-    if (!performanceMode) {
-        img.src = src;
-        return;
-    }
-
-    // start the timer before assigning src so it can be cancelled by load/error
-    const timeoutId = setTimeout(() => {
-        // timeout reached, abort loading and show title text
-        img.src = '';
-        handleImageTimeout(img, title);
-    }, 5000); // 5 seconds
-
-    img.addEventListener('load', () => {
-        clearTimeout(timeoutId);
-    });
-    img.addEventListener('error', () => {
-        clearTimeout(timeoutId);
-        handleImageTimeout(img, title);
-    });
-
     img.src = src;
 }
 
@@ -313,37 +275,6 @@ function full(){
 frame.requestFullscreen()
 }
 
-// FPS Counter - Only runs when performance mode is enabled
-let fpsAnimationId=null
-
-function startFPSCounter(){
-if(fpsCounterActive) return
-fpsCounterActive=true
-frameCount=0
-lastTime=performance.now()
-
-function updateFPS(){
-frameCount++
-const currentTime=performance.now()
-if(currentTime-lastTime>=1000){
-fps=frameCount
-frameCount=0
-lastTime=currentTime
-if(fpsValue) fpsValue.textContent=fps
-}
-fpsAnimationId=requestAnimationFrame(updateFPS)
-}
-fpsAnimationId=requestAnimationFrame(updateFPS)
-}
-
-function stopFPSCounter(){
-if(!fpsCounterActive) return
-fpsCounterActive=false
-if(fpsAnimationId){
-cancelAnimationFrame(fpsAnimationId)
-fpsAnimationId=null
-}
-}
 
 
 // Toggle secret menu with F6 and add Mac keyboard shortcuts
