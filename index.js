@@ -76,6 +76,7 @@ const games=[
 {title:"Highway Racer",img:"images/Highway Racer.png",url:"games/highway racer/index.html",cat:"driving"},
 {title:"Hollow Kight",img:"images/Hollow Knight.png",url:"games/Hollow Knight/index.html",cat:"platformer"},
 {title:"Ice Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"platformer"},
+{title:"Icey Purple Head",img:"images/Icy Purple Head.png",url:"games/Icy Purple Head/index.html",cat:"platformer"},
 {title:"Johnny Trigger",img:"images/Johnny Trigger.jpeg",url:"games/Johnny Trigger/index.html",cat:"shooter"},
 {title:"Karlson",img:"images/Karlson.png",url:"games/Karlson/index.html",cat:"platformer,shooter"},
 {title:"Kirby 64",img:"images/Kirby 64.png",url:"games/Kirby 64/index.html",cat:"platformer"},
