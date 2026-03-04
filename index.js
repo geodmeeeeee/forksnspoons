@@ -76,6 +76,7 @@ const games=[
 {title:"Doom 64",img:"images/Doom 64.png",url:"games/Doom 64/index.html",cat:"shooter"},
 {title:"Douchebag Life",img:"images/DBL.png",url:"games/Douchebag life/index.html",cat:"simulator"},
 {title:"Dragon Ball Z legacy of goku",img:"images/Dragon Ball Z legacy of goku.png",url:"games/Dragon Ball Z legacy of goku/index.html",cat:"rpg"},
+{title:"Draw Climber",img:"images/Draw Climber.png",url:"games/Draw Climber/index.html",cat:"arcade"},
 {title:"Drive Mad",img:"images/Drive Mad.png",url:"games/Drive Mad/index.html",cat:"driving"},
 {title:"Eagle Ride",img:"images/eagle ride.png",url:"games/Eagle Ride/index.html",cat:"runner"},
 {title:"Elastic Face",img:"images/Elastic Face.png",url:"games/Elastic Face/index.html",cat:"simulator"},
