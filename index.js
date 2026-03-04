@@ -53,7 +53,6 @@ const games=[
 {title:"Age of War",img:"images/Age of War.png",url:"games/Age of War/index.html",cat:"strategy"},
 {title:"Age of War 2",img:"images/Age of War 2.png",url:"games/Age of War 2/index.html",cat:"strategy"},
 {title:"Apple Worm",img:"images/Apple Worm.png",url:"games/Apple Worm/index.html",cat:"puzzle"},
-{title:"Awesome Tanks",img:"images/Awesome Tanks.png",url:"games/Awesome Tanks/index.html",cat:"strategy"},
 {title:"Awesome Tanks 2",img:"images/Awesome Tanks 2.png",url:"games/Awesome Tanks 2/index.html",cat:"strategy"},
 {title:"Bad Monday Simulator",img:"images/Bad Monday Simulator.png",url:"games/Bad Monday Simulator/index.html",cat:"fighting"},
 {title:"Baseball Bros",img:"images/BaseBall Bros.png",url:"games/BaseBall Bros/index.html",cat:"sports"},
