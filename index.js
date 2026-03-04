@@ -95,6 +95,7 @@ const games=[
 {title:"Grand Theft Auto",img:"images/grand theft auto.png",url:"games/Grand Theft Auto/index.html",cat:"shooter,driving,open world"},
 {title:"Grand Theft Auto Vice City",img:"images/grand theft auto vice city.png",url:"games/grand theft auto vice city/index.html",cat:"shooter,driving,open world"},
 {title:"Half Life",img:"images/Half Life.png",url:"games/Half Life/index.html",cat:"shooter"},
+{title:"Handshakes",img:"images/Handshakes.png",url:"games/Handshakes/index.html",cat:"puzzle"},
 {title:"Highway Racer",img:"images/Highway Racer.png",url:"games/highway racer/index.html",cat:"driving"},
 {title:"Hollow Kight",img:"images/Hollow Knight.png",url:"games/Hollow Knight/index.html",cat:"platformer"},
 {title:"Ice Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"platformer"},
