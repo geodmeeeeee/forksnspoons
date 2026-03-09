@@ -130,6 +130,7 @@ const games=[
 {title:"Slope Plus",img:"images/Slope Plus.png",url:"games/Slope Plus/index.html",cat:"runner"},
 {title:"Smash Karts",img:"images/Smash Karts.jpg",url:"games/Smash Karts/index.html",cat:"driving,multiplayer"},
 {title:"Snow Rider 3D",img:"images/Snow Rider 3D.png",url:"games/Snow Rider 3D/index.html",cat:"driving"},
+{title:"Sonic CD",img:"images/Sonic CD.png",url:"games/Sonic CD/index.html",cat:"platformer"},
 {title:"Space Waves",img:"images/Space Waves.png",url:"games/Space Waves/index.html",cat:"rythm"},
 {title:"Sonic The Hedgehog",img:"images/Sonic The Hedgehog.png",url:"games/Sonic The Hedgehog/index.html",cat:"platformer"},
 {title:"Spacebar Clicker",img:"images/Spacebar Clicker.png",url:"games/Spacebar Clicker/index.html",cat:"clicker"},
