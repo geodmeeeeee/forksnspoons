@@ -92,6 +92,7 @@ const games=[
 {title:"Gangsta Bean",img:"images/Gangsta Bean.png",url:"games/Gangsta Bean/index.html",cat:"fighting"},
 {title:"Geometry Dash",img:"images/Geometry dash.png",url:"games/Geometry Dash/index.html",cat:"rhythm"},
 {title:"Gladihoppers",img:"images/Gladihoppers.png",url:"games/Gladihoppers/index.html",cat:"fighting"},
+{title:"Gold Digger FRVR",img:"images/Gold Digger FRVR.png",url:"games/Gold Digger FRVR/index.html",cat:"arcade"},
 {title:"Golden eye 007",img:"images/Golden Eye 007.png",url:"games/Golden Eye 007/index.html",cat:"shooter"},
 {title:"Google Dino",img:"images/Google Dino.png",url:"games/Google Dino/index.html",cat:"runner"},
 {title:"Grand Theft Auto",img:"images/grand theft auto.png",url:"games/Grand Theft Auto/index.html",cat:"shooter,driving,open world"},
