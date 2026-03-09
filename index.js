@@ -110,6 +110,7 @@ const games=[
 {title:"Kirby 64",img:"images/Kirby 64.png",url:"games/Kirby 64/index.html",cat:"platformer"},
 {title:"Kour.io",img:"images/Kourio.png",url:"games/Kour.io/index.html",cat:"shooter,multiplayer"},
 {title:"Lego Indiana Jones The Original Adventures",img:"images/Lego Indiana Jones.png",url:"games/Lego Indiana Jones/index.html",cat:"shooter,multiplayer"},
+{title:"Mario Golf",img:"images/Mario Golf.png",url:"games/Mario Golf/index.html",cat:"sports"},
 {title:"Mario Kart 64",img:"images/Mario Kart 64.png",url:"games/Mario Kart 64/index.html",cat:"driving"},
 {title:"Minecraft 1.8.8",img:"images/Minecraft 1.8.8.png",url:"games/Minecraft 1.8.8/index.html",cat:"sandbox"},
 {title:"Monkey Mart",img:"images/Monkey Mart.png",url:"games/Monkey Mart/index.html",cat:"simulator"},
