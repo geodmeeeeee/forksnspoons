@@ -73,6 +73,7 @@ const games=[
 {title:"Doblox",img:"images/Doblox.png",url:"games/Doblox/index.html",cat:"multiplayer"},
 {title:"Doge Miner",img:"images/Doge Miner.png",url:"games/Doge Miner/index.html",cat:"Clicker"},
 {title:"Doge Miner 2",img:"images/Doge Miner 2.png",url:"games/Doge Miner 2/index.html",cat:"Clicker"},
+{title:"Donkey Kong 64",img:"images/Donkey Kong 64.png",url:"games/Donkey Kong 64/index.html",cat:"Platformer"},
 {title:"Doom 64",img:"images/Doom 64.png",url:"games/Doom 64/index.html",cat:"shooter"},
 {title:"Douchebag Life",img:"images/DBL.png",url:"games/Douchebag life/index.html",cat:"simulator"},
 {title:"Dragon Ball Z legacy of goku",img:"images/Dragon Ball Z legacy of goku.png",url:"games/Dragon Ball Z legacy of goku/index.html",cat:"rpg"},
@@ -144,6 +145,7 @@ const games=[
 {title:"Ultrakill",img:"images/Ultrakill.png",url:"games/ultrakill/index.html",cat:"shooter"},
 {title:"Vex 7",img:"images/Vex 7.png",url:"games/Vex 7/index.html",cat:"shooter"},
 {title:"We Become What We Behold",img:"images/We Become What We Behold.png",url:"games/We Become What We Behold/index.html",cat:"simulator"},
+{title:"Web Fishing",img:"images/Web Fishing.png",url:"games/Web Fishing/index.html",cat:"simulator"},
 {title:"You VS 100 Skibidi Toilets",img:"images/you vs 100 skibidi.png",url:"games/You vs 100 Skibidi/index.html",cat:"shooter"}
 ]
 
