@@ -84,6 +84,7 @@ const games=[
 {title:"Elastic Face",img:"images/Elastic Face.png",url:"games/Elastic Face/index.html",cat:"simulator"},
 {title:"Escape Road",img:"images/Escape road.png",url:"games/Escape Road/index.html",cat:"driving"},
 {title:"Escape Road 2",img:"images/escape road 2.jpeg",url:"games/Escape Road 2/index.html",cat:"driving"},
+{title:"Fireboy and Watergirl 2",img:"images/Fire Boy And Water Girl 2.png",url:"games/Fire Boy And Water Girl 2/index.html",cat:"puzzle"},
 {title:"Five Nights at Freddys",img:"images/five nights at freddys.png",url:"games/Five Nights at Freddys/index.html",cat:"horror"},
 {title:"Five Nights at Freddys 2",img:"images/five nights at freddys 2.png",url:"games/Five Nights at Freddys 2/index.html",cat:"horror"},
 {title:"Five Nights at Freddys 3",img:"images/five nights at freddys 3.png",url:"games/Five Nights at Freddys 3/index.html",cat:"horror"},
