@@ -148,6 +148,7 @@ const games=[
 {title:"Tunnel Rush",img:"images/Tunnel Rush.png",url:"games/Tunnel Rush/index.html",cat:"runner"},
 {title:"Ultrakill",img:"images/Ultrakill.png",url:"games/ultrakill/index.html",cat:"shooter"},
 {title:"Vex 7",img:"images/Vex 7.png",url:"games/Vex 7/index.html",cat:"shooter"},
+{title:"Wave Race 64",img:"images/Wave Race 64.png",url:"games/Wave Race 64/index.html",cat:"driving"},
 {title:"We Become What We Behold",img:"images/We Become What We Behold.png",url:"games/We Become What We Behold/index.html",cat:"simulator"},
 {title:"Web Fishing",img:"images/Web Fishing.png",url:"games/Web Fishing/index.html",cat:"simulator"},
 {title:"You VS 100 Skibidi Toilets",img:"images/you vs 100 skibidi.png",url:"games/You vs 100 Skibidi/index.html",cat:"shooter"}
