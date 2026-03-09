@@ -134,6 +134,7 @@ const games=[
 {title:"Space Waves",img:"images/Space Waves.png",url:"games/Space Waves/index.html",cat:"rythm"},
 {title:"Sonic The Hedgehog",img:"images/Sonic The Hedgehog.png",url:"games/Sonic The Hedgehog/index.html",cat:"platformer"},
 {title:"Spacebar Clicker",img:"images/Spacebar Clicker.png",url:"games/Spacebar Clicker/index.html",cat:"clicker"},
+{title:"Stone Grass Mowing Simulator",img:"images/Stone Grass Mowing Simulator.png",url:"games/Stone Grass Mowing Simulator/index.html",cat:"simulator"},
 {title:"Sugar Sugar",img:"images/Sugar Sugar.png",url:"games/Sugar Sugar/index.html",cat:"puzzle"},
 {title:"Super Mario 64",img:"images/mayrio.jpeg",url:"games/Super Mario 64/index.html",cat:"platformer"},
 {title:"Super Smash Bros",img:"images/super smash bros.jpg",url:"games/Super Smash Bros/index.html",cat:"fighting"},
