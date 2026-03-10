@@ -103,6 +103,7 @@ const games=[
 {title:"Golden eye 007",img:"images/Golden Eye 007.png",url:"games/Golden Eye 007/index.html",cat:"shooter"},
 {title:"Google Dino",img:"images/Google Dino.png",url:"games/Google Dino/index.html",cat:"runner"},
 {title:"Grand Theft Auto",img:"images/grand theft auto.png",url:"games/Grand Theft Auto/index.html",cat:"shooter,driving,open world"},
+{title:"Grand Theft Auto 2",img:"images/grand theft auto 2.png",url:"games/Grand Theft Auto 2/index.html",cat:"shooter,driving,open world"},
 {title:"Grand Theft Auto Vice City",img:"images/grand theft auto vice city.png",url:"games/grand theft auto vice city/index.html",cat:"shooter,driving,open world"},
 {title:"Half Life",img:"images/Half Life.png",url:"games/Half Life/index.html",cat:"shooter"},
 {title:"Handshakes",img:"images/Handshakes.png",url:"games/Handshakes/index.html",cat:"puzzle"},
