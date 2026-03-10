@@ -154,6 +154,7 @@ const games=[
 {title:"Super Smash Bros",img:"images/super smash bros.jpg",url:"games/Super Smash Bros/index.html",cat:"fighting"},
 {title:"Super Smash Flash 2",img:"images/Super smash flash 2.png",url:"games/Super Smash Flash 2/index.html",cat:"fighting"},
 {title:"SuperHot",img:"images/superhot.jpeg",url:"games/SuperHot/index.html",cat:"shooter"},
+{title:"Tag",img:"images/Tag.png",url:"games/Tag/index.html",cat:"shooter"},
 {title:"Tanuki Sunset",img:"images/tanuki sunset.jpg",url:"games/Tanuki Sunset/index.html",cat:"driving"},
 {title:"The Binding Of Issac",img:"images/BOI.png",url:"games/The Binding Of Issac/index.html",cat:"horror"},
 {title:"The Impossible Quiz",img:"images/The Impossible Quiz.jpeg",url:"games/The Impossible Quiz/index.html",cat:"puzzle"},
