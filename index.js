@@ -119,6 +119,7 @@ const games=[
 {title:"Kirby 64",img:"images/Kirby 64.png",url:"games/Kirby 64/index.html",cat:"platformer"},
 {title:"Kour.io",img:"images/Kourio.png",url:"games/Kour.io/index.html",cat:"shooter,multiplayer"},
 {title:"Lego Indiana Jones The Original Adventures",img:"images/Lego Indiana Jones.png",url:"games/Lego Indiana Jones/index.html",cat:"shooter,multiplayer"},
+{title:"Madden Football 64",img:"images/Madden Football 64.png",url:"games/Madden Football 64/index.html",cat:"shooter,multiplayer"},
 {title:"Mario Kart 64",img:"images/Mario Kart 64.png",url:"games/Mario Kart 64/index.html",cat:"driving"},
 {title:"Mario Party",img:"images/Mario Party.png",url:"games/Mario Party/index.html",cat:"sports"},
 {title:"Mario Party 2",img:"images/Mario Party 2.png",url:"games/Mario Party 2/index.html",cat:"sports"},
