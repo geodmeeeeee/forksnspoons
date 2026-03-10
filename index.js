@@ -153,6 +153,7 @@ const games=[
 {title:"Time Shooter 2",img:"images/Time Shooter 2.jpg",url:"games/Time Shooter 2/index.html",cat:"shooter"},
 {title:"Time Shooter 3",img:"images/time shooter 3.jpg",url:"games/Time Shooter 3/index.html",cat:"shooter"},
 {title:"Tunnel Rush",img:"images/Tunnel Rush.png",url:"games/Tunnel Rush/index.html",cat:"runner"},
+{title:"Tom Clancys Rainbow Six",img:"images/Tom Clancys Rainbow Six.png",url:"games/Tom Clancys Rainbow Six/index.html",cat:"runner"},
 {title:"Ultrakill",img:"images/Ultrakill.png",url:"games/ultrakill/index.html",cat:"shooter"},
 {title:"Vex 7",img:"images/Vex 7.png",url:"games/Vex 7/index.html",cat:"shooter"},
 {title:"Wave Race 64",img:"images/Wave Race 64.png",url:"games/Wave Race 64/index.html",cat:"driving"},
