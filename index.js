@@ -124,6 +124,7 @@ const games=[
 {title:"Madden Football 64",img:"images/Madden Football 64.png",url:"games/Madden Football 64/index.html",cat:"shooter,multiplayer"},
 {title:"Mario Kart 64",img:"images/Mario Kart 64.png",url:"games/Mario Kart 64/index.html",cat:"driving"},
 {title:"Mario Kart DS",img:"images/Mario Kart DS.png",url:"games/Mario Kart DS/index.html",cat:"driving"},
+{title:"Mario Kart Super Circuit",img:"images/Mario Kart Super Circuit.png",url:"games/Mario Kart Super Circuit/index.html",cat:"driving"},
 {title:"Mario Party",img:"images/Mario Party.png",url:"games/Mario Party/index.html",cat:"sports"},
 {title:"Mario Party 2",img:"images/Mario Party 2.png",url:"games/Mario Party 2/index.html",cat:"sports"},
 {title:"Mario Tennis",img:"images/Mario Tennis.png",url:"games/Mario Tennis/index.html",cat:"Sports"},
