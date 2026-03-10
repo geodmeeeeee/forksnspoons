@@ -121,6 +121,7 @@ const games=[
 {title:"Lego Indiana Jones The Original Adventures",img:"images/Lego Indiana Jones.png",url:"games/Lego Indiana Jones/index.html",cat:"shooter,multiplayer"},
 {title:"Mario Kart 64",img:"images/Mario Kart 64.png",url:"games/Mario Kart 64/index.html",cat:"driving"},
 {title:"Mario Party",img:"images/Mario Party.png",url:"games/Mario Party/index.html",cat:"sports"},
+{title:"Mario Party 2",img:"images/Mario Party 2.png",url:"games/Mario Party 2/index.html",cat:"sports"},
 {title:"Mario Tennis",img:"images/Mario Tennis.png",url:"games/Mario Tennis/index.html",cat:"Sports"},
 {title:"Minecraft 1.8.8",img:"images/Minecraft 1.8.8.png",url:"games/Minecraft 1.8.8/index.html",cat:"sandbox"},
 {title:"Minecraft 1.12",img:"images/Minecraft 1.12.png",url:"games/Minecraft 1.12/index.html",cat:"sandbox"},
