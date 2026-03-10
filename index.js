@@ -118,6 +118,7 @@ const games=[
 {title:"Mario Party",img:"images/Mario Party.png",url:"games/Mario Party/index.html",cat:"sports"},
 {title:"Mario Tennis",img:"images/Mario Tennis.png",url:"games/Mario Tennis/index.html",cat:"Sports"},
 {title:"Minecraft 1.8.8",img:"images/Minecraft 1.8.8.png",url:"games/Minecraft 1.8.8/index.html",cat:"sandbox"},
+{title:"Minecraft 1.12",img:"images/Minecraft 1.12.png",url:"games/Minecraft 1.12/index.html",cat:"sandbox"},
 {title:"Minecraft Beta 1.3",img:"images/Minecraft Beta 1.3.png",url:"games/Minecraft Beta 1.3/index.html",cat:"sandbox"},
 {title:"Monkey Mart",img:"images/Monkey Mart.png",url:"games/Monkey Mart/index.html",cat:"simulator"},
 {title:"Newgrounds Rumble",img:"images/Newgrounds Rumble.png",url:"games/Newgrounds Rumble/index.html",cat:"fighting"},
