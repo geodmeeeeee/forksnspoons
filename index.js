@@ -99,6 +99,7 @@ const games=[
 {title:"Fruit Ninja",img:"images/Fruit Ninja.png",url:"games/Fruit Ninja/index.html",cat:"arcade"},
 {title:"Gangsta Bean",img:"images/Gangsta Bean.png",url:"games/Gangsta Bean/index.html",cat:"fighting"},
 {title:"Geometry Dash",img:"images/Geometry dash.png",url:"games/Geometry Dash/index.html",cat:"rhythm"},
+{title:"Geometry Vibes",img:"images/Geometry Vibes.png",url:"games/Geometry Vibes/index.html",cat:"rhythm"},
 {title:"Gladihoppers",img:"images/Gladihoppers.png",url:"games/Gladihoppers/index.html",cat:"fighting"},
 {title:"Glover",img:"images/Glover.png",url:"games/Glover/index.html",cat:"fighting"},
 {title:"Gold Digger FRVR",img:"images/Gold Digger FRVR.png",url:"games/Gold Digger FRVR/index.html",cat:"arcade"},
