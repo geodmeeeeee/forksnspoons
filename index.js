@@ -172,6 +172,7 @@ const games=[
 {title:"Wave Race 64",img:"images/Wave Race 64.png",url:"games/Wave Race 64/index.html",cat:"driving"},
 {title:"We Become What We Behold",img:"images/We Become What We Behold.png",url:"games/We Become What We Behold/index.html",cat:"simulator"},
 {title:"Web Fishing",img:"images/Web Fishing.png",url:"games/Web Fishing/index.html",cat:"simulator"},
+{title:"Wolfenstein 3D",img:"images/Wolfenstein 3D.png",url:"games/Wolfenstein 3D/index.html",cat:"simulator"},
 {title:"You VS 100 Skibidi Toilets",img:"images/you vs 100 skibidi.png",url:"games/You vs 100 Skibidi/index.html",cat:"shooter"}
 ]
 
