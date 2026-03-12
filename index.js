@@ -146,6 +146,7 @@ const games=[
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"driving"},
 {title:"R.E.P.O",img:"images/REPO.png",url:"games/R.E.P.O/index.html",cat:"horror"},
 {title:"Retro Bowl",img:"images/retro bowl.jpeg",url:"games/Retro Bowl/index.html",cat:"sports"},
+{title:"Slope 2 Player",img:"images/Slope 2 Player",url:"games/Slope 2 Player/index.html",cat:"sports"},
 {title:"Slope Plus",img:"images/Slope Plus.png",url:"games/Slope Plus/index.html",cat:"runner"},
 {title:"Smash Karts",img:"images/Smash Karts.jpg",url:"games/Smash Karts/index.html",cat:"driving,multiplayer"},
 {title:"Snow Rider 3D",img:"images/Snow Rider 3D.png",url:"games/Snow Rider 3D/index.html",cat:"driving"},
