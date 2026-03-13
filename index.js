@@ -151,6 +151,7 @@ const games=[
 {title:"Pokemon Emerald",img:"images/Pokemon Emerald.png",url:"games/Pokemon Emerald/index.html",cat:"rpg"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"driving"},
 {title:"R.E.P.O",img:"images/REPO.png",url:"games/R.E.P.O/index.html",cat:"horror"},
+{title:"Ragdoll Archers",img:"images/Ragdoll Archers.png",url:"games/Ragdoll Archers/index.html",cat:"horror"},
 {title:"Retro Bowl",img:"images/retro bowl.jpeg",url:"games/Retro Bowl/index.html",cat:"sports"},
 {title:"Slope 2 Player",img:"images/Slope 2 Player.png",url:"games/Slope 2 Player/index.html",cat:"sports"},
 {title:"Slope Plus",img:"images/Slope Plus.png",url:"games/Slope Plus/index.html",cat:"runner"},
