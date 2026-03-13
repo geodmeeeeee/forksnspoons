@@ -167,6 +167,7 @@ const games=[
 {title:"Tag",img:"images/Tag.png",url:"games/Tag/index.html",cat:"shooter"},
 {title:"Tanuki Sunset",img:"images/tanuki sunset.jpg",url:"games/Tanuki Sunset/index.html",cat:"driving"},
 {title:"Temple Run 2",img:"images/Temple Run 2.png",url:"games/Temple Run 2/index.html",cat:"driving"},
+{title:"Ten Minutes Till Dawn",img:"images/Ten Minutes Till Dawn.png",url:"games/Ten Minutes Till Dawn/index.html",cat:"driving"},
 {title:"The Binding Of Issac",img:"images/BOI.png",url:"games/The Binding Of Issac/index.html",cat:"horror"},
 {title:"The Impossible Quiz",img:"images/The Impossible Quiz.jpeg",url:"games/The Impossible Quiz/index.html",cat:"puzzle"},
 {title:"The Impossible Quiz 2",img:"images/The Impossible Quiz 2.png",url:"games/The Impossible Quiz 2/index.html",cat:"puzzle"},
