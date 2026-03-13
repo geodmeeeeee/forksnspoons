@@ -63,7 +63,7 @@ const games=[
 {title:"Bad Time Simulator",img:"images/Sans.jpeg",url:"games/Bad Time Simulator/index.html",cat:"all"},
 {title:"Bitlife",img:"images/Bitlife.png",url:"games/Bitlife/index.html",cat:"all"},
 {title:"Bloxorz",img:"images/Bloxorz.png",url:"games/Bloxorz/index.html",cat:"puzzle"},
-{title:"Bob The Robber 2",img:"images/Bob The Robber 2.png",url:"games/Bob The Robber 2/index.html",cat:"puzzle"},
+{title:"Bottle Jump 3D",img:"images/Bottle Jump 3D.png",url:"games/Bottle Jump 3D/index.html",cat:"puzzle"},
 {title:"Bridge Race",img:"images/Bridge Race.png",url:"games/Bridge Race/index.html",cat:"all"},
 {title:"Burgen Truck 201X",img:"images/Burgen Truck 201x.png",url:"games/Burgen Truck 201X/index.html",cat:"driving"},
 {title:"Call Of Duty Black Ops",img:"images/Call Of Duty Black Ops.png",url:"games/Call Of Duty Black Ops/index.html",cat:"shooter"},
