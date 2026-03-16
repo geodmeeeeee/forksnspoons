@@ -52,6 +52,7 @@ const games=[
 {title:"2Doom",img:"images/2Doom.png",url:"games/2Doom/index.html",cat:"Shooter"},
 {title:"3Dash",img:"images/3Dash.png",url:"games/3Dash/index.html",cat:"all"},
 {title:"12 Mini Battles",img:"images/12 Mini Battles.png",url:"games/12 Mini Battles/index.html",cat:"Multiplayer"},
+{title:"60 Seconds Burger Run",img:"images/60 Seconds Burger Run.png",url:"games/60 Seconds Burger Run/index.html",cat:"Multiplayer"},
 {title:"99Balls",img:"images/99Balls.png",url:"games/99Balls/index.html",cat:"Multiplayer"},
 {title:"A Small World Cup",img:"images/A Small World Cup.png",url:"games/A Small World Cup/index.html",cat:"Multiplayer"},
 {title:"Adventure Capitalist",img:"images/Adventure Capitalist.png",url:"games/Adventure Capitalist/index.html",cat:"Multiplayer"},
