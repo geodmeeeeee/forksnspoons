@@ -192,6 +192,7 @@ const games=[
 {title:"Tunnel Rush",img:"images/Tunnel Rush.png",url:"games/Tunnel Rush/index.html",cat:"runner"},
 {title:"Tom Clancys Rainbow Six",img:"images/Tom Clancys Rainbow Six.png",url:"games/Tom Clancys Rainbow Six/index.html",cat:"runner"},
 {title:"Ultrakill",img:"images/Ultrakill.png",url:"games/ultrakill/index.html",cat:"shooter"},
+{title:"Undertale Yellow",img:"images/Undertale Yellow.png",url:"games/Undertale Yellow/index.html",cat:"shooter"},
 {title:"Untitled Goose Game",img:"images/Untitled Goose Game.png",url:"games/Untitled Goose Game/index.html",cat:"shooter"},
 {title:"Vex 4",img:"images/Vex 4.png",url:"games/Vex 4/index.html",cat:"shooter"},
 {title:"Vex 6",img:"images/Vex 6.png",url:"games/Vex 6/index.html",cat:"shooter"},
