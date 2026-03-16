@@ -51,6 +51,7 @@ const games=[
 {title:"2 minute football",img:"images/2 minute football.png",url:"games/2 minute football/index.html",cat:"Sports"},
 {title:"3Dash",img:"images/3Dash.png",url:"games/3Dash/index.html",cat:"all"},
 {title:"12 Mini Battles",img:"images/12 Mini Battles.png",url:"games/12 Mini Battles/index.html",cat:"Multiplayer"},
+{title:"Adventure Capitalist",img:"images/Adventure Capitalist.png",url:"games/Adventure Capitalist/index.html",cat:"Multiplayer"},
 {title:"Agar.io Lite",img:"images/Agar.io Lite.png",url:"games/Agar.io Lite/index.html",cat:"all"},
 {title:"Age of War",img:"images/Age of War.png",url:"games/Age of War/index.html",cat:"all"},
 {title:"Age of War 2",img:"images/Age of War 2.png",url:"games/Age of War 2/index.html",cat:"all"},
