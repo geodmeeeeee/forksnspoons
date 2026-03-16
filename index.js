@@ -154,6 +154,7 @@ const games=[
 {title:"Monkey Mart",img:"images/Monkey Mart.png",url:"games/Monkey Mart/index.html",cat:"simulator"},
 {title:"Newgrounds Rumble",img:"images/Newgrounds Rumble.png",url:"games/Newgrounds Rumble/index.html",cat:"fighting"},
 {title:"Nubbys Number Factory",img:"images/Nubbys Number Factory.png",url:"games/Nubbys Number Factory/index.html",cat:"puzzle"},
+{title:"Obby 99% Will Lose",img:"images/Obby 99% Will Lose.png",url:"games/Obby 99% Will Lose/index.html",cat:"puzzle"},
 {title:"The Oregon Trail",img:"images/Oregon Trail.png",url:"games/Oregon Trail/index.html",cat:"puzzle"},
 {title:"Parking Fury",img:"images/Parking Fury.png",url:"games/Parking Fury/index.html",cat:"puzzle"},
 {title:"Pokemon Blue",img:"images/Pokemon Blue.png",url:"games/Pokemon Blue/index.html",cat:"rpg"},
