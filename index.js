@@ -64,6 +64,7 @@ const games=[
 {title:"Bendy And The Ink Machine",img:"images/Bendy And The Ink Machine.png",url:"games/Bendy And The Ink Machine/index.html",cat:"sports"},
 {title:"Bad Time Simulator",img:"images/Sans.jpeg",url:"games/Bad Time Simulator/index.html",cat:"all"},
 {title:"Bitlife",img:"images/Bitlife.png",url:"games/Bitlife/index.html",cat:"all"},
+{title:"BitPlanes",img:"images/BitPlanes.png",url:"games/BitPlanes/index.html",cat:"all"},
 {title:"Bloxorz",img:"images/Bloxorz.png",url:"games/Bloxorz/index.html",cat:"puzzle"},
 {title:"Bridge Race",img:"images/Bridge Race.png",url:"games/Bridge Race/index.html",cat:"all"},
 {title:"Brotato",img:"images/Brotato.png",url:"games/Brotato/index.html",cat:"all"},
