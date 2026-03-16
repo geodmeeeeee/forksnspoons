@@ -113,6 +113,7 @@ const games=[
 {title:"Gangsta Bean",img:"images/Gangsta Bean.png",url:"games/Gangsta Bean/index.html",cat:"fighting"},
 {title:"Geometry Dash",img:"images/Geometry dash.png",url:"games/Geometry Dash/index.html",cat:"rhythm"},
 {title:"Geometry Vibes",img:"images/Geometry Vibes.png",url:"games/Geometry Vibe/index.html",cat:"rhythm"},
+{title:"Getting Over It",img:"images/Getting Over It.png",url:"games/Getting Over It/index.html",cat:"rhythm"},
 {title:"Gimme The Airpod",img:"images/Gimme The Airpod.png",url:"games/Gimme The Airpod/index.html",cat:"rhythm"},
 {title:"Gladihoppers",img:"images/Gladihoppers.png",url:"games/Gladihoppers/index.html",cat:"fighting"},
 {title:"Glover",img:"images/Glover.png",url:"games/Glover/index.html",cat:"fighting"},
