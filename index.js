@@ -64,6 +64,7 @@ const games=[
 {title:"Among Us",img:"images/Amongus.png",url:"games/Amongus/index.html",cat:"all"},
 {title:"Apple Worm",img:"images/Apple Worm.png",url:"games/Apple Worm/index.html",cat:"puzzle"},
 {title:"Awesome Tanks 2",img:"images/Awesome Tanks 2.png",url:"games/Awesome Tanks 2/index.html",cat:"all"},
+{title:"Bad Ice Cream",img:"images/Bad Ice Cream.png",url:"games/Bad Ice Cream/index.html",cat:"all"},
 {title:"Bad Monday Simulator",img:"images/Bad Monday Simulator.png",url:"games/Bad Monday Simulator/index.html",cat:"all"},
 {title:"Baseball Bros",img:"images/BaseBall Bros.png",url:"games/BaseBall Bros/index.html",cat:"sports"},
 {title:"Basket Random",img:"images/Basket Random.png",url:"games/Basket Random/index.html",cat:"sports"},
