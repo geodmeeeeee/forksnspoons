@@ -185,6 +185,7 @@ const games=[
 {title:"Super Mario World",img:"images/Super Mario World.png",url:"games/Super Mario World/index.html",cat:"platformer"},
 {title:"Super Smash Bros",img:"images/super smash bros.jpg",url:"games/Super Smash Bros/index.html",cat:"fighting"},
 {title:"Super Smash Flash 2",img:"images/Super smash flash 2.png",url:"games/Super Smash Flash 2/index.html",cat:"fighting"},
+{title:"SuperCold",img:"images/SuperCold.png",url:"games/SuperCold/index.html",cat:"fighting"},
 {title:"SuperHot",img:"images/superhot.jpeg",url:"games/SuperHot/index.html",cat:"shooter"},
 {title:"Tag",img:"images/Tag.png",url:"games/Tag/index.html",cat:"shooter"},
 {title:"Tanuki Sunset",img:"images/tanuki sunset.jpg",url:"games/Tanuki Sunset/index.html",cat:"driving"},
