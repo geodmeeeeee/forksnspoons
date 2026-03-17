@@ -163,6 +163,7 @@ const games=[
 {title:"The Oregon Trail",img:"images/Oregon Trail.png",url:"games/Oregon Trail/index.html",cat:"puzzle"},
 {title:"OvO",img:"images/OvO.png",url:"games/OvO/index.html",cat:"puzzle"},
 {title:"Parking Fury",img:"images/Parking Fury.png",url:"games/Parking Fury/index.html",cat:"puzzle"},
+{title:"Pixel Speedrun",img:"images/Pixel Speedrun.png",url:"games/Pixel Speedrun/index.html",cat:"puzzle"},
 {title:"Pokemon Blue",img:"images/Pokemon Blue.png",url:"games/Pokemon Blue/index.html",cat:"rpg"},
 {title:"Pokemon Emerald",img:"images/Pokemon Emerald.png",url:"games/Pokemon Emerald/index.html",cat:"rpg"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"driving"},
