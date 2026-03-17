@@ -181,6 +181,7 @@ const games=[
 {title:"Spacebar Clicker",img:"images/Spacebar Clicker.png",url:"games/Spacebar Clicker/index.html",cat:"clicker"},
 {title:"Star Fox 64",img:"images/Star Fox 64.png",url:"games/Star Fox 64/index.html",cat:"clicker"},
 {title:"Steal a Brainrot",img:"images/Steal a Brainrot.png",url:"games/Steal a Brainrot/index.html",cat:"clicker"},
+{title:"Stickman Hook",img:"images/Stickman Hook.png",url:"games/Stickman Hook/index.html",cat:"clicker"},
 {title:"Stone Grass Mowing Simulator",img:"images/Stone Grass Mowing Simulator.png",url:"games/Stone Grass Mowing Simulator/index.html",cat:"simulator"},
 {title:"Sugar Sugar",img:"images/Sugar Sugar.png",url:"games/Sugar Sugar/index.html",cat:"puzzle"},
 {title:"Super Mario 64",img:"images/mayrio.jpeg",url:"games/Super Mario 64/index.html",cat:"platformer"},
