@@ -88,6 +88,7 @@ const games=[
 {title:"CS GO clicker",img:"images/CS GO clicker.png",url:"games/CS GO clicker/index.html",cat:"all"},
 {title:"CupHead",img:"images/CupHead.png",url:"games/CupHead/index.html",cat:"platformer"},
 {title:"Dad N Me",img:"images/Dad n Me.png",url:"games/Dad N me/index.html",cat:"platformer"},
+{title:"Death Run 3D",img:"images/Death Run 3D.png",url:"games/Death Run 3D/index.html",cat:"platformer"},
 {title:"Deltarune",img:"images/Deltarune.png",url:"games/Deltarune/index.html",cat:"all"},
 {title:"Doblox",img:"images/Doblox.png",url:"games/Doblox/index.html",cat:"multiplayer"},
 {title:"Doge Miner",img:"images/Doge Miner.png",url:"games/Doge Miner/index.html",cat:"all"},
