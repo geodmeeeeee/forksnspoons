@@ -171,6 +171,7 @@ const games=[
 {title:"Plinko",img:"images/Plinko.png",url:"games/Plinko/index.html",cat:"puzzle"},
 {title:"Pokemon Blue",img:"images/Pokemon Blue.png",url:"games/Pokemon Blue/index.html",cat:"rpg"},
 {title:"Pokemon Emerald",img:"images/Pokemon Emerald.png",url:"games/Pokemon Emerald/index.html",cat:"rpg"},
+{title:"Pokemon Red",img:"images/Pokemon Red.png",url:"games/Pokemon Red (GBA)/index.html",cat:"rpg"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"driving"},
 {title:"R.E.P.O",img:"images/REPO.png",url:"games/R.E.P.O/index.html",cat:"horror"},
 {title:"Ragdoll Archers",img:"images/Ragdoll Archers.png",url:"games/Ragdoll Archers/index.html",cat:"horror"},
