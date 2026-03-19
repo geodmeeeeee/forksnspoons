@@ -56,6 +56,7 @@ const games=[
 {title:"60 Seconds Burger Run",img:"images/60 Seconds Burger Run.png",url:"games/60 Seconds Burger Run/index.html",cat:"Multiplayer"},
 {title:"99Balls",img:"images/99Balls.png",url:"games/99Balls/index.html",cat:"Multiplayer"},
 {title:"A Small World Cup",img:"images/A Small World Cup.png",url:"games/A Small World Cup/index.html",cat:"Multiplayer"},
+{title:"Achievement Unlocked 2",img:"images/Achievement Unlocked 2.png",url:"games/Achievement Unlocked 2/index.html",cat:"Multiplayer"},
 {title:"Achievement Unlocked",img:"images/Achievement Unlocked.png",url:"games/Achievement Unlocked/index.html",cat:"Multiplayer"},
 {title:"Adventure Capitalist",img:"images/Adventure Capitalist.png",url:"games/Adventure Capitalist/index.html",cat:"Multiplayer"},
 {title:"Agar.io Lite",img:"images/Agar.io Lite.png",url:"games/Agar.io Lite/index.html",cat:"all"},
