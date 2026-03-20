@@ -47,7 +47,7 @@ document.documentElement.classList.add("macos-optimized")
 }
 
 const games=[
-{title:"1 on 1 Soccar",img:"images/1 on 1 Soccar.png",url:"games/1 on 1 Soccar/index.html",cat:"sports,multiplayer"},
+{title:"1 on 1 Soccar",img:"images/1 on 1 Soccar.png",url:"games/1 on 1 Soccar/index.html",cat:"all"},
 {title:"1 on 1 Tennis",img:"images/1 on 1 Tennis.png",url:"games/1 on 1 Tennis/index.html",cat:"all"},       
 {title:"1v1.lol",img:"images/1v1.lol.png",url:"games/1v1.lol/index.html",cat:"all"},
 {title:"2 Minute Football",img:"images/2 minute football.png",url:"games/2 minute football/index.html",cat:"all"},
@@ -78,7 +78,7 @@ const games=[
 {title:"Bloxorz",img:"images/Bloxorz.png",url:"games/Bloxorz/index.html",cat:"all"},
 {title:"Bridge Race",img:"images/Bridge Race.png",url:"games/Bridge Race/index.html",cat:"all"},
 {title:"Brotato",img:"images/Brotato.png",url:"games/Brotato/index.html",cat:"all"},
-{title:"Buckshot Roulette",img:"images/Buckshot Roulette.png",url:"games/Brotato/index.html",cat:"all"},
+{title:"Buckshot Roulette",img:"images/Buckshot Roulette.png",url:"games/Buckshot Roulette/index.html",cat:"all"},
 {title:"Burgen Truck 201X",img:"images/Burgen Truck 201x.png",url:"games/Burgen Truck 201X/index.html",cat:"all"},
 {title:"Call Of Duty Black Ops",img:"images/Call Of Duty Black Ops.png",url:"games/Call Of Duty Black Ops/index.html",cat:"all"},
 {title:"Candy Crush",img:"images/Candy Crush.png",url:"games/Candy Crush/index.html",cat:"all"},
