@@ -90,6 +90,7 @@ const games=[
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"all"},
 {title:"Countmaster Stickman Games",img:"images/Countmaster Stickman Games.png",url:"games/Countmaster stickman games/index.html",cat:"all"},
 {title:"Crazy Cattle 3D",img:"images/Crazy Cattle 3D.png",url:"games/Crazy Cattle 3D/index.html",cat:"all"},
+{title:"CS 1.6",img:"images/CS 1.6.png",url:"games/CS 1.6/index.html",cat:"all"},
 {title:"CS GO clicker",img:"images/CS GO clicker.png",url:"games/CS GO clicker/index.html",cat:"all"},
 {title:"CupHead",img:"images/CupHead.png",url:"games/CupHead/index.html",cat:"all"},
 {title:"Dad N Me",img:"images/Dad n Me.png",url:"games/Dad N me/index.html",cat:"all"},
