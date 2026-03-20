@@ -32,7 +32,7 @@ mainContent.classList.remove("hidden")
 switchTab(tabName)
 }
 
-const gameCategories=["all","sports","multiplayer","platformer","puzzle"]
+const gameCategories=["all","sports","multiplayer","platformer","puzzle","clicker"]
 const movieCategories=["all","comedy","horror","sci-fi"]
 
 // MacBook-specific optimizations
@@ -60,7 +60,7 @@ const games=[
 {title:"Achievement Unlocked",img:"images/Achievement Unlocked.png",url:"games/Achievement Unlocked/index.html",cat:"platformer"},
 {title:"Achievement Unlocked 2",img:"images/Achievement Unlocked 2.png",url:"games/Achievement Unlocked 2/index.html",cat:"platformer"},
 {title:"Achievement Unlocked 3",img:"images/Achievement Unlocked 3.png",url:"games/Achievement Unlocked 3/index.html",cat:"platformer"},
-{title:"Adventure Capitalist",img:"images/Adventure Capitalist.png",url:"games/Adventure Capitalist/index.html",cat:"all"},
+{title:"Adventure Capitalist",img:"images/Adventure Capitalist.png",url:"games/Adventure Capitalist/index.html",cat:"clicker"},
 {title:"Agar.io Lite",img:"images/Agar.io Lite.png",url:"games/Agar.io Lite/index.html",cat:"all"},
 {title:"Age of War",img:"images/Age of War.png",url:"games/Age of War/index.html",cat:"all"},
 {title:"Age of War 2",img:"images/Age of War 2.png",url:"games/Age of War 2/index.html",cat:"all"},
