@@ -222,6 +222,7 @@ const games=[
 {title:"We Become What We Behold",img:"images/We Become What We Behold.png",url:"games/We Become What We Behold/index.html",cat:"all"},
 {title:"Web Fishing",img:"images/Web Fishing.png",url:"games/Web Fishing/index.html",cat:"all"},
 {title:"Worlds Hardest Game",img:"images/Worlds Hardest Game.png",url:"games/Worlds Hardest Game/index.html",cat:"all"},
+{title:"Worlds Hardest Game 2",img:"images/Worlds Hardest Game 2.png",url:"games/Worlds Hardest Game 2/index.html",cat:"all"},
 {title:"You VS 100 Skibidi Toilets",img:"images/you vs 100 skibidi.png",url:"games/You vs 100 Skibidi/index.html",cat:"all"}
 ]
 
