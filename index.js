@@ -64,7 +64,7 @@ const games=[
 {title:"Agar.io Lite",img:"images/Agar.io Lite.png",url:"games/Agar.io Lite/index.html",cat:"random"},
 {title:"Age of War",img:"images/Age of War.png",url:"games/Age of War/index.html",cat:"tower defense"},
 {title:"Age of War 2",img:"images/Age of War 2.png",url:"games/Age of War 2/index.html",cat:"tower defense"},
-{title:"Among Us",img:"images/Amongus.png",url:"games/Amongus/index.html",cat:"all"},
+{title:"Among Us",img:"images/Amongus.png",url:"games/Amongus/index.html",cat:"random"},
 {title:"Apple Worm",img:"images/Apple Worm.png",url:"games/Apple Worm/index.html",cat:"all"},
 {title:"Awesome Tanks 2",img:"images/Awesome Tanks 2.png",url:"games/Awesome Tanks 2/index.html",cat:"all"},
 {title:"Bad Ice Cream",img:"images/Bad Ice Cream.png",url:"games/Bad Ice Cream/index.html",cat:"all"},
