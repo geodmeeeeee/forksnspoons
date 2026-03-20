@@ -119,7 +119,6 @@ const games=[
 {title:"Five Nights at Freddys 3",img:"images/five nights at freddys 3.png",url:"games/Five Nights at Freddys 3/index.html",cat:"all"},
 {title:"Portal The Flash Verison",img:"images/Flash Portal.png",url:"games/Flash Portal/index.html",cat:"all"},
 {title:"Fluidism",img:"images/Fluidism.png",url:"games/Fluidism/index.html",cat:"all"},
-{title:"Fortzone",img:"images/Fortzone.png",url:"games/Fortzone/index.html",cat:"all"},
 {title:"Friday Night Funkin",img:"images/Friday Night Funkin.png",url:"games/friday night funkin/index.html",cat:"all"},
 {title:"Fruit Ninja",img:"images/Fruit Ninja.png",url:"games/Fruit Ninja/index.html",cat:"all"},
 {title:"Gangsta Bean",img:"images/Gangsta Bean.png",url:"games/Gangsta Bean/index.html",cat:"all"},
