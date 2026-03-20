@@ -72,6 +72,7 @@ const games=[
 {title:"Baseball Bros",img:"images/BaseBall Bros.png",url:"games/BaseBall Bros/index.html",cat:"all"},
 {title:"Basket Random",img:"images/Basket Random.png",url:"games/Basket Random/index.html",cat:"all"},
 {title:"Bendy And The Ink Machine",img:"images/Bendy And The Ink Machine.png",url:"games/Bendy And The Ink Machine/index.html",cat:"all"},
+{title:"Big Ice Tower Tiny Square",img:"images/Big Ice Tower Tiny Square.png",url:"games/Big Ice Tower Tiny Square/index.html",cat:"all"},
 {title:"Bad Time Simulator",img:"images/Sans.jpeg",url:"games/Bad Time Simulator/index.html",cat:"all"},
 {title:"Bart Blast",img:"images/Bart Blast.png",url:"games/Bart Blast/index.html",cat:"all"},
 {title:"Bitlife",img:"images/Bitlife.png",url:"games/Bitlife/index.html",cat:"all"},
