@@ -32,7 +32,7 @@ mainContent.classList.remove("hidden")
 switchTab(tabName)
 }
 
-const gameCategories=["all","sports","multiplayer"]
+const gameCategories=["all","sports","multiplayer","platformer"]
 const movieCategories=["all","comedy","horror","sci-fi"]
 
 // MacBook-specific optimizations
@@ -54,7 +54,7 @@ const games=[
 {title:"3 Pandas",img:"images/3 Pandas.png",url:"games/3 Pandas/index.html",cat:"all"},
 {title:"3Dash",img:"images/3Dash.png",url:"games/3Dash/index.html",cat:"platformer"},
 {title:"12 Mini Battles",img:"images/12 Mini Battles.png",url:"games/12 Mini Battles/index.html",cat:"multiplayer"},
-{title:"60 Seconds Burger Run",img:"images/60 Seconds Burger Run.png",url:"games/60 Seconds Burger Run/index.html",cat:"all"},
+{title:"60 Seconds Burger Run",img:"images/60 Seconds Burger Run.png",url:"games/60 Seconds Burger Run/index.html",cat:"platformer"},
 {title:"99Balls",img:"images/99Balls.png",url:"games/99Balls/index.html",cat:"all"},
 {title:"A Small World Cup",img:"images/A Small World Cup.png",url:"games/A Small World Cup/index.html",cat:"all"},
 {title:"Achievement Unlocked",img:"images/Achievement Unlocked.png",url:"games/Achievement Unlocked/index.html",cat:"all"},
@@ -156,11 +156,11 @@ const games=[
 {title:"Mario Kart 64",img:"images/Mario Kart 64.png",url:"games/Mario Kart 64/index.html",cat:"driving"},
 {title:"Mario Kart DS",img:"images/Mario Kart DS.png",url:"games/Mario Kart DS/index.html",cat:"driving"},
 {title:"Mario Kart Super Circuit",img:"images/Mario Kart Super Circuit.png",url:"games/Mario Kart Super Circuit/index.html",cat:"driving"},
-{title:"Mario Party",img:"images/Mario Party.png",url:"games/Mario Party/index.html",cat:"sports"},
-{title:"Mario Party 2",img:"images/Mario Party 2.png",url:"games/Mario Party 2/index.html",cat:"sports"},
-{title:"Mario Tennis",img:"images/Mario Tennis.png",url:"games/Mario Tennis/index.html",cat:"Sports"},
-{title:"Minecraft 1.8.8",img:"images/Minecraft 1.8.8.png",url:"games/Minecraft 1.8.8/index.html",cat:"sandbox"},
-{title:"Minecraft 1.12",img:"images/Minecraft 1.12.png",url:"games/Minecraft 1.12/index.html",cat:"sandbox"},
+{title:"Mario Party",img:"images/Mario Party.png",url:"games/Mario Party/index.html",cat:"all"},
+{title:"Mario Party 2",img:"images/Mario Party 2.png",url:"games/Mario Party 2/index.html",cat:"all"},
+{title:"Mario Tennis",img:"images/Mario Tennis.png",url:"games/Mario Tennis/index.html",cat:"all"},
+{title:"Minecraft 1.8.8",img:"images/Minecraft 1.8.8.png",url:"games/Minecraft 1.8.8/index.html",cat:"all"},
+{title:"Minecraft 1.12",img:"images/Minecraft 1.12.png",url:"games/Minecraft 1.12/index.html",cat:"all"},
 {title:"Minecraft Beta 1.3",img:"images/Minecraft Beta 1.3.png",url:"games/Minecraft Beta 1.3/index.html",cat:"sandbox"},
 {title:"Monkey Mart",img:"images/Monkey Mart.png",url:"games/Monkey Mart/index.html",cat:"simulator"},
 {title:"Newgrounds Rumble",img:"images/Newgrounds Rumble.png",url:"games/Newgrounds Rumble/index.html",cat:"fighting"},
