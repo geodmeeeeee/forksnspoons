@@ -166,7 +166,7 @@ const games=[
 {title:"Monkey Mart",img:"images/Monkey Mart.png",url:"games/Monkey Mart/index.html",cat:"all"},
 {title:"Newgrounds Rumble",img:"images/Newgrounds Rumble.png",url:"games/Newgrounds Rumble/index.html",cat:"all"},
 {title:"Nubbys Number Factory",img:"images/Nubbys Number Factory.png",url:"games/Nubbys Number Factory/index.html",cat:"all"},
-{title:"Obby 99% Will Lose",img:"images/obby99%willlose.png",url:"games/Obby 99% Will Lose/index.html",cat:"all"},
+{title:"Obby 99% Will Lose",img:"images/word.png",url:"games/Obby 99% Will Lose/index.html",cat:"all"},
 {title:"The Oregon Trail",img:"images/Oregon Trail.png",url:"games/Oregon Trail/index.html",cat:"all"},
 {title:"OvO",img:"images/OvO.png",url:"games/OvO/index.html",cat:"all"},
 {title:"Papas Pizzeria",img:"images/Papaz Pizzeria.png",url:"games/Papas Pizzeria/index.html",cat:"all"},
