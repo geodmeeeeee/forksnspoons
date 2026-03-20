@@ -47,9 +47,9 @@ document.documentElement.classList.add("macos-optimized")
 }
 
 const games=[
-{title:"1 on 1 Soccar",img:"images/1 on 1 Soccar.png",url:"games/1 on 1 Soccar/index.html",cat:"sports","multiplayer"},
+{title:"1 on 1 Soccar",img:"images/1 on 1 Soccar.png",url:"games/1 on 1 Soccar/index.html",cat:["sports","multiplayer"]},
 {title:"1 on 1 Tennis",img:"images/1 on 1 Tennis.png",url:"games/1 on 1 Tennis/index.html",cat:"sports"},       
-{title:"1v1.lol",img:"images/1v1.lol.png",url:"games/1v1.lol/index.html",cat:"shooter","multiplayer"},
+{title:"1v1.lol",img:"images/1v1.lol.png",url:"games/1v1.lol/index.html",cat:["shooter","multiplayer"]},
 {title:"2 minute football",img:"images/2 minute football.png",url:"games/2 minute football/index.html",cat:"sports"},
 {title:"3Dash",img:"images/3Dash.png",url:"games/3Dash/index.html",cat:"platformer"},
 {title:"12 Mini Battles",img:"images/12 Mini Battles.png",url:"games/12 Mini Battles/index.html",cat:"all"},
@@ -105,10 +105,10 @@ const games=[
 {title:"Drift Boss",img:"images/Drift Boss.png",url:"games/Drift Boss/index.html",cat:"arcade"},
 {title:"Drift Hunters",img:"images/Drift Hunters.png",url:"games/Drift Hunters/index.html",cat:"arcade"},
 {title:"Drive Mad",img:"images/Drive Mad.png",url:"games/Drive Mad/index.html",cat:"driving"},
-{title:"Eagle Ride",img:"images/eagle ride.png",url:"games/Eagle Ride/index.html",cat:"runner"},
-{title:"EarthBound",img:"images/EarthBound.png",url:"games/EarthBound/index.html",cat:"rpg"},
-{title:"Elastic Face",img:"images/Elastic Face.png",url:"games/Elastic Face/index.html",cat:"simulator"},
-{title:"Escape Road",img:"images/Escape road.png",url:"games/Escape Road/index.html",cat:"driving"},
+{title:"Eagle Ride",img:"images/eagle ride.png",url:"games/Eagle Ride/index.html",cat:"all"},
+{title:"EarthBound",img:"images/EarthBound.png",url:"games/EarthBound/index.html",cat:"all"},
+{title:"Elastic Face",img:"images/Elastic Face.png",url:"games/Elastic Face/index.html",cat:"all"},
+{title:"Escape Road",img:"images/Escape road.png",url:"games/Escape Road/index.html",cat:"all"},
 {title:"Escape Road 2",img:"images/escape road 2.jpeg",url:"games/Escape Road 2/index.html",cat:"driving"},
 {title:"Five Nights At Epsteins",img:"images/Five Nights At Epsteins.png",url:"games/Five Nights At Epsteins/index.html",cat:"horror"},
 {title:"Five Nights at Freddys",img:"images/five nights at freddys.png",url:"games/Five Nights at Freddys/index.html",cat:"horror"},
