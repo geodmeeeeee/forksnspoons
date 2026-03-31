@@ -24,7 +24,7 @@ tooltip=document.getElementById("tooltip")
 openingPage=document.getElementById("openingPage")
 mainContent=document.getElementById("mainContent")
 updateMuteButton()
-frame?.addEventListener("load",()=>applyMuteStateToCurrentGame())
+    frame?.addEventListener("load",()=>applyMuteStateToWindow(window))
 }
 
 // Navigation functions
@@ -435,6 +435,23 @@ win.Audio=WrappedAudio
 }
 }catch(e){}
 
+try{
+const audioNodePrototype=win.AudioNode?.prototype
+if(audioNodePrototype&&!audioNodePrototype.__forksMuteConnectWrapped){
+const originalConnect=audioNodePrototype.connect
+audioNodePrototype.connect=function(destination,...args){
+try{
+const ctx=this.context
+if(destination===ctx?.destination && ctx.__forksMuteGain){
+return originalConnect.call(this,ctx.__forksMuteGain,...args)
+}
+}catch(e){}
+return originalConnect.call(this,destination,...args)
+}
+audioNodePrototype.__forksMuteConnectWrapped=true
+}
+}catch(e){}
+
 ;["AudioContext","webkitAudioContext"].forEach(name=>{
 try{
 const OriginalContext=win[name]
@@ -442,10 +459,7 @@ if(typeof OriginalContext!=="function") return
 const WrappedContext=function(...args){
 const ctx=new OriginalContext(...args)
 win.__forksAudioContexts.add(ctx)
-const action=isMuted?ctx.suspend?.():ctx.resume?.()
-if(action&&typeof action.catch==="function"){
-action.catch(()=>{})
-}
+ensureAudioContextGain(ctx)
 return ctx
 }
 WrappedContext.prototype=OriginalContext.prototype
@@ -503,17 +517,39 @@ win.__forksAudioContexts.add(moduleAudioContext)
 }catch(e){}
 }
 
+function ensureAudioContextGain(ctx){
+if(!ctx||ctx.__forksGainCreated||typeof ctx.createGain!="function"||!ctx.destination) return
+try{
+const gain=ctx.createGain()
+gain.gain.value=isMuted?0:1
+gain.connect(ctx.destination)
+ctx.__forksMuteGain=gain
+ctx.__forksGainCreated=true
+}catch(e){}
+}
+
+function setAudioContextMute(ctx){
+if(!ctx) return
+try{
+ensureAudioContextGain(ctx)
+if(ctx.__forksMuteGain){
+const gain=ctx.__forksMuteGain.gain
+if(typeof gain.setValueAtTime==="function"){
+gain.setValueAtTime(isMuted?0:1,ctx.currentTime)
+}else{
+gain.value=isMuted?0:1
+}
+}
+if(!isMuted && ctx.state==="suspended"){
+ctx.resume?.().catch(()=>{})
+}
+}catch(e){}
+}
+
 function updateAudioContextState(win){
 collectAudioContexts(win)
 if(!win?.__forksAudioContexts) return
-win.__forksAudioContexts.forEach(ctx=>{
-try{
-const action=isMuted?ctx.suspend?.():ctx.resume?.()
-if(action&&typeof action.catch==="function"){
-action.catch(()=>{})
-}
-}catch(e){}
-})
+win.__forksAudioContexts.forEach(setAudioContextMute)
 }
 
 function applyMuteStateToWindow(win){
@@ -541,7 +577,11 @@ try{
 localStorage.setItem("forksNFrogzMuted",String(isMuted))
 }catch(e){}
 updateMuteButton()
-applyMuteStateToCurrentGame()
+applyMuteStateToWindow(window)
+try{
+frame?.focus()
+frame?.contentWindow?.focus()
+}catch(e){}
 }
 
 function openGame(u){
