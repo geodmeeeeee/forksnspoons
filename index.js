@@ -157,7 +157,7 @@ const games=[
 {title:"Icey Purple Head",img:"images/Icy Purple Head.png",url:"games/Icy Purple Head/index.html",cat:"all"},
 {title:"Ink Games",img:"images/Ink Games.png",url:"games/Ink Games/index.html",cat:"all"},
 {title:"Iron Lung",img:"images/Iron Lung.png",url:"games/Iron Lung/index.html",cat:"all"},
-{title:"Jeffery Epstein Basics in Education and Kidnapping",img:"images/jebieak.png",url:"games/jeffery Epstein Basics in Education And Kidnapping/index.html",cat:"all"},
+{title:"Jeffery Epstein Basics in Education and Kidnapping",img:"images/jebieak.png",url:"games/jeffbaldiesbasics/index.html",cat:"all"},
 {title:"Johnny Trigger",img:"images/Johnny Trigger.jpeg",url:"games/Johnny Trigger/index.html",cat:"all"},
 {title:"Just Hit The Button",img:"images/Just Hit The Button.png",url:"games/Just Hit The Button/index.html",cat:"all"},
 {title:"Karlson",img:"images/Karlson.png",url:"games/Karlson/index.html",cat:"platformer,shooter"},
