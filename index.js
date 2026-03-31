@@ -2,9 +2,14 @@ let tab="games"
 let previousTab="games"
 let cat="all"
 let searchTimeout
+let isMuted=false
+
+try{
+isMuted=localStorage.getItem("forksNFrogzMuted")==="true"
+}catch(e){}
 
 // Cache DOM elements for better performance
-let grid,filterMenu,search,frame,player,secret,tooltip,openingPage,mainContent
+let grid,filterMenu,search,frame,player,secret,tooltip,openingPage,mainContent,muteBtn
 
 function initializeDOMReferences(){
 grid=document.getElementById("grid")
@@ -12,11 +17,14 @@ filterMenu=document.getElementById("filterMenu")
 search=document.getElementById("search")
 frame=document.getElementById("frame")
 player=document.getElementById("player")
+muteBtn=document.getElementById("muteBtn")
 secret=document.getElementById("secret")
 userCountDisplay=document.getElementById("userCount")
 tooltip=document.getElementById("tooltip")
 openingPage=document.getElementById("openingPage")
 mainContent=document.getElementById("mainContent")
+updateMuteButton()
+frame?.addEventListener("load",()=>applyMuteStateToCurrentGame())
 }
 
 // Navigation functions
@@ -378,6 +386,164 @@ function initializeLazyLoading(){
     }
 }
 
+function updateMuteButton(){
+if(!muteBtn) return
+muteBtn.textContent=isMuted?"Unmute":"Mute"
+muteBtn.classList.toggle("active",isMuted)
+muteBtn.setAttribute("aria-pressed",String(isMuted))
+}
+
+function syncMediaState(doc){
+if(!doc) return
+const mediaElements=doc.querySelectorAll("audio,video")
+mediaElements.forEach(media=>{
+media.muted=isMuted
+media.defaultMuted=isMuted
+})
+}
+
+function patchAudioInWindow(win){
+if(!win||win.__forksMutePatched) return
+win.__forksMutePatched=true
+win.__forksAudioContexts=new Set()
+
+try{
+const mediaPrototype=win.HTMLMediaElement?.prototype
+if(mediaPrototype&&!mediaPrototype.__forksMuteWrapped){
+const originalPlay=mediaPrototype.play
+mediaPrototype.play=function(...args){
+this.muted=isMuted
+this.defaultMuted=isMuted
+return originalPlay.apply(this,args)
+}
+mediaPrototype.__forksMuteWrapped=true
+}
+}catch(e){}
+
+try{
+const OriginalAudio=win.Audio
+if(typeof OriginalAudio==="function"){
+const WrappedAudio=function(...args){
+const audio=new OriginalAudio(...args)
+audio.muted=isMuted
+audio.defaultMuted=isMuted
+return audio
+}
+WrappedAudio.prototype=OriginalAudio.prototype
+Object.setPrototypeOf(WrappedAudio,OriginalAudio)
+win.Audio=WrappedAudio
+}
+}catch(e){}
+
+;["AudioContext","webkitAudioContext"].forEach(name=>{
+try{
+const OriginalContext=win[name]
+if(typeof OriginalContext!=="function") return
+const WrappedContext=function(...args){
+const ctx=new OriginalContext(...args)
+win.__forksAudioContexts.add(ctx)
+const action=isMuted?ctx.suspend?.():ctx.resume?.()
+if(action&&typeof action.catch==="function"){
+action.catch(()=>{})
+}
+return ctx
+}
+WrappedContext.prototype=OriginalContext.prototype
+Object.setPrototypeOf(WrappedContext,OriginalContext)
+win[name]=WrappedContext
+}catch(e){}
+})
+}
+
+function collectAudioContexts(win){
+if(!win||!win.__forksAudioContexts) return
+const contextTypes=[win.AudioContext,win.webkitAudioContext].filter(Boolean)
+if(!contextTypes.length) return
+const addContext=value=>{
+if(!value) return
+if(contextTypes.some(ContextType=>value instanceof ContextType)){
+win.__forksAudioContexts.add(value)
+}
+}
+
+try{
+Object.values(win).forEach(value=>{
+addContext(value)
+if(value&&typeof value==="object"){
+addContext(value.ctx)
+addContext(value.audioContext)
+addContext(value.context)
+}
+})
+}catch(e){}
+}
+
+function updateLibraryMuteState(win){
+try{
+win.Howler?.mute?.(isMuted)
+}catch(e){}
+
+try{
+if(win.createjs?.Sound){
+win.createjs.Sound.muted=isMuted
+}
+}catch(e){}
+
+try{
+if(win.game?.sound&&"mute" in win.game.sound){
+win.game.sound.mute=isMuted
+}
+}catch(e){}
+
+try{
+const moduleAudioContext=win.Module?.SDL2?.audioContext
+if(moduleAudioContext&&win.__forksAudioContexts){
+win.__forksAudioContexts.add(moduleAudioContext)
+}
+}catch(e){}
+}
+
+function updateAudioContextState(win){
+collectAudioContexts(win)
+if(!win?.__forksAudioContexts) return
+win.__forksAudioContexts.forEach(ctx=>{
+try{
+const action=isMuted?ctx.suspend?.():ctx.resume?.()
+if(action&&typeof action.catch==="function"){
+action.catch(()=>{})
+}
+}catch(e){}
+})
+}
+
+function applyMuteStateToWindow(win){
+if(!win) return
+
+try{
+patchAudioInWindow(win)
+updateLibraryMuteState(win)
+syncMediaState(win.document)
+updateAudioContextState(win)
+for(let i=0;i<win.frames.length;i++){
+applyMuteStateToWindow(win.frames[i])
+}
+}catch(e){}
+}
+
+function applyMuteStateToCurrentGame(){
+if(!frame?.contentWindow) return
+applyMuteStateToWindow(frame.contentWindow)
+}
+
+function toggleMute(){
+isMuted=!isMuted
+try{
+localStorage.setItem("forksNFrogzMuted",String(isMuted))
+}catch(e){}
+updateMuteButton()
+applyMuteStateToCurrentGame()
+}
+
 function openGame(u){
 player.style.display="flex"
 player.classList.remove("closing")
@@ -400,7 +566,7 @@ player.classList.remove("closing")
 }
 
 function full(){
-frame.requestFullscreen()
+frame?.requestFullscreen?.()
 }
 
 

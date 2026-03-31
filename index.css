@@ -590,6 +590,16 @@ padding:10px 20px;
 border-radius:10px;
 color:white;
 cursor:pointer;
+transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.controls button:hover{
+transform:translateY(-1px);
+}
+
+.controls button.active{
+background:#dc2626;
+box-shadow:0 0 0 2px rgba(220,38,38,0.35);
 }
 
 .hidden{display:none;}
