@@ -19,11 +19,10 @@ isMuted=localStorage.getItem("forksNFrogzMuted")==="true"
 }catch(e){}
 
 // Cache DOM elements for better performance
-let grid,filterMenu,search,frame,player,secret,tooltip,openingPage,mainContent,muteBtn,siteSubtitle
+let grid,search,frame,player,secret,tooltip,openingPage,mainContent,muteBtn,siteSubtitle
 
 function initializeDOMReferences(){
 grid=document.getElementById("grid")
-filterMenu=document.getElementById("filterMenu")
 search=document.getElementById("search")
 frame=document.getElementById("frame")
 player=document.getElementById("player")
@@ -115,35 +114,7 @@ credits.classList.add("show")
 credits.classList.remove("show")
 }
 
-if(t!=="extras"){
-loadCategories()
-}else{
-filterMenu.innerHTML=""
-}
-
 render()
-}
-
-function loadCategories(){
-let cats=tab=="games"?gameCategories:movieCategories
-filterMenu.innerHTML=""
-cats.forEach(c=>{
-filterMenu.innerHTML+=`
-<div class="filter-option"
-onclick="setCat('${c}')">
-${c}
-</div>`
-})
-}
-
-function toggleFilter(){
-filterMenu.classList.toggle("show")
-}
-
-function setCat(c){
-cat=c
-render()
-toggleFilter()
 }
 
 function render(){
@@ -511,7 +482,6 @@ switchTab("movies")
 
 // Initialize and render
 initializeDOMReferences()
-loadCategories()
 render()
 
 // Debounced search input for better performance
