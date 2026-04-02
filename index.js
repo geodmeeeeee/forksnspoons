@@ -4,12 +4,22 @@ let cat="all"
 let searchTimeout
 let isMuted=false
 
+const splashTexts = [
+    "Welcome to Forks N Frogz!",
+    "Everythings fucked ik",
+    "piracy is fun",
+    "try cluster rush",
+    "this websites code sucks",
+    "movies with help from cortlin",
+    "no this isnt hacking",
+]
+
 try{
 isMuted=localStorage.getItem("forksNFrogzMuted")==="true"
 }catch(e){}
 
 // Cache DOM elements for better performance
-let grid,filterMenu,search,frame,player,secret,tooltip,openingPage,mainContent,muteBtn
+let grid,filterMenu,search,frame,player,secret,tooltip,openingPage,mainContent,muteBtn,siteSubtitle
 
 function initializeDOMReferences(){
 grid=document.getElementById("grid")
@@ -23,7 +33,9 @@ userCountDisplay=document.getElementById("userCount")
 tooltip=document.getElementById("tooltip")
 openingPage=document.getElementById("openingPage")
 mainContent=document.getElementById("mainContent")
+siteSubtitle=document.querySelector(".site-subtitle")
 updateMuteButton()
+setRandomSplashText()
     frame?.addEventListener("load",()=>applyMuteStateToWindow(window))
 }
 
@@ -63,6 +75,7 @@ const games=[
 {title:"Bitlife",img:"images/Bitlife.png",url:"games/Bitlife/index.html",cat:"all"},
 {title:"BitPlanes",img:"images/BitPlanes.png",url:"games/BitPlanes/index.html",cat:"all"},
 {title:"Candy Crush",img:"images/Candy Crush.png",url:"games/Candy Crush/index.html",cat:"all"},
+{title:"Cluster Rush",img:"images/Cluster Rush.png",url:"games/Cluster Rush/index.html",cat:"all"},
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"all"},
 {title:"CS GO Clicker",img:"images/CS GO clicker.png",url:"games/CS GO clicker/index.html",cat:"all"},
 {title:"Deltarune",img:"images/Deltarune.png",url:"games/Deltarune/index.html",cat:"all"},
@@ -85,7 +98,6 @@ const games=[
 {title:"Spacebar Clicker",img:"images/Spacebar Clicker.png",url:"games/Spacebar Clicker/index.html",cat:"all"},
 {title:"Tag",img:"images/Tag.png",url:"games/Tag/index.html",cat:"all"},
 {title:"Tanuki Sunset",img:"images/tanuki sunset.jpg",url:"games/Tanuki Sunset/index.html",cat:"all"},
-{title:"Temple Run 2",img:"images/Tanuki.jpg",url:"games/ultrakill/index.html",cat:"all"},
 ]
 
 const movies=[
@@ -238,6 +250,12 @@ if(!muteBtn) return
 muteBtn.textContent=isMuted?"Unmute":"Mute"
 muteBtn.classList.toggle("active",isMuted)
 muteBtn.setAttribute("aria-pressed",String(isMuted))
+}
+
+function setRandomSplashText(){
+if(!siteSubtitle) return
+const randomIndex = Math.floor(Math.random() * splashTexts.length)
+siteSubtitle.textContent = splashTexts[randomIndex]
 }
 
 function syncMediaState(doc){
@@ -454,6 +472,15 @@ player.classList.remove("closing")
 
 function full(){
 frame?.requestFullscreen?.()
+}
+
+function openInBlank(){
+if(frame.src){
+const newWindow = window.open('about:blank', '_blank');
+if(newWindow){
+newWindow.location.href = frame.src;
+}
+}
 }
 
 
