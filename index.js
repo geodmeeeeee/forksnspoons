@@ -38,14 +38,13 @@ mainContent=document.getElementById("mainContent")
 siteSubtitle=document.querySelector(".site-subtitle")
 updateMuteButton()
 setRandomSplashText()
-    frame?.addEventListener("load",()=>applyMuteStateToWindow(window))
+frame?.addEventListener("load",()=>applyMuteStateToWindow(window))
 }
 
 // Navigation functions
 function goToHome(){
 isReturningFromBack=true
 openingPage.style.display="flex"
-openingPage.classList.add("no-animation")
 mainContent.classList.add("hidden")
 player.style.display="none"
 }
@@ -53,7 +52,6 @@ player.style.display="none"
 function goToTab(tabName){
 isReturningFromBack=false
 openingPage.style.display="none"
-openingPage.classList.remove("no-animation")
 mainContent.classList.remove("hidden")
 switchTab(tabName)
 }
@@ -81,6 +79,7 @@ const games=[
 {title:"Bitlife",img:"images/Bitlife.png",url:"games/Bitlife/index.html",cat:"all"},
 {title:"BitPlanes",img:"images/BitPlanes.png",url:"games/BitPlanes/index.html",cat:"all"},
 {title:"Candy Crush",img:"images/Candy Crush.png",url:"games/Candy Crush/index.html",cat:"all"},
+{title:"Celeste",img:"images/Candy Crush.png",url:"games/Celeste/index.html",cat:"all"},
 {title:"Cluster Rush",img:"images/Cluster Rush.png",url:"games/Cluster Rush/index.html",cat:"all"},
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"all"},
 {title:"CS GO Clicker",img:"images/CS GO clicker.png",url:"games/CS GO clicker/index.html",cat:"all"},
