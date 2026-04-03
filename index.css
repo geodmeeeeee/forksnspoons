@@ -37,6 +37,11 @@ opacity: 0;
 animation: pageLoad 1.2s ease-out forwards, bgShift 8s ease-in-out infinite;
 }
 
+.opening-container.no-animation {
+opacity: 1;
+animation: bgShift 8s ease-in-out infinite;
+}
+
 @keyframes bgShift {
 0%, 100% {
 background-position: 0% 50%;

@@ -3,6 +3,7 @@ let previousTab="games"
 let cat="all"
 let searchTimeout
 let isMuted=false
+let isReturningFromBack=false
 
 const splashTexts = [
     "Welcome to Forks N Frogz!",
@@ -12,6 +13,7 @@ const splashTexts = [
     "this websites code sucks",
     "movies with help from cortlin",
     "no this isnt hacking",
+    "FAHHHHHHH",
 ]
 
 try{
@@ -40,13 +42,17 @@ setRandomSplashText()
 
 // Navigation functions
 function goToHome(){
+isReturningFromBack=true
 openingPage.style.display="flex"
+openingPage.classList.add("no-animation")
 mainContent.classList.add("hidden")
 player.style.display="none"
 }
 
 function goToTab(tabName){
+isReturningFromBack=false
 openingPage.style.display="none"
+openingPage.classList.remove("no-animation")
 mainContent.classList.remove("hidden")
 switchTab(tabName)
 }
@@ -77,6 +83,7 @@ const games=[
 {title:"Cluster Rush",img:"images/Cluster Rush.png",url:"games/Cluster Rush/index.html",cat:"all"},
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"all"},
 {title:"CS GO Clicker",img:"images/CS GO clicker.png",url:"games/CS GO clicker/index.html",cat:"all"},
+{title:"CupHead",img:"images/CupHead.png",url:"games/Cuphead/index.html",cat:"all"},
 {title:"Deltarune",img:"images/Deltarune.png",url:"games/Deltarune/index.html",cat:"all"},
 {title:"Doge Miner",img:"images/Doge Miner.png",url:"games/Doge Miner/index.html",cat:"all"},
 {title:"Drift Boss",img:"images/Drift Boss.png",url:"games/Drift Boss/index.html",cat:"all"},
@@ -88,6 +95,7 @@ const games=[
 {title:"High Stakes",img:"images/High Stakes.png",url:"games/High Stakes/index.html",cat:"all"},
 {title:"Icy Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"all"},
 {title:"Iron Lung",img:"images/Iron Lung.png",url:"games/Iron Lung/index.html",cat:"all"},
+{title:"Kour.io",img:"images/Kourio.png",url:"games/Kour.io/index.html",cat:"all"},
 {title:"Minecraft 1.8.8",img:"images/Minecraft 1.8.8.png",url:"games/Minecraft 1.8.8/index.html",cat:"all"},
 {title:"Minecraft 1.12",img:"images/Minecraft 1.12.png",url:"games/Minecraft 1.12/index.html",cat:"all"},
 {title:"Minecraft Beta 1.3",img:"images/Minecraft Beta 1.3.png",url:"games/Minecraft Beta 1.3/index.html",cat:"all"},
@@ -443,15 +451,6 @@ player.classList.remove("closing")
 
 function full(){
 frame?.requestFullscreen?.()
-}
-
-function openInBlank(){
-if(frame.src){
-const newWindow = window.open('about:blank', '_blank');
-if(newWindow){
-newWindow.location.href = frame.src;
-}
-}
 }
 
 
