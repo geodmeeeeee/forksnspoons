@@ -16,6 +16,7 @@ const splashTexts = [
     "FAHHHHHHH",
     "Microsoft Ruined Github",
     "New UI 2027 guys",
+    "New UI 2027 gu",
 ]
 
 try{
