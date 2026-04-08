@@ -111,6 +111,7 @@ const games=[
 {title:"Minecraft Beta 1.3",img:"images/Minecraft Beta 1.3.png",url:"games/Minecraft Beta 1.3/index.html",cat:"all"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"all"},
 {title:"Rainbow Road Polytrack",img:"images/Rainbow Road Polytrack.png",url:"games/Polytrack but mario/index.html",cat:"all"},
+{title:"Retro Bowl",img:"images/Retro Bowl.png",url:"games/Retro Bowl/index.html",cat:"all"},
 {title:"Silk",img:"images/Silk.png",url:"games/Silk/index.html",cat:"all"},
 {title:"Slope Plus",img:"images/Slope Plus.png",url:"games/Slope Plus/index.html",cat:"all"},
 {title:"Smash Karts",img:"images/Smash Karts.jpg",url:"games/Smash Karts/index.html",cat:"all"},
