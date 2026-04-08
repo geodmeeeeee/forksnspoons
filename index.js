@@ -101,6 +101,7 @@ const games=[
 {title:"Gold Digger FRVR",img:"images/Gold Digger FRVR.png",url:"games/Gold Digger FRVR/index.html",cat:"all"},
 {title:"Google Dino",img:"images/Google Dino.png",url:"games/Google Dino/index.html",cat:"all"},
 {title:"Granny",img:"images/Granny.png",url:"games/Granny/index.html",cat:"all"},
+{title:"Gunspin",img:"images/Gunspin.png",url:"games/Gunspin/index.html",cat:"all"},
 {title:"High Stakes",img:"images/High Stakes.png",url:"games/High Stakes/index.html",cat:"all"},
 {title:"Icy Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"all"},
 {title:"Iron Lung",img:"images/Iron Lung.png",url:"games/Iron Lung/index.html",cat:"all"},
