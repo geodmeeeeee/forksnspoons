@@ -74,6 +74,7 @@ document.documentElement.classList.add("macos-optimized")
 
 const games=[    
 {title:"2 Minute Football",img:"images/2 minute football.png",url:"games/2 minute football/index.html",cat:"all"},
+{title:"3D.city",img:"images/2 minute football.png",url:"games/3D.city/index.html",cat:"all"},
 {title:"99Balls",img:"images/99Balls.png",url:"games/99Balls/index.html",cat:"all"},
 {title:"2048",img:"images/2048.png",url:"games/2048/index.html",cat:"all"},
 {title:"A Small World Cup",img:"images/A Small World Cup.png",url:"games/A Small World Cup/index.html",cat:"all"},
@@ -96,8 +97,8 @@ const games=[
 {title:"Drive Mad",img:"images/Drive Mad.png",url:"games/Drive Mad/index.html",cat:"all"},
 {title:"Five Nights At Epsteins",img:"images/Five Nights At Epsteins.png",url:"games/Five Nights At Epsteins/index.html",cat:"all"},
 {title:"Fluidism",img:"images/Fluidism.png",url:"games/Fluidism/index.html",cat:"all"},
-{title:"Geometry Dash",img:"images/Getaway Shootout.png",url:"games/Geometry Dash/index.html",cat:"all"},
-{title:"Getaway Shootout",img:"images/GD.png",url:"games/Getaway Shootout/index.html",cat:"all"},
+{title:"Geometry Dash",img:"images/GD.png",url:"games/Geometry Dash/index.html",cat:"all"},
+{title:"Getaway Shootout",img:"images/Getaway Shootout.png",url:"games/Getaway Shootout/index.html",cat:"all"},
 {title:"Gladihoppers",img:"images/Gladihoppers.png",url:"games/Gladihoppers/index.html",cat:"all"},
 {title:"Gold Digger FRVR",img:"images/Gold Digger FRVR.png",url:"games/Gold Digger FRVR/index.html",cat:"all"},
 {title:"Google Dino",img:"images/Google Dino.png",url:"games/Google Dino/index.html",cat:"all"},
