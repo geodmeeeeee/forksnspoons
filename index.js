@@ -135,6 +135,7 @@ const games=[
 {title:"Riddle School 2",img:"images/Riddle School 2.png",url:"games/Riddle School 2/index.html",cat:"all"},
 {title:"Riddle School 3",img:"images/Riddle School 3.png",url:"games/Riddle School 3/index.html",cat:"all"},
 {title:"Riddle School 4",img:"images/Riddle School 4.png",url:"games/Riddle School 4/index.html",cat:"all"},
+{title:"Riddle School 5",img:"images/Riddle School 5.png",url:"games/Riddle School 5/index.html",cat:"all"},
 {title:"Silk",img:"images/Silk.png",url:"games/Silk/index.html",cat:"all"},
 {title:"Slope Plus",img:"images/Slope Plus.png",url:"games/Slope Plus/index.html",cat:"all"},
 {title:"Smash Karts",img:"images/Smash Karts.jpg",url:"games/Smash Karts/index.html",cat:"all"},
