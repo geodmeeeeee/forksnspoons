@@ -132,6 +132,7 @@ const games=[
 {title:"Minecraft 1.12",img:"images/Minecraft 1.12.png",url:"games/Minecraft 1.12/index.html",cat:"all"},
 {title:"Minecraft Beta 1.3",img:"images/Minecraft Beta 1.3.png",url:"games/Minecraft Beta 1.3/index.html",cat:"all"},
 {title:"Papas Cheeseria",img:"images/Papas Cheeseria.png",url:"games/Papas Cheeseria/index.html",cat:"all"},
+{title:"Papas Pancakeria",img:"images/Papas Pancakeria.png",url:"games/Papas Pancakeria/index.html",cat:"all"},
 {title:"Papas TacoMia",img:"images/Papas TacoMia.png",url:"games/Papas TacoMia/index.html",cat:"all"},
 {title:"Papery Planes",img:"images/Papery Planes.png",url:"games/Papery Planes/index.html",cat:"all"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"all"},
