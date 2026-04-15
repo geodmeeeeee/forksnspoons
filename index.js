@@ -125,6 +125,7 @@ const games=[
 {title:"Icy Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"all"},
 {title:"Iron Lung",img:"images/Iron Lung.png",url:"games/Iron Lung/index.html",cat:"all"},
 {title:"Kour.io",img:"images/Kour.png",url:"games/Kour.io/index.html",cat:"all"},
+{title:"Leader Strike",img:"images/Leader Strike.png",url:"games/Leader Strike/index.html",cat:"all"},
 {title:"Learn To Fly 3",img:"images/Learn To Fly 3.png",url:"games/Learn To Fly 3/index.html",cat:"all"},
 {title:"Minecraft 1.8.8",img:"images/Minecraft 1.8.8.png",url:"games/Minecraft 1.8.8/index.html",cat:"all"},
 {title:"Minecraft 1.12",img:"images/Minecraft 1.12.png",url:"games/Minecraft 1.12/index.html",cat:"all"},
