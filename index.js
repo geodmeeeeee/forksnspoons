@@ -106,6 +106,7 @@ const games=[
 {title:"Doge Miner",img:"images/Doge Miner.png",url:"games/Doge Miner/index.html",cat:"all"},
 {title:"Doom 2",img:"images/Doom 2.png",url:"games/Doom 2/public/index.html",cat:"all"},
 {title:"Draw The Hill",img:"images/Draw The Hill.png",url:"games/Draw The Hill/index.html",cat:"all"},
+{title:"Dreadhead Parkour",img:"images/Dreadhead Parkour.png",url:"games/Dreadhead Parkour/index.html",cat:"all"},
 {title:"Drift Boss",img:"images/Drift Boss.png",url:"games/Drift Boss/index.html",cat:"all"},
 {title:"Drive Mad",img:"images/Drive Mad.png",url:"games/Drive Mad/index.html",cat:"all"},
 {title:"Duck Life",img:"images/Duck Life.png",url:"games/Duck Life/index.html",cat:"all"},
