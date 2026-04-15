@@ -80,6 +80,7 @@ const games=[
 {title:"2048",img:"images/2048.png",url:"games/2048/index.html",cat:"all"},
 {title:"A Small World Cup",img:"images/A Small World Cup.png",url:"games/A Small World Cup/index.html",cat:"all"},
 {title:"Ace Attorney (all Games) (DS)",img:"images/Ace Attorney.png",url:"games/Ace Attorney (all games) (NDS)/index.html",cat:"all"},
+{title:"Achievement Unlocked",img:"images/Achievement Unlocked.png",url:"games/Achievement Unlocked/index.html",cat:"all"},
 {title:"Adventure Capitalist",img:"images/Adventure Capitalist.png",url:"games/Adventure Capitalist/index.html",cat:"all"},
 {title:"Agar.io Lite",img:"images/Agar.io Lite.png",url:"games/Agar.io Lite/index.html",cat:"all"},
 {title:"Bad Ice Cream",img:"images/Bad Ice Cream.png",url:"games/Bad Ice Cream/index.html",cat:"all"},
