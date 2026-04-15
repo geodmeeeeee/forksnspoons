@@ -141,6 +141,7 @@ const games=[
 {title:"Riddle School 5",img:"images/Riddle School 5.png",url:"games/Riddle School 5/index.html",cat:"all"},
 {title:"Silk",img:"images/Silk.png",url:"games/Silk/index.html",cat:"all"},
 {title:"Slope Plus",img:"images/Slope Plus.png",url:"games/Slope Plus/index.html",cat:"all"},
+{title:"Slow Roads",img:"images/Slow Roads.png",url:"games/Slow Roads/index.html",cat:"all"},
 {title:"Smash Karts",img:"images/Smash Karts.jpg",url:"games/Smash Karts/index.html",cat:"all"},
 {title:"Spacebar Clicker",img:"images/Spacebar Clicker.png",url:"games/Spacebar Clicker/index.html",cat:"all"},
 {title:"Stickman Hook",img:"images/Stickman Hook.png",url:"games/Stickman Hook/index.html",cat:"all"},
