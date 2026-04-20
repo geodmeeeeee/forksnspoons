@@ -126,6 +126,7 @@ const games=[
 {title:"Gold Digger FRVR",img:"images/Gold Digger FRVR.png",url:"games/Gold Digger FRVR/index.html",cat:"all"},
 {title:"Google Dino",img:"images/Google Dino.png",url:"games/Google Dino/index.html",cat:"all"},
 {title:"Granny",img:"images/Granny.png",url:"games/Granny/index.html",cat:"all"},
+{title:"Granny 2",img:"images/Granny 2.png",url:"games/Granny 2/index.html",cat:"all"},
 {title:"Gunfest",img:"images/Gunfest.png",url:"games/Gunfest/index.html",cat:"all"},
 {title:"Gunspin",img:"images/Gunspin.png",url:"games/Gunspin/index.html",cat:"all"},
 {title:"Henry Stickman Breaking The Bank",img:"images/Breaking The Bank.png",url:"games/Henry Stickman Breaking The Bank/index.html",cat:"all"},
