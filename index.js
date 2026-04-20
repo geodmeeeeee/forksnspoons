@@ -183,7 +183,8 @@ const games=[
 const movies=[
 {title:"Bee Movie",img:"images/Bee.png",url:"movies/Bee Movie/index.html",cat:"all"},
 {title:"Shrek",img:"images/Shrek.png",url:"movies/shrek/index.html",cat:"all"},
-{title:"The Lego Ninjago Movie",img:"images/ninjago.png",url:"movies/Ninjago movie/index.html",cat:"all"},
+{title:"Spiderman Into The Spiderverse",img:"images/Spider Man Into The Spider Verse.png",url:"movies/Spider Man Into The Spider Verse/index.html",cat:"all"},
+{title:"The Lego Ninjago Movie",img:"images/ninjago.png",url:"movies/The Lego Ninjago movie/index.html",cat:"all"},
 
 ]
 
