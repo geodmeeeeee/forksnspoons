@@ -89,6 +89,7 @@ const games=[
 {title:"Adventure Capitalist",img:"images/Adventure Capitalist.png",url:"games/Adventure Capitalist/index.html",cat:"all"},
 {title:"Agar.io Lite",img:"images/Agar.io Lite.png",url:"games/Agar.io Lite/index.html",cat:"all"},
 {title:"Bad Ice Cream",img:"images/Bad Ice Cream.png",url:"games/Bad Ice Cream/index.html",cat:"all"},
+{title:"Bad Ice Cream 2",img:"images/Bad Ice Cream 2.png",url:"games/Bad Ice Cream 2/index.html",cat:"all"},
 {title:"Basket Random",img:"images/Basket Random.png",url:"games/Basket Random/index.html",cat:"all"},
 {title:"BasketBall Stars",img:"images/Basketball Stars.png",url:"games/BasketBall Stars/index.html",cat:"all"},
 {title:"Bee Swarm Simulator",img:"images/Bee Swarm Simulator.png",url:"games/Bee Swarm Simulator/index.html",cat:"all"},
