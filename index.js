@@ -18,10 +18,11 @@ const splashTexts = [
     "New UI 2027 guys",
     "Use The Comment Tab",
     "All My Homies Hate Flash",
-    "Did you know theres 16 of these things",
+    "Did you know theres 17 of these things",
     "Koas a Chud",
     "Logan Boyers a simp",
     "olivers a Nerd",
+    "BirdBrain",
 ]
 
 try{
@@ -149,6 +150,7 @@ const games=[
 {title:"My Dream Hospital",img:"images/My Dream Hospital.png",url:"games/My Dream Hospital/index.html",cat:"all"},
 {title:"Papas Cheeseria",img:"images/Papas Cheeseria.png",url:"games/Papas Cheeseria/index.html",cat:"all"},
 {title:"Papas Pancakeria",img:"images/Papas Pancakeria.png",url:"games/Papas Pancakeria/index.html",cat:"all"},
+{title:"Papas Scooperia",img:"images/Papas Scooperia.png",url:"games/Papas Scooperia/index.html",cat:"all"},
 {title:"Papas TacoMia",img:"images/Papas TacoMia.png",url:"games/Papas TacoMia/index.html",cat:"all"},
 {title:"Papery Planes",img:"images/Papery Planes.png",url:"games/Papery Planes/index.html",cat:"all"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"all"},
