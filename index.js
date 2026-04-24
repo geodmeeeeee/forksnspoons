@@ -6,7 +6,25 @@ let isMuted=false
 let isReturningFromBack=false
 
 const splashTexts = [
-    "Do This Survey For Me Please https://forms.gle/N61wBHRZVWjF7gt29 ",
+    "Welcome to Forks N Frogz!",
+    "Everythings fucked ik",
+    "piracy is fun",
+    "try cluster rush",
+    "this websites code sucks",
+    "movies with help from cortlin",
+    "no this isnt hacking",
+    "FAHHHHHHH",
+    "Microsoft Ruined Github",
+    "New UI 2027 guys",
+    "Use The Comment Tab",
+    "All My Homies Hate Flash",
+    "Did you know theres 18 of these things",
+    "Koas a Chud",
+    "Logan Boyers a simp",
+    "olivers a Nerd",
+    "BirdBrain",
+    "Stupid Github Codespaces",
+    "Unblockable",
  
 ]
 
