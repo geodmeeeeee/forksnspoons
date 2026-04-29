@@ -179,6 +179,7 @@ const games=[
 {title:"The Binding Of Issac",img:"images/The Binding Of Issac.png",url:"games/The Binding Of Issac/index.html",cat:"all"},
 {title:"Time Shooter 2",img:"images/Time Shooter 2.jpg",url:"games/Time Shooter 2/index.html",cat:"all"},
 {title:"Time Shooter 3",img:"images/Time Shooter 3.png",url:"games/Time Shooter 3/index.html",cat:"all"},
+{title:"Tiny Fishing",img:"images/Tiny Fishing.png",url:"games/Tiny Fishing/index.html",cat:"all"},
 {title:"Ultrakill",img:"images/Ultrakill.png",url:"games/ultrakill/index.html",cat:"all"},
 {title:"Vex 3",img:"images/Vex 3.png",url:"games/Vex 3/index.html",cat:"all"},
 {title:"Vex 6",img:"images/Vex 6.png",url:"games/Vex 6/index.html",cat:"all"},
