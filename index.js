@@ -141,6 +141,7 @@ const games=[
 {title:"High Stakes",img:"images/High Stakes.png",url:"games/High Stakes/index.html",cat:"all"},
 {title:"Icy Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"all"},
 {title:"Iron Lung",img:"images/Iron Lung.png",url:"games/Iron Lung/index.html",cat:"all"},
+{title:"Johnny Upgrade",img:"images/Johnny Upgrade.png",url:"games/Johnny Upgrade/index.html",cat:"all"},
 {title:"Kour.io",img:"images/Kour.png",url:"games/Kour.io/index.html",cat:"all"},
 {title:"Leader Strike",img:"images/Leader Strike.png",url:"games/Leader Strike/index.html",cat:"all"},
 {title:"Learn To Fly 2",img:"images/Learn To Fly 2.png",url:"games/Learn To Fly 2/index.html",cat:"all"},
