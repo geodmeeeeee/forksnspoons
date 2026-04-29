@@ -151,6 +151,7 @@ const games=[
 {title:"Moto X3M",img:"images/Moto X3M.png",url:"games/Moto X3M/index.html",cat:"all"},
 {title:"Moto X3M Spookyland",img:"images/Moto X3M Spookyland.png",url:"games/Moto X3M Spookyland/index.html",cat:"all"},
 {title:"My Dream Hospital",img:"images/My Dream Hospital.png",url:"games/My Dream Hospital/index.html",cat:"all"},
+{title:"OvO",img:"images/OvO.png",url:"games/OvO/index.html",cat:"all"},
 {title:"Papas Bakeria",img:"images/Papas Bakeria.png",url:"games/Papas Bakeria/index.html",cat:"all"},
 {title:"Papas Cheeseria",img:"images/Papas Cheeseria.png",url:"games/Papas Cheeseria/index.html",cat:"all"},
 {title:"Papas Pancakeria",img:"images/Papas Pancakeria.png",url:"games/Papas Pancakeria/index.html",cat:"all"},
