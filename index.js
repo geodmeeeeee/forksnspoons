@@ -192,6 +192,7 @@ const games=[
 {title:"Worlds Hardest Game",img:"images/Worlds Hardest Game.png",url:"games/Worlds Hardest Game/index.html",cat:"all"},
 {title:"Worlds Hardest Game 2",img:"images/Worlds Hardest Game 2.png",url:"games/Worlds Hardest Game 2/index.html",cat:"all"},
 {title:"Worlds Hardest Game 3",img:"images/Worlds Hardest Game 3.png",url:"games/Worlds Hardest Game 3/index.html",cat:"all"},
+{title:"xx142-b2.exe",img:"images/xx142-b2.exe.png",url:"games/xx142-b2.exe/index.html",cat:"all"},
 ]
 
 const movies=[
