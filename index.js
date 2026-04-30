@@ -112,7 +112,6 @@ const games=[
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"all"},
 {title:"Crazy Cattle 3D",img:"images/Crazy Cattle 3D.png",url:"games/Crazy Cattle 3D/index.html",cat:"all"},
 {title:"CS GO Clicker",img:"images/CS GO clicker.png",url:"games/CS GO clicker/index.html",cat:"all"},
-{title:"CupHead",img:"images/CupHead.png",url:"games/Cuphead/index.html",cat:"all"},
 {title:"Doge Miner",img:"images/Doge Miner.png",url:"games/Doge Miner/index.html",cat:"all"},
 {title:"Doom 2",img:"images/Doom 2.png",url:"games/Doom 2/public/index.html",cat:"all"},
 {title:"Draw The Hill",img:"images/Draw The Hill.png",url:"games/Draw The Hill/index.html",cat:"all"},
