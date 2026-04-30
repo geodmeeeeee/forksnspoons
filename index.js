@@ -7,7 +7,6 @@ let isReturningFromBack=false
 
 const splashTexts = [
     "Welcome to Forks N Frogz!",
-    "Everythings fucked ik",
     "piracy is fun",
     "try cluster rush",
     "this websites code sucks",
@@ -15,7 +14,6 @@ const splashTexts = [
     "no this isnt hacking",
     "FAHHHHHHH",
     "Microsoft Ruined Github",
-    "New UI 2027 guys",
     "Use The Comment Tab",
     "All My Homies Hate Flash",
     "Did you know theres 18 of these things",
@@ -25,6 +23,7 @@ const splashTexts = [
     "BirdBrain",
     "Stupid Github Codespaces",
     "Unblockable",
+    "jay the seventh grader is the goat",
  
 ]
 
