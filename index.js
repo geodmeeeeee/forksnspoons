@@ -132,6 +132,7 @@ const games=[
 {title:"Gladihoppers",img:"images/Gladihoppers.png",url:"games/Gladihoppers/index.html",cat:"all"},
 {title:"Gold Digger FRVR",img:"images/Gold Digger FRVR.png",url:"games/Gold Digger FRVR/index.html",cat:"all"},
 {title:"Google Dino",img:"images/Google Dino.png",url:"games/Google Dino/index.html",cat:"all"},
+{title:"Google Doodle Champion Island",img:"images/Google Doodle Champion Island.png",url:"games/Google Doodle Champion Island/index.html",cat:"all"},
 {title:"Granny",img:"images/Granny.png",url:"games/Granny/index.html",cat:"all"},
 {title:"Granny 2",img:"images/Granny 2.png",url:"games/Granny 2/index.html",cat:"all"},
 {title:"Gunfest",img:"images/Gunfest.png",url:"games/Gunfest/index.html",cat:"all"},
