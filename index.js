@@ -160,6 +160,7 @@ const games=[
 {title:"Moving Truck Bounty",img:"images/Moving Truck Bounty.png",url:"games/Moving Truck Bounty/index.html",cat:"all"},
 {title:"My Dream Hospital",img:"images/My Dream Hospital.png",url:"games/My Dream Hospital/index.html",cat:"all"},
 {title:"OvO",img:"images/OvO.png",url:"games/OvO/index.html",cat:"all"},
+{title:"OvO 2",img:"images/OvO 2.png",url:"games/OvO 2/index.html",cat:"all"},
 {title:"Papas Bakeria",img:"images/Papas Bakeria.png",url:"games/Papas Bakeria/index.html",cat:"all"},
 {title:"Papas Burgeria",img:"images/Papas Burgeria.png",url:"games/Papas Burgeria/index.html",cat:"all"},
 {title:"Papas Cheeseria",img:"images/Papas Cheeseria.png",url:"games/Papas Cheeseria/index.html",cat:"all"},
