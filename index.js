@@ -156,6 +156,7 @@ const games=[
 {title:"Moto X3M 2",img:"images/Moto X3M 2.png",url:"games/Moto X3M 2/index.html",cat:"all"},
 {title:"Moto X3M Pool Party",img:"images/Moto X3M Pool Party.png",url:"games/Moto X3M Pool Party/index.html",cat:"all"},
 {title:"Moto X3M Spookyland",img:"images/Moto X3M Spookyland.png",url:"games/Moto X3M Spookyland/index.html",cat:"all"},
+{title:"Moving Truck Bounty",img:"images/Moving Truck Bounty.png",url:"games/Moving Truck Bounty/index.html",cat:"all"},
 {title:"My Dream Hospital",img:"images/My Dream Hospital.png",url:"games/My Dream Hospital/index.html",cat:"all"},
 {title:"OvO",img:"images/OvO.png",url:"games/OvO/index.html",cat:"all"},
 {title:"Papas Bakeria",img:"images/Papas Bakeria.png",url:"games/Papas Bakeria/index.html",cat:"all"},
