@@ -167,6 +167,7 @@ const games=[
 {title:"Papas Cupcakeria",img:"images/Papas Cupcakeria.png",url:"games/Papas Cupcakeria/index.html",cat:"all"},
 {title:"Papas Pancakeria",img:"images/Papas Pancakeria.png",url:"games/Papas Pancakeria/index.html",cat:"all"},
 {title:"Papas Scooperia",img:"images/Papas Scooperia.png",url:"games/Papas Scooperia/index.html",cat:"all"},
+{title:"Papas Sushiria",img:"images/Papas Sushiria.png",url:"games/Papas Sushiria/index.html",cat:"all"},
 {title:"Papas TacoMia",img:"images/Papas TacoMia.png",url:"games/Papas TacoMia/index.html",cat:"all"},
 {title:"Papery Planes",img:"images/Papery Planes.png",url:"games/Papery Planes/index.html",cat:"all"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"all"},
