@@ -181,6 +181,7 @@ const games=[
 {title:"Riddle School 4",img:"images/Riddle School 4.png",url:"games/Riddle School 4/index.html",cat:"all"},
 {title:"Riddle School 5",img:"images/Riddle School 5.png",url:"games/Riddle School 5/index.html",cat:"all"},
 {title:"Run 2",img:"images/Run 2.png",url:"games/Run 2/index.html",cat:"all"},
+{title:"Short Ride",img:"images/Short Ride.png",url:"games/Short Ride/index.html",cat:"all"},
 {title:"Silk",img:"images/Silk.png",url:"games/Silk/index.html",cat:"all"},
 {title:"Slope Plus",img:"images/Slope Plus.png",url:"games/Slope Plus/index.html",cat:"all"},
 {title:"Slow Roads",img:"images/Slow Roads.png",url:"games/Slow Roads/index.html",cat:"all"},
