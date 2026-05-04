@@ -2,7 +2,6 @@
 <html>
 <head>
 
-
 <!-- Google tag (gtag.js) -->
 <script async src="G-P5GL39LYY5"></script>
 <script>
@@ -23,45 +22,40 @@
 
 <body>
 
-<div id="openingPage" class="opening-container">
-  <div class="opening-header">
-    <h1 class="site-title">Forks N Frogz</h1>
-    <p class="site-subtitle">everythings fucked ik</p>
+<div class="navbar-container">
+  <div class="navbar">
+    <h1 class="navbar-title">Forks N Frogz</h1>
+    <div class="tab-container">
+      <button class="tab-btn active" onclick="switchTab('games')" data-tab="games">
+        <span class="tab-icon">🎮</span>
+        <span class="tab-label">Games</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('movies')" data-tab="movies">
+        <span class="tab-icon">🎬</span>
+        <span class="tab-label">Movies</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('extras')" data-tab="extras">
+        <span class="tab-icon">⭐</span>
+        <span class="tab-label">Extras</span>
+      </button>
+      <div class="tab-indicator"></div>
+    </div>
+    <input class="search" id="search" placeholder="Search...">
   </div>
   
-  <div class="opening-content">
-    <p class="welcome-text"></p>
-    
-    <div class="nav-grid">
-      <div class="nav-card" onclick="goToTab('games')">
-        <div class="nav-icon">🎮</div>
-        <h2>Games</h2>
-        <p>Browse my actually decently sized collection of games :)</p>
-      </div>
-      
-      <div class="nav-card" onclick="goToTab('movies')">
-        <div class="nav-icon">🎬</div>
-        <h2>Movies</h2>
-        <p>Watch One Movie Since Im the goat</p>
-      </div>
-
-      
-      <div class="nav-card" onclick="goToTab('extras')">
-        <div class="nav-icon">⭐</div>
-        <h2>Extras</h2>
-        <p>my stupid ah dont know what to put here :(</p>
-      </div>
+  <div class="category-bar" id="categoryBar" style="display:none;">
+    <div class="category-container">
+      <button class="category-btn" onclick="switchCategory('all')">All</button>
+      <button class="category-btn" onclick="switchCategory('flash')">Flash</button>
+      <button class="category-btn" onclick="switchCategory('html5')">HTML5</button>
     </div>
   </div>
 </div>
 
-<div id="mainContent" class="main-content hidden">
-  <div class="topbar">
-    <button class="back-btn" onclick="goToHome()">← Home</button>
-    <input class="search" id="search" placeholder="Search...">
+<div class="main-container">
+  <div class="content-wrapper">
+    <div class="grid" id="grid"></div>
   </div>
-
-  <div class="grid" id="grid"></div>
   <div class="credits" id="credits">Credits to Cortlin Ferraiuolo</div>
 </div>
 

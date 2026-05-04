@@ -3,7 +3,7 @@ let previousTab="games"
 let cat="all"
 let searchTimeout
 let isMuted=false
-let isReturningFromBack=false
+let isSwitchingTab=false
 
 const splashTexts = [
     "Welcome to Forks N Frogz!",
@@ -24,7 +24,6 @@ const splashTexts = [
     "Stupid Github Codespaces",
     "Unblockable",
     "jay the seventh grader is the goat",
- 
 ]
 
 try{
@@ -32,7 +31,7 @@ isMuted=localStorage.getItem("forksNFrogzMuted")==="true"
 }catch(e){}
 
 // Cache DOM elements for better performance
-let grid,search,frame,player,secret,tooltip,openingPage,mainContent,muteBtn,siteSubtitle
+let grid,search,frame,player,secret,tooltip,muteBtn
 
 function initializeDOMReferences(){
 grid=document.getElementById("grid")
@@ -41,29 +40,9 @@ frame=document.getElementById("frame")
 player=document.getElementById("player")
 muteBtn=document.getElementById("muteBtn")
 secret=document.getElementById("secret")
-userCountDisplay=document.getElementById("userCount")
 tooltip=document.getElementById("tooltip")
-openingPage=document.getElementById("openingPage")
-mainContent=document.getElementById("mainContent")
-siteSubtitle=document.querySelector(".site-subtitle")
 updateMuteButton()
-setRandomSplashText()
 frame?.addEventListener("load",()=>applyMuteStateToWindow(window))
-}
-
-// Navigation functions
-function goToHome(){
-isReturningFromBack=true
-openingPage.style.display="flex"
-mainContent.classList.add("hidden")
-player.style.display="none"
-}
-
-function goToTab(tabName){
-isReturningFromBack=false
-openingPage.style.display="none"
-mainContent.classList.remove("hidden")
-switchTab(tabName)
 }
 
 const gameCategories=["all","flash","html5",""]
@@ -218,20 +197,82 @@ const movies=[
 {title:"Shrek",img:"images/Shrek.png",url:"movies/shrek/index.html",cat:"all"},
 {title:"Spiderman Into The Spiderverse",img:"images/Spider Man Into The Spider Verse.png",url:"movies/Spider Man Into The Spider Verse/index.html",cat:"all"},
 {title:"The Lego Ninjago Movie",img:"images/ninjago.png",url:"movies/The Lego Ninjago movie/index.html",cat:"all"},
-
 ]
 
-function switchTab(t){
-previousTab=tab
-tab=t
-cat="all"
-const credits=document.getElementById("credits")
-if(t==="movies"){
-credits.classList.add("show")
-}else{
-credits.classList.remove("show")
+function updateTabIndicator(){
+const activeBtn = document.querySelector('.tab-btn.active')
+const indicator = document.querySelector('.tab-indicator')
+if(activeBtn && indicator){
+const rect = activeBtn.getBoundingClientRect()
+const container = document.querySelector('.tab-container')
+const containerRect = container.getBoundingClientRect()
+indicator.style.left = (rect.left - containerRect.left) + 'px'
+indicator.style.width = rect.width + 'px'
+}
 }
 
+function updateTabUI(t){
+// Update active button
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.classList.toggle('active', btn.dataset.tab === t)
+})
+
+// Show/hide category bar
+const categoryBar = document.getElementById('categoryBar')
+if(categoryBar){
+  categoryBar.style.display = t === 'games' ? 'block' : 'none'
+}
+
+// Reset category buttons
+document.querySelectorAll('.category-btn').forEach(btn => {
+  btn.classList.toggle('active', btn.textContent.toLowerCase() === 'all')
+})
+
+requestAnimationFrame(() => updateTabIndicator())
+}
+
+function switchTab(t){
+if(tab === t || isSwitchingTab) return
+isSwitchingTab = true
+previousTab = tab
+
+updateTabUI(t)
+
+const wrapper = document.querySelector('.content-wrapper')
+if(!wrapper){
+  tab = t
+  cat = 'all'
+  render()
+  isSwitchingTab = false
+  return
+}
+
+wrapper.classList.remove('slide-in')
+wrapper.classList.add('slide-out')
+
+wrapper.addEventListener('animationend', function handleSlideOut(){
+  wrapper.removeEventListener('animationend', handleSlideOut)
+  wrapper.classList.remove('slide-out')
+
+  tab = t
+  cat = 'all'
+  render()
+
+  wrapper.classList.add('slide-in')
+  wrapper.addEventListener('animationend', function handleSlideIn(){
+    wrapper.removeEventListener('animationend', handleSlideIn)
+    wrapper.classList.remove('slide-in')
+    isSwitchingTab = false
+  })
+})
+}
+
+function switchCategory(c){
+cat = c
+// Update active category button
+document.querySelectorAll('.category-btn').forEach(btn => {
+btn.classList.toggle('active', btn.textContent.toLowerCase() === c)
+})
 render()
 }
 
@@ -239,15 +280,23 @@ function render(){
 if(tab==="extras"){
 grid.innerHTML=`
 <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
-<h2 style="color: var(--accent); margin-top: 0;">Coming Soon!</h2>
-<p style="color: var(--text); font-size: 1.1rem;">chances i add anything here are near zero</p>
-<p style="color: #a0aec0;">Check back soon tho i might change my mind</p>
+<h2 style="color: var(--accent); margin-top: 0;">Extras</h2>
+<div style="max-width: 500px; margin: 40px auto;">
+  <div style="background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid rgba(124, 92, 255, 0.2);">
+    <h3 style="color: var(--accent); margin-top: 0;">Share Your Feedback</h3>
+    <a href="https://docs.google.com/document/d/CHANGE_ME/edit" target="_blank" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+      Open Google Doc
+    </a>
+    <p style="color: #a0aec0; font-size: 0.9rem; margin-top: 20px;">Edit the link with your Google Doc URL</p>
+  </div>
+</div>
 </div>
 `
+animateGridSlide()
 return
 }
 
-let list=tab=="games"?games:movies
+let list=tab==="games"?games:movies
 let s=search.value.toLowerCase()
 grid.innerHTML=""
 const filtered=list.filter(x=>
@@ -260,7 +309,7 @@ const fragment=document.createDocumentFragment()
 let cardIndex=0
 filtered.forEach(x=>{
 const card=document.createElement("div")
-card.className="card"
+card.className="grid-item"
 card.style.setProperty('--card-index', cardIndex++)
 card.onclick=()=>openGame(x.url)
 
@@ -283,6 +332,7 @@ grid.appendChild(fragment)
 
 // Initialize lazy loading for images
 initializeLazyLoading()
+animateGridSlide()
 }
 
 // Lazy Loading with Intersection Observer
@@ -293,13 +343,8 @@ function loadImageWithTimeout(img, src, title) {
 function handleImageTimeout(img, title) {
     const card = img.parentElement;
     if (!card) return;
-
-    // remove the broken/in-progress image
     img.remove();
-
-    // if we've already inserted a text fallback, don't duplicate
     if (card.querySelector('.no-img')) return;
-
     const text = document.createElement('div');
     text.className = 'no-img';
     text.textContent = title;
@@ -313,7 +358,6 @@ function initializeLazyLoading(){
                 if(entry.isIntersecting){
                     const img=entry.target
                     if(img.dataset.src){
-                        // use our new loader with timeout
                         loadImageWithTimeout(img, img.dataset.src, img.alt);
                         img.removeAttribute('data-src')
                         observer.unobserve(img)
@@ -321,11 +365,9 @@ function initializeLazyLoading(){
                 }
             })
         })
-
         const lazyImages=grid.querySelectorAll('img[data-src]')
         lazyImages.forEach(img=>imageObserver.observe(img))
     }else{
-        // Fallback for browsers without IntersectionObserver
         const lazyImages=grid.querySelectorAll('img[data-src]')
         lazyImages.forEach(img=>{
             loadImageWithTimeout(img, img.dataset.src, img.alt);
@@ -334,17 +376,18 @@ function initializeLazyLoading(){
     }
 }
 
-function updateMuteButton(){
-if(!muteBtn) return
-muteBtn.textContent=isMuted?"Unmute":"Mute"
-muteBtn.classList.toggle("active",isMuted)
-muteBtn.setAttribute("aria-pressed",String(isMuted))
+function animateGridSlide(){
+    if(!grid) return
+    grid.classList.remove('slide-in')
+    void grid.offsetWidth
+    grid.classList.add('slide-in')
 }
 
-function setRandomSplashText(){
-if(!siteSubtitle) return
-const randomIndex = Math.floor(Math.random() * splashTexts.length)
-siteSubtitle.textContent = splashTexts[randomIndex]
+function updateMuteButton(){
+if(!muteBtn) return
+muteBtn.textContent=isMuted?"🔇 Unmute":"🔊 Mute"
+muteBtn.classList.toggle("active",isMuted)
+muteBtn.setAttribute("aria-pressed",String(isMuted))
 }
 
 function syncMediaState(doc){
@@ -433,7 +476,6 @@ if(contextTypes.some(ContextType=>value instanceof ContextType)){
 win.__forksAudioContexts.add(value)
 }
 }
-
 try{
 Object.values(win).forEach(value=>{
 addContext(value)
@@ -508,7 +550,6 @@ win.__forksAudioContexts.forEach(setAudioContextMute)
 
 function applyMuteStateToWindow(win){
 if(!win) return
-
 try{
 patchAudioInWindow(win)
 updateLibraryMuteState(win)
@@ -532,6 +573,7 @@ localStorage.setItem("forksNFrogzMuted",String(isMuted))
 }catch(e){}
 updateMuteButton()
 applyMuteStateToWindow(window)
+applyMuteStateToCurrentGame()
 try{
 frame?.focus()
 frame?.contentWindow?.focus()
@@ -540,20 +582,21 @@ frame?.contentWindow?.focus()
 
 function openGame(u){
 player.style.display="flex"
+document.body.classList.add("player-opened")
 player.classList.remove("closing")
 frame.src=u
-// Trigger animation on next frame to ensure display:flex is applied first
 requestAnimationFrame(()=>{
 player.classList.add("opening")
 })
+setTimeout(applyMuteStateToCurrentGame, 500)
 }
 
 function closeGame(){
 player.classList.remove("opening")
 player.classList.add("closing")
-// Wait for animation to complete before hiding
 setTimeout(()=>{
 player.style.display="none"
+document.body.classList.remove("player-opened")
 frame.src=""
 player.classList.remove("closing")
 },300)
@@ -563,35 +606,32 @@ function full(){
 frame?.requestFullscreen?.()
 }
 
-
-
 // Toggle secret menu with F6 and add Mac keyboard shortcuts
 document.addEventListener("keydown",e=>{
 if(e.key==="F6"){
 e.preventDefault()
 if(secret) secret.style.display=secret.style.display==="block"?"none":"block"
 }
-// Mac-specific keyboard shortcuts
 if(e.metaKey){
 if(e.key==="f"||e.key==="F"){
-// Cmd+F - Focus search
 e.preventDefault()
 if(search) search.focus()
 }else if(e.key==="1"){
-// Cmd+1 - Switch to games
 e.preventDefault()
 switchTab("games")
 }else if(e.key==="2"){
-// Cmd+2 - Switch to movies
 e.preventDefault()
 switchTab("movies")
 }
 }
 })
 
+// Handle window resize for tab indicator
+window.addEventListener('resize', updateTabIndicator)
+
 // Initialize and render
 initializeDOMReferences()
-render()
+switchTab("games")
 
 // Debounced search input for better performance
 document.getElementById('search').addEventListener('input',()=>{
