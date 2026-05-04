@@ -1,30 +1,8 @@
 let tab="games"
-let previousTab="games"
 let cat="all"
 let searchTimeout
 let isMuted=false
 let isSwitchingTab=false
-
-const splashTexts = [
-    "Welcome to Forks N Frogz!",
-    "piracy is fun",
-    "try cluster rush",
-    "this websites code sucks",
-    "movies with help from cortlin",
-    "no this isnt hacking",
-    "FAHHHHHHH",
-    "Microsoft Ruined Github",
-    "Use The Comment Tab",
-    "All My Homies Hate Flash",
-    "Did you know theres 18 of these things",
-    "Koas a Chud",
-    "Logan Boyers a simp",
-    "olivers a Nerd",
-    "BirdBrain",
-    "Stupid Github Codespaces",
-    "Unblockable",
-    "jay the seventh grader is the goat",
-]
 
 try{
 isMuted=localStorage.getItem("forksNFrogzMuted")==="true"
@@ -44,9 +22,6 @@ tooltip=document.getElementById("tooltip")
 updateMuteButton()
 frame?.addEventListener("load",()=>applyMuteStateToWindow(window))
 }
-
-const gameCategories=["all","flash","html5",""]
-const movieCategories=["all","comedy","horror","sci-fi"]
 
 // MacBook-specific optimizations
 const isMacBook=/Mac|iPhone|iPad|iPod/.test(navigator.platform)||/Mac|iPhone|iPad|iPod/.test(navigator.userAgentData?.platform)
@@ -234,7 +209,6 @@ requestAnimationFrame(() => updateTabIndicator())
 function switchTab(t){
 if(tab === t || isSwitchingTab) return
 isSwitchingTab = true
-previousTab = tab
 
 updateTabUI(t)
 
@@ -284,15 +258,14 @@ grid.innerHTML=`
 <div style="max-width: 500px; margin: 40px auto;">
   <div style="background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid rgba(124, 92, 255, 0.2);">
     <h3 style="color: var(--accent); margin-top: 0;">Share Your Feedback</h3>
-    <a href="https://docs.google.com/document/d/CHANGE_ME/edit" target="_blank" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+    <a href="https://docs.google.com/document/d/1mFn2eMQwayVZQMeotMlZYchbJbCDto_UTTi0I1FvcwM/edit?usp=sharing" target="_blank" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
       Open Google Doc
     </a>
-    <p style="color: #a0aec0; font-size: 0.9rem; margin-top: 20px;">Edit the link with your Google Doc URL</p>
+    <p style="color: #a0aec0; font-size: 0.9rem; margin-top: 20px;">Google Doc YAY</p>
   </div>
 </div>
 </div>
 `
-animateGridSlide()
 return
 }
 
@@ -332,7 +305,6 @@ grid.appendChild(fragment)
 
 // Initialize lazy loading for images
 initializeLazyLoading()
-animateGridSlide()
 }
 
 // Lazy Loading with Intersection Observer
@@ -374,13 +346,6 @@ function initializeLazyLoading(){
             img.removeAttribute('data-src')
         })
     }
-}
-
-function animateGridSlide(){
-    if(!grid) return
-    grid.classList.remove('slide-in')
-    void grid.offsetWidth
-    grid.classList.add('slide-in')
 }
 
 function updateMuteButton(){
@@ -631,10 +596,15 @@ window.addEventListener('resize', updateTabIndicator)
 
 // Initialize and render
 initializeDOMReferences()
-switchTab("games")
+updateTabUI("games")
+render()
+updateTabIndicator()
 
 // Debounced search input for better performance
-document.getElementById('search').addEventListener('input',()=>{
-clearTimeout(searchTimeout)
-searchTimeout=setTimeout(()=>render(),250)
-})
+const searchInput = document.getElementById('search')
+if (searchInput) {
+  searchInput.addEventListener('input',()=>{
+    clearTimeout(searchTimeout)
+    searchTimeout=setTimeout(()=>render(),250)
+  })
+}
