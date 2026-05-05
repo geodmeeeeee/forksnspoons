@@ -105,6 +105,7 @@ const games=[
 {title:"Jumping Shell",img:"images/Jumping Shell.png",url:"games/Jumping Shell/index.html",cat:"all"},
 {title:"Kour.io",img:"images/Kour.png",url:"games/Kour.io/index.html",cat:"all"},
 {title:"Leader Strike",img:"images/Leader Strike.png",url:"games/Leader Strike/index.html",cat:"all"},
+{title:"Learn To Fly",img:"images/Learn To Fly.png",url:"games/Learn To Fly/index.html",cat:"all"},
 {title:"Learn To Fly 2",img:"images/Learn To Fly 2.png",url:"games/Learn To Fly 2/index.html",cat:"all"},
 {title:"Learn To Fly 3",img:"images/Learn To Fly 3.png",url:"games/Learn To Fly 3/index.html",cat:"all"},
 {title:"Minecraft 1.8.8",img:"images/Minecraft 1.8.8.png",url:"games/Minecraft 1.8.8/index.html",cat:"all"},
