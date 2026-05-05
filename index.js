@@ -125,6 +125,7 @@ const games=[
 {title:"Papas Scooperia",img:"images/Papas Scooperia.png",url:"games/Papas Scooperia/index.html",cat:"all"},
 {title:"Papas Sushiria",img:"images/Papas Sushiria.png",url:"games/Papas Sushiria/index.html",cat:"all"},
 {title:"Papas TacoMia",img:"images/Papas TacoMia.png",url:"games/Papas TacoMia/index.html",cat:"all"},
+{title:"Papas Wingeria",img:"images/Papas Wingeria.png",url:"games/Papas Wingeria/index.html",cat:"all"},
 {title:"Papery Planes",img:"images/Papery Planes.png",url:"games/Papery Planes/index.html",cat:"all"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"all"},
 {title:"Rainbow Road Polytrack",img:"images/Rainbow Road Polytrack.png",url:"games/Polytrack but mario/index.html",cat:"all"},
