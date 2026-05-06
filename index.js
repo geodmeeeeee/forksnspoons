@@ -65,7 +65,6 @@ const games=[
 {title:"Boxing Random",img:"images/Boxing Random.png",url:"games/Boxing Random/index.html",cat:"all"},
 {title:"Candy Crush",img:"images/Candy Crush.png",url:"games/Candy Crush/index.html",cat:"all"},
 {title:"Cluster Rush",img:"images/Cluster Rush.png",url:"games/Cluster Rush/index.html",cat:"all"},
-{title:"Cookie Clicker",img:"images/Cookie Clicker.png",url:"games/Cookie Clicker/index.html",cat:"all"},
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"all"},
 {title:"Crazy Cattle 3D",img:"images/Crazy Cattle 3D.png",url:"games/Crazy Cattle 3D/index.html",cat:"all"},
 {title:"CS GO Clicker",img:"images/CS GO clicker.png",url:"games/CS GO clicker/index.html",cat:"all"},
