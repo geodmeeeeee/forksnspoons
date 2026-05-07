@@ -99,6 +99,7 @@ const games=[
 {title:"High Stakes",img:"images/High Stakes.png",url:"games/High Stakes/index.html",cat:"all"},
 {title:"Hobo 1",img:"images/Hobo 1.png",url:"games/Hobo 1/index.html",cat:"all"},
 {title:"Hobo 2 Prison Brawl",img:"images/Hobo 2.png",url:"games/Hobo 2 Prison Brawl/index.html",cat:"all"},
+{title:"Hobo 3 Wanted",img:"images/Hobo 3.png",url:"games/Hobo 3 Wanted/index.html",cat:"all"},
 {title:"Hobo 4 Total War",img:"images/Hobo 4 Total War.png",url:"games/Hobo 4 Total War/index.html",cat:"all"},
 {title:"House Of Hazards",img:"images/House Of Hazards.png",url:"games/House Of Hazards/index.html",cat:"all"},
 {title:"Icy Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"all"},
