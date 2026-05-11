@@ -104,6 +104,7 @@ const games=[
 {title:"Hobo 4 Total War",img:"images/Hobo 4 Total War.png",url:"games/Hobo 4 Total War/index.html",cat:"all"},
 {title:"Hobo 5 Space Brawl",img:"images/Hobo 5.png",url:"games/Hobo 5 Space Brawl/index.html",cat:"all"},
 {title:"Hobo 6 Hell",img:"images/Hobo 6 Hell.png",url:"games/Hobo 6 Hell/index.html",cat:"all"},
+{title:"Hobo 7 Heaven",img:"images/Hobo 7 Heaven.png",url:"games/Hobo 7 Heaven/index.html",cat:"all"},
 {title:"House Of Hazards",img:"images/House Of Hazards.png",url:"games/House Of Hazards/index.html",cat:"all"},
 {title:"Icy Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"all"},
 {title:"Iron Lung",img:"images/Iron Lung.png",url:"games/Iron Lung/index.html",cat:"all"},
