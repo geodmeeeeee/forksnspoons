@@ -64,6 +64,7 @@ const games=[
 {title:"Bloxorz",img:"images/Bloxorz.png",url:"games/Bloxorz/index.html",cat:"all"},
 {title:"Boxing Random",img:"images/Boxing Random.png",url:"games/Boxing Random/index.html",cat:"all"},
 {title:"Candy Crush",img:"images/Candy Crush.png",url:"games/Candy Crush/index.html",cat:"all"},
+{title:"Choppy Orc",img:"images/Choppy Orc.png",url:"games/Choppy Orc/index.html",cat:"all"},
 {title:"Cluster Rush",img:"images/Cluster Rush.png",url:"games/Cluster Rush/index.html",cat:"all"},
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"all"},
 {title:"Crazy Cars",img:"images/Crazy Cars.png",url:"games/Crazy Cars/index.html",cat:"all"},
