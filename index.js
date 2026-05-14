@@ -190,6 +190,7 @@ const games=[
 {title:"Tiny Fishing",img:"images/Tiny Fishing.png",url:"games/Tiny Fishing/index.html",cat:"all"},
 {title:"Tunnel Rush",img:"images/TunnelRush.png",url:"games/TunnelRush/index.html",cat:"all"},
 {title:"Ultrakill",img:"images/Ultrakill.png",url:"games/ultrakill/index.html",cat:"all"},
+{title:"Undertale Last Breath Bad Time Simulator",img:"images/Undertale Last Breath Bad Time Simulator.png",url:"games/Undertale Last Breath Bad Time Simulator/index.html",cat:"all"},
 {title:"Vex 3",img:"images/Vex 3.png",url:"games/Vex 3/index.html",cat:"all"},
 {title:"Vex 4",img:"images/Vex 4.png",url:"games/Vex 4/index.html",cat:"all"},
 {title:"Vex 5",img:"images/Vex 5.png",url:"games/Vex 5/index.html",cat:"all"},
