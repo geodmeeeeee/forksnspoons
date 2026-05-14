@@ -660,3 +660,15 @@ if (searchInput) {
     searchTimeout=setTimeout(()=>render(),250)
   })
 }
+
+// Clear search when logo is clicked
+const navbarTitle = document.querySelector('.navbar-title')
+if (navbarTitle) {
+  navbarTitle.addEventListener('click', () => {
+    if (searchInput) {
+      searchInput.value = ''
+      clearTimeout(searchTimeout)
+      searchTimeout = setTimeout(() => render(), 250)
+    }
+  })
+}
