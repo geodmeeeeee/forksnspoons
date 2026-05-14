@@ -74,6 +74,7 @@ const games=[
 {title:"Cyber Cars Punk Racing",img:"images/Cyber Cars Punk Racing.png",url:"games/Cyber Cars Punk Racing/index.html",cat:"all"},
 {title:"Death Run 3D",img:"images/Death Run 3D.png",url:"games/Death Run 3D/index.html",cat:"all"},
 {title:"Doge Miner",img:"images/Doge Miner.png",url:"games/Doge Miner/index.html",cat:"all"},
+{title:"Dont You Lecture Me With Your 30 Dollar Website",img:"images/Dont You Lecture Me About Your 30 Dollar Website.png",url:"games/Dont You Lecture Me About Your 30 Dollar Website/index.html",cat:"all"},
 {title:"Doom 2",img:"images/Doom 2.png",url:"games/Doom 2/public/index.html",cat:"all"},
 {title:"Draw The Hill",img:"images/Draw The Hill.png",url:"games/Draw The Hill/index.html",cat:"all"},
 {title:"Dreadhead Parkour",img:"images/Dreadhead Parkour.png",url:"games/Dreadhead Parkour/index.html",cat:"all"},
