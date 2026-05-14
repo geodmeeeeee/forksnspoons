@@ -20,7 +20,10 @@ muteBtn=document.getElementById("muteBtn")
 secret=document.getElementById("secret")
 tooltip=document.getElementById("tooltip")
 updateMuteButton()
-frame?.addEventListener("load",()=>applyMuteStateToWindow(window))
+frame?.addEventListener("load",()=>{
+  updateMuteButton()
+  applyMuteStateToCurrentGame()
+})
 }
 
 // MacBook-specific optimizations
