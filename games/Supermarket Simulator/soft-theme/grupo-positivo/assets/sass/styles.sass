@@ -1,0 +1,1134 @@
+@charset "utf-8"
+@import animate
+@import mixin
+@import function
+@include webfont('TriplexExtraboldOldstyle')
+.pulse-scale
+  animation-name: pulse-scale
+  animation-duration: 1s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+.pulse-right
+  animation-name: pulse-right
+  animation-duration: 0.9s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+.pulse-filter-neg
+  animation-name: pulse-filter-neg
+  animation-duration: 1s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+.pulse-filter-pos
+  animation-name: pulse-filter-pos
+  animation-duration: 1s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+.rotate
+  animation-name: rotate
+  animation-duration: 7s
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+.shake
+  animation-name: shake
+  animation-duration: 0.4s
+  animation-iteration-count: 1
+  animation-timing-function: ease-in-out
+.events-none, .events-none *
+  pointer-events: none !important
+body#soft
+  position: absolute
+  width: 100%
+  height: 100%
+  *
+    font-family: TriplexExtraboldOldstyle, 'Arial', sans-serif
+    font-size: 45px
+    line-height: 55px
+    color: #392E1D
+  p
+    b
+      font-family: TriplexExtraboldOldstyle, 'Arial', sans-serif
+  .scroll-y
+    overflow-y: auto
+    overflow-x: hidden
+  .scroll-x
+    overflow-x: auto
+    overflow-y: hidden
+  .btn
+    cursor: pointer
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      width: 95%
+      height: 90%
+      background: rgba(0, 0, 0, 1)
+      border-radius: 100% 100% 90px 90px
+      box-shadow: 0 10px 30px 10px rgb(0 0 0 / 50%)
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+    .bg
+      background-size: 100% 100% !important
+      position: absolute
+      width: 100%
+      height: 100%
+    p
+      font-family: TriplexExtraboldOldstyle, 'Arial', sans-serif
+      text-transform: capitalize
+      color: #000
+      font-size: 30px
+      text-align: center
+      line-height: 125px
+      position: absolute
+      width: 100%
+    &.inactive
+      pointer-events: none !important
+    &:hover
+      transform: scale(1.1) !important
+      filter: brightness(1.2)
+    &:active
+      transform: scale(1.05) !important
+      filter: brightness(1.1)
+  .ease, .ease *
+    transition: all ease-in-out 0.2s
+  main
+    background-color: #fff
+    position: inherit
+    width: inherit
+    height: inherit
+    overflow: hidden
+    #soft-loader
+      opacity: 0
+      visibility: hidden
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 10%
+      height: 20%
+      max-width: 80px
+      max-height: 80px
+      div
+        @include background('global/loader.gif')
+        background-position: center
+        height: 100%
+        width: 100%
+        position: absolute
+        i
+          text-align: center
+          font-size: 20px
+          font-style: normal
+          line-height: 100px
+          display: none
+    #soft-pages
+      position: inherit
+      width: inherit
+      height: inherit
+      overflow: hidden
+      z-index: 1
+      .soft-page
+        display: none
+        opacity: 0
+        visibility: hidden
+        transform: scale(2)
+      .soft-current-page
+        position: inherit
+        width: inherit
+        height: inherit
+        overflow: hidden
+        display: block
+        .logo
+          position: absolute
+          width: 450px
+          height: 240px
+          margin: auto
+          left: 5px
+          right: 0
+        // Splash Screen
+        &#splash-screen
+          background-image: none
+          background-color: #fff
+          .logo-aprende-brasil
+            @include background('global/splashscreen/logo_aprende_brasil.png')
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            max-width: 300px
+            max-height: 130px
+            width: 40%
+            height: 12%
+            margin: auto
+            transform: scale(0)
+
+        // telas
+        &#start
+          @include background('00_main/background.jpg')
+          background-size: cover
+          .logo-game
+            opacity: 0
+            transform: scale(0)
+            @include background('01_capa/logo.png')
+            position: absolute
+            margin: auto
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            width: 1920px
+            height: 1080px
+            display: inline-block
+          .btn-next
+            transform: scale(0)
+            position: absolute
+            margin: auto
+            top: 0
+            bottom: -450px
+            left: 0
+            right: 0
+            width: 349px
+            height: 139px
+            &::before
+              content: none
+            .bg
+              @include background('01_capa/botao_jogar.png')
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+        &#intro
+          @include background('00_main/background.jpg')
+          background-size: cover
+          display: flex
+          .soft-scaled
+            display: flex
+            justify-content: center
+            align-items: center
+            .container
+              width: 1008px
+              height: 315px
+              display: flex
+              justify-content: center
+              align-items: center
+              position: relative
+              .bg-intro
+                @include background('02_abertura/box.png')
+                position: absolute
+                width: 1008px
+                height: 315px
+                left: -3000px
+                opacity: 0
+              .content
+                @include background('02_abertura/txt.png')
+                background-position: center
+                opacity: 0
+                transform: scale(0)
+                width: 770px
+                height: 315px
+        &#char-selection
+          @include background('00_main/background.jpg')
+          background-size: cover
+          display: flex
+          .soft-scaled
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+          .header
+            @include background('00_main/header.png')
+            background-repeat: repeat-x
+            position: absolute
+            top: 0
+            left: -500vw
+            width: 2000vw
+            height: 0 //85px
+          .title
+            @include background('03_personagens/txt.png')
+            background-position: center left !important
+            width: 100vw
+            height: 61px
+            position: absolute
+            top: 0px
+            left: 30px
+            margin-top: 60px
+            opacity: 0
+          .char-container
+            .char
+              width: 340px
+              height: 520px
+              background-position: bottom center !important
+              transform-origin: center bottom
+              transform: scale(0)
+              opacity: 0
+              &.char-f
+                @include background('03_personagens/f.png')
+              &.char-m
+                @include background('03_personagens/m.png')
+          .btn-char
+            transform: scale(0)
+            margin: auto
+            top: 0
+            bottom: -450px
+            right: 0
+            width: 349px
+            height: 139px
+            &::before
+              content: none
+            .bg
+              @include background('01_capa/botao_jogar.png')
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+        &#cart
+          @include background('00_main/background.jpg')
+          background-size: cover
+          display: flex
+          .soft-scaled
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+          .header
+            @include background('00_main/header.png')
+            background-repeat: repeat-x
+            position: absolute
+            top: 0
+            left: -500vw
+            width: 2000vw
+            height: 0 //85px
+          .title
+            @include background('04_carrinho/txt.png')
+            background-position: center left !important
+            width: 100vw
+            height: 61px
+            position: absolute
+            top: 0px
+            left: 30px
+            margin-top: 60px
+            opacity: 0
+          .cart-container
+            .cart
+              @include background('04_carrinho/carrinho.png')
+              width: 340px
+              height: 520px
+              background-position: bottom center !important
+              transform-origin: center bottom
+              transform: scale(0)
+              opacity: 0
+          .btn-cart
+            transform: scale(0)
+            margin: auto
+            top: 0
+            bottom: -450px
+            right: 0
+            width: 349px
+            height: 139px
+            &::before
+              content: none
+            .bg
+              @include background('01_capa/botao_jogar.png')
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+        &#list
+          @include background('00_main/background.jpg')
+          background-size: cover
+          display: flex
+          .soft-scaled
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+            flex-direction: column
+          .header
+            @include background('00_main/header.png')
+            background-repeat: repeat-x
+            position: absolute
+            top: 0
+            left: -500vw
+            width: 2000vw
+            height: 0 //85px
+          .title
+            @include background('05_lista/txt.png')
+            background-position: center left !important
+            width: 100%
+            height: 61px
+            position: absolute
+            top: 0px
+            left: 30px
+            margin-top: 60px
+            opacity: 0
+          .list
+            width: 1388px
+            height: 650px
+            display: flex
+            flex-direction: row
+            .list-bg
+              @include background('05_lista/box.png')
+              width: 1388px
+              height: 650px
+              position: absolute
+              z-index: -10
+            .coluna
+              padding-top: 115px
+              width: 470px
+              margin-left: 104px
+              .list-item
+                height: 53px
+                $distancia-inicial: 230px
+                $distancia: 15px
+                display: flex
+                flex-direction: row
+                @for $i from 1 through 10
+                  &:nth-child(#{$i})
+                    margin-left: calc(#{$distancia-inicial} - #{$distancia * $i})
+                .mark
+                  width: 45px
+                  height: 47px
+                  margin-right: 15px
+                  margin-top: 5px
+                  @include background('05_lista/check_nao_pego.png')
+                  &[selected]
+                    @include background('05_lista/check_pego.png')
+          .btn-gameplay
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            margin: auto
+            right: 370px
+            bottom: 130px
+            width: 349px
+            height: 139px
+            &::before
+              content: none
+            .bg
+              @include background('07_pre-caixa/botao_ir.png')
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+        &#pre-checkout
+          @include background('00_main/background.jpg')
+          background-size: cover
+          display: flex
+          .soft-scaled
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+          .message
+            width: 1388px
+            height: 650px
+            display: flex
+            justify-content: center
+            align-items: center
+          .message-bg
+            opacity: 0
+            transform: scale(0)
+            @include background('07_pre-caixa/box.png')
+            width: 1147px
+            height: 480px
+            position: absolute
+          .message-text
+            opacity: 0
+            transform: scale(0)
+            @include background('07_pre-caixa/txt.png')
+            width: 686px
+            height: 275px
+            position: absolute
+          .btn-checkout
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            margin: auto
+            width: 349px
+            height: 139px
+            bottom: 240px
+            &::before
+              content: none
+            .bg
+              @include background('07_pre-caixa/botao_ir.png')
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+
+        &#gameplay
+          @include background('06_cenario/background.png')
+          background-size: contain
+          background-repeat: repeat-x
+          .btn-list
+            transform: scale(0)
+            opacity: 0
+            @include background('06_cenario/icone_lista.png')
+            width: 175px
+            height: 186px
+            position: absolute
+            left: 0
+            top: 250px
+            &::before
+              content: none
+          .prateleiras
+            pointer-events: auto !important
+            @include background('06_cenario/prateleiras.png')
+            width: 5502px
+            height: 1080px
+            position: absolute
+            left: 0
+            top: 0
+            .chars
+              pointer-events: none !important
+              position: absolute
+              bottom: 100px
+              .char
+                width: 671px
+                height: 585px
+                &.char-f
+                  &[data-frame="0"]
+                    @include background('06_cenario/chars/f_1.png')
+                  &[data-frame="1"]
+                    @include background('06_cenario/chars/f_2.png')
+                &.char-m
+                  &[data-frame="0"]
+                    @include background('06_cenario/chars/m_1.png')
+                  &[data-frame="1"]
+                    @include background('06_cenario/chars/m_2.png')
+          .profile
+            width: 318px
+            height: 188px
+            position: absolute
+            left: 0
+            top: 20px
+            .profile-f
+              position: absolute
+              transform: scale(0)
+              opacity: 0
+              @include background('06_cenario/personagem_f.png')
+              width: 318px
+              height: 188px
+            .profile-m
+              position: absolute
+              transform: scale(0)
+              opacity: 0
+              @include background('06_cenario/personagem_m.png')
+              width: 318px
+              height: 188px
+          .spawn-item
+            opacity: 0
+            position: absolute
+            width: 140px
+            height: 140px
+            pointer-events: auto !important
+            cursor: pointer
+            background-color: rgba(0,0 ,0 ,0.4 )
+            &.abacate
+              left: 1190px
+              top: 350px
+            &.alface
+              left: 633px
+              top: 478px
+            &.banana
+              left: 1380px
+              top: 480px
+            &.batata
+              left: 838px
+              top: 342px
+            &.beterraba
+              left: 710px
+              top: 598px
+            &.bife
+              left: 4079px
+              top: 491px
+              height: 100px
+              width: 400px
+            &.biscoito
+              left: 2200px
+              top: 374px
+              height: 70px
+              width: 180px
+            &.bolo
+              left: 1953px
+              top: 298px
+            &.brocolis
+              left: 570px
+              top: 600px
+            &.carne
+              left: 4080px
+              top: 357px
+              height: 110px
+              width: 390px
+            &.cenoura
+              left: 610px
+              top: 340px
+            &.coca
+              left: 3463px
+              top: 613px
+              height: 90px
+              width: 230px
+            &.frango
+              left: 4077px
+              top: 606px
+              width: 390px
+              height: 100px
+            &.goiaba
+              left: 1170px
+              top: 600px
+            &.iogurte
+              left: 2738px
+              top: 508px
+              height: 100px
+              width: 300px
+            &.leite
+              width: 260px
+              left: 2684px
+              top: 347px
+            &.limao
+              left: 1410px
+              top: 350px
+            &.maca
+              left: 1180px
+              top: 490px
+            &.mexirica
+              left: 1422px
+              top: 590px
+            &.milho
+              left: 860px
+              top: 598px
+            &.pao
+              width: 390px
+              left: 1848px
+              top: 516px
+            &.peixe
+              left: 4753px
+              top: 525px
+              &.i-2
+                left: 5133px
+            &.queijo
+              left: 2725px
+              top: 628px
+              height: 90px
+              width: 340px
+            &.rosquinha
+              left: 2266px
+              top: 527px
+            &.salmao
+              left: 4946px
+              top: 525px
+            &.suco-laranja
+              left: 3463px
+              top: 354px
+              height: 110px
+              width: 200px
+            &.suco-limao
+              left: 3595px
+              top: 488px
+              height: 100px
+              width: 190px
+            &.suco-uva
+              left: 3401px
+              top: 490px
+              height: 100px
+            &.tomate
+              left: 860px
+              top: 486px
+            &.uva
+              left: 1290px
+              top: 590px
+          .drag-item
+            pointer-events: none !important
+            position: absolute
+            transform: scale(0)
+            opacity: 0
+            width: 140px
+            height: 140px
+            transform: translate(-50%,-50%)
+            &.bolo
+              width: 200px
+              height: 200px
+            &.abacate
+              @include background('08_caixa/alimentos/abacate.png')
+            &.alface
+              @include background('08_caixa/alimentos/alface.png')
+            &.banana
+              @include background('08_caixa/alimentos/banana.png')
+            &.batata
+              @include background('08_caixa/alimentos/batata.png')
+            &.beterraba
+              @include background('08_caixa/alimentos/beterraba.png')
+            &.bife
+              @include background('08_caixa/alimentos/bife.png')
+            &.biscoito
+              @include background('08_caixa/alimentos/biscoito.png')
+            &.bolo
+              @include background('08_caixa/alimentos/bolo.png')
+            &.brocolis
+              @include background('08_caixa/alimentos/brocolis.png')
+            &.carne
+              @include background('08_caixa/alimentos/carne.png')
+            &.cenoura
+              @include background('08_caixa/alimentos/cenoura.png')
+            &.coca
+              @include background('08_caixa/alimentos/coca.png')
+            &.frango
+              @include background('08_caixa/alimentos/frango.png')
+            &.goiaba
+              @include background('08_caixa/alimentos/goiaba.png')
+            &.iogurte
+              @include background('08_caixa/alimentos/iogurte.png')
+            &.leite
+              @include background('08_caixa/alimentos/leite.png')
+            &.limao
+              @include background('08_caixa/alimentos/limao.png')
+            &.maca
+              @include background('08_caixa/alimentos/maca.png')
+            &.mexirica
+              @include background('08_caixa/alimentos/mexirica.png')
+            &.milho
+              @include background('08_caixa/alimentos/milho.png')
+            &.pao
+              @include background('08_caixa/alimentos/pao.png')
+            &.peixe
+              @include background('08_caixa/alimentos/peixe.png')
+            &.queijo
+              @include background('08_caixa/alimentos/queijo.png')
+            &.rosquinha
+              @include background('08_caixa/alimentos/rosquinha.png')
+            &.salmao
+              @include background('08_caixa/alimentos/salmao.png')
+            &.suco-laranja
+              @include background('08_caixa/alimentos/suco-laranja.png')
+            &.suco-limao
+              @include background('08_caixa/alimentos/suco-limao.png')
+            &.suco-uva
+              @include background('08_caixa/alimentos/suco-uva.png')
+            &.tomate
+              @include background('08_caixa/alimentos/tomate.png')
+            &.uva
+              @include background('08_caixa/alimentos/uva.png')
+          .btn-next
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            top: auto
+            left: auto
+            right: 40px
+            bottom: 40px
+            margin: auto
+            width: 349px
+            height: 139px
+            &::before
+              content: none
+            .bg
+              @include background('07_pre-caixa/botao_ir.png')
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+          .btn-prev
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            margin: auto
+            top: auto
+            left: 40px
+            right: auto
+            bottom: 40px
+            width: 349px
+            height: 139px
+            &::before
+              content: none
+            .bg
+              @include background('07_pre-caixa/botao_ir.png')
+              transform: scaleX(-1)
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+
+        &.checkout
+          @include background('00_main/background.jpg')
+          background-size: cover
+          display: flex
+          .btn::before
+            content: none
+          .header
+            @include background('00_main/header.png')
+            background-repeat: repeat-x
+            position: absolute
+            top: 0
+            left: -500vw
+            width: 2000vw
+            height: 0 //85px
+          .title
+            background-position: center left !important
+            width: 100vw
+            height: 61px
+            position: absolute
+            top: 0px
+            left: 30px
+            margin-top: 60px
+            opacity: 0
+            @at-root #checkout-items .title
+              @include background('08_caixa/txt.png')
+            @at-root #checkout-payment .title
+              @include background('09_escolher-pagamento/txt.png')
+            @at-root #checkout-end .title
+              @include background('10_jogar-novamente/txt.png')
+          .soft-scaled
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+          .table
+            pointer-events: none
+            @include background('08_caixa/mesa.jpg')
+            background-repeat: repeat-x
+            position: absolute
+            left: -500vw
+            width: 2000vw
+            height: 323px
+            position: absolute
+            bottom: 0
+          .cashier
+            pointer-events: none
+            @include background('08_caixa/caixa.png')
+            position: absolute
+            width: 791px
+            height: 451px
+            position: absolute
+            margin: auto
+            left: 0
+            right: 0
+            bottom: 323px
+          .scanner
+            pointer-events: none
+            opacity: 0
+            @include background('08_caixa/caixa_leitor_ativo.png')
+            position: absolute
+            width: 794px
+            height: 514px
+            position: absolute
+            margin: auto
+            left: 0
+            right: 0
+            bottom: 323px
+          .cart-icon
+            pointer-events: none
+            @include background('08_caixa/icone_carrinho.png')
+            width: 151px
+            height: 107px
+            position: absolute
+            left: 20px
+            bottom: 265px
+            @at-root #checkout-end .cart-icon
+              display: none
+        &#checkout-items
+          .items-area
+            position: absolute
+            width: 1650px
+            height: 250px
+            bottom: 20px
+            white-space: nowrap
+            overflow: hidden
+            display: flex
+            align-content: center
+            justify-content: center
+            .items-content
+              flex: 1
+              @at-root .item
+                width: 150px
+                height: 150px
+                margin: 20px
+                display: inline-block
+                pointer-events: auto !important
+                cursor: pointer
+                &:hover
+                  transform: scale(1.2)
+                &.abacate
+                  @include background('08_caixa/alimentos/abacate.png')
+                &.alface
+                  @include background('08_caixa/alimentos/alface.png')
+                &.banana
+                  @include background('08_caixa/alimentos/banana.png')
+                &.batata
+                  @include background('08_caixa/alimentos/batata.png')
+                &.beterraba
+                  @include background('08_caixa/alimentos/beterraba.png')
+                &.bife
+                  @include background('08_caixa/alimentos/bife.png')
+                &.biscoito
+                  @include background('08_caixa/alimentos/biscoito.png')
+                &.bolo
+                  @include background('08_caixa/alimentos/bolo.png')
+                &.brocolis
+                  @include background('08_caixa/alimentos/brocolis.png')
+                &.carne
+                  @include background('08_caixa/alimentos/carne.png')
+                &.cenoura
+                  @include background('08_caixa/alimentos/cenoura.png')
+                &.coca
+                  @include background('08_caixa/alimentos/coca.png')
+                &.frango
+                  @include background('08_caixa/alimentos/frango.png')
+                &.goiaba
+                  @include background('08_caixa/alimentos/goiaba.png')
+                &.iogurte
+                  @include background('08_caixa/alimentos/iogurte.png')
+                &.leite
+                  @include background('08_caixa/alimentos/leite.png')
+                &.limao
+                  @include background('08_caixa/alimentos/limao.png')
+                &.maca
+                  @include background('08_caixa/alimentos/maca.png')
+                &.mexirica
+                  @include background('08_caixa/alimentos/mexirica.png')
+                &.milho
+                  @include background('08_caixa/alimentos/milho.png')
+                &.pao
+                  @include background('08_caixa/alimentos/pao.png')
+                &.peixe
+                  @include background('08_caixa/alimentos/peixe.png')
+                &.queijo
+                  @include background('08_caixa/alimentos/queijo.png')
+                &.rosquinha
+                  @include background('08_caixa/alimentos/rosquinha.png')
+                &.salmao
+                  @include background('08_caixa/alimentos/salmao.png')
+                &.suco-laranja
+                  @include background('08_caixa/alimentos/suco-laranja.png')
+                &.suco-limao
+                  @include background('08_caixa/alimentos/suco-limao.png')
+                &.suco-uva
+                  @include background('08_caixa/alimentos/suco-uva.png')
+                &.tomate
+                  @include background('08_caixa/alimentos/tomate.png')
+                &.uva
+                  @include background('08_caixa/alimentos/uva.png')
+          .btn
+            position: absolute
+            width: 67px
+            height: 79px
+            background-size: 67px 79px
+            bottom: 120px
+            &.btn-left
+              @include background('08_caixa/voltar.png')
+              left: 20px
+            &.btn-right
+              @include background('08_caixa/ir.png')
+              right: 20px
+        &#checkout-payment
+          .value-container
+            opacity: 0
+            transform: scale(0)
+            @include background('09_escolher-pagamento/valor_devido.png')
+            width: 400px
+            height: 121px
+            position: absolute
+            right: 440px
+            top: 265px
+          .value
+            position: absolute
+            right: 470px
+            top: 280px
+            width: 250px
+            height: 90px
+            text-align: center
+            line-height: 80px
+            font-size: 75px
+          .btn
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            bottom: 60px
+            width: 392px
+            height: 217px
+            background-position: center bottom !important
+            &.btn-left
+              @include background('09_escolher-pagamento/pagar_dinheiro.png')
+              left: 500px
+            &.btn-right
+              @include background('09_escolher-pagamento/pagar_cartao.png')
+              right: 500px
+        &#checkout-end
+          .btn
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            bottom: 60px
+            width: 392px
+            height: 217px
+            background-position: center bottom !important
+            &.btn-left
+              @include background('10_jogar-novamente/Sair.png')
+              left: 500px
+            &.btn-right
+              @include background('10_jogar-novamente/jogar_novamente.png')
+              right: 500px
+
+  .overlay
+    background-color: rgba(0, 0, 0, 0.5)
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 9999
+    opacity: 0
+    visibility: hidden
+    transform: scale(1.5)
+    .wrap-scaled
+      .content-box
+        @include background('content-box-bg.png')
+        background-size: 100% 100%
+        width: 78%
+        max-width: 950px
+        margin: auto
+        padding: 90px
+        text-align: center
+        position: absolute
+        transform: translate(-50%, -50%)
+        left: 50%
+        top: 50%
+        h2
+          text-transform: uppercase
+          font-family: TriplexExtraboldOldstyle, 'Arial', sans-serif
+          font-size: 60px
+          display: inline-block
+          margin-bottom: 45px
+          color: #FDDE01
+          width: 100%
+          border-bottom: 4px solid #fff
+          padding-bottom: 20px
+        & > div *
+          font-size: 35px
+          line-height: 55px
+          color: #fff
+          h3
+            font-size: 45px
+          span
+            font-family: TriplexExtraboldOldstyle, 'Arial', sans-serif
+            text-transform: uppercase
+          strong
+            font-family: TriplexExtraboldOldstyle, 'Arial', sans-serif
+            font-size: 40px
+            display: inline-block
+            padding: 10px 0
+            text-transform: initial
+            color: #FDDE01
+        img
+          margin: 20px auto
+          display: block
+        .buttons
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-direction: row
+          margin-top: 45px
+          .btn-prev, .btn-next
+            width: 135px
+            height: 145px
+            margin: auto 15px
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            .bg
+              position: absolute
+              width: 135px
+              height: 145px
+              @include background('global/generic-btn/generic-btn-2.png')
+            p
+              color: #004AC6
+              line-height: 122px
+  .overlay
+    &#exit-home
+      .wrap-scaled
+        .content-box
+          max-width: 720px
+    &#credits
+      .wrap-scaled
+        .content-box
+          .btn-next
+            display: none
+  #top-buttons
+    position: absolute
+    z-index: 99999
+    width: 100%
+    height: 100%
+    pointer-events: none
+    .buttons
+      position: absolute
+      text-align: center
+      pointer-events: all
+      right: 35px
+      top: 25px
+      transform-origin: top right
+      .icon
+        position: absolute !important
+        width: 25px
+        height: 25px
+        z-index: 10
+        margin: auto
+        top: -2px
+        bottom: 0
+        left: 0
+        right: 0
+      & > div
+        display: inline-block
+        width: 45px
+        height: 45px
+        margin: 0 2px
+        position: relative
+        &::before
+          width: 80%
+          height: 65%
+          border-radius: 70% 70% 30px 30px
+          box-shadow: 0 5px 20px 5px rgb(0 0 0 / 50%)
+          top: 7px
+      .btn-home
+        display: none
+        .bg
+          @include background('global/generic-btn/generic-btn-6.png')
+        .icon
+          @include background('global/top-buttons/icon-home.png')
+      .btn-credits
+        .bg
+          @include background('global/generic-btn/generic-btn-8.png')
+        .icon
+          @include background('global/top-buttons/icon-credits.png')
+      .btn-sound
+        &.sound-on
+          .bg
+            @include background('global/generic-btn/generic-btn-8.png')
+          .icon
+            @include background('global/top-buttons/icon-sound-on.png')
+        &.sound-off
+          .bg
+            @include background('global/generic-btn/generic-btn-8.png')
+          .icon
+            @include background('global/top-buttons/icon-sound-off.png')
+      .btn-fullscreen
+        .bg
+          @include background('global/generic-btn/generic-btn-8.png')
+        .icon
+          @include background('global/top-buttons/icon-fullscreen-on.png')
+      &.no-home
+        width: 118px
+        .btn-home
+          transform: scale(0)
+          display: none
+        .btn-sound
+          margin-left: -2px
+  #device-rotate
+    @include background('global/device-rotate.gif')
+    background-size: 50%
+    background-color: #fff
+    position: absolute
+    z-index: 9999
+    width: 100%
+    height: 100%
+    display: none
+  &.fullscreen
+    .btn-fullscreen
+      .icon
+        background-image: url('global/top-buttons/icon_fullscreen_off.png') !important
+  &.iOS
+    .btn-fullscreen
+      display: none !important

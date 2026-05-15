@@ -1,0 +1,1858 @@
+@keyframes pulse-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pulse-right {
+  0% {
+    margin-right: 0;
+  }
+  50% {
+    margin-right: 10px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+@keyframes pulse-filter-neg {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes pulse-filter-pos {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(3px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "TriplexExtraboldOldstyle";
+  src: url("fonts/TriplexExtraboldOldstyle.ttf") format("truetype"), url("fonts/TriplexExtraboldOldstyle.svg#TriplexExtraboldOldstyle") format("svg"), url("fonts/TriplexExtraboldOldstyle.eot"), url("fonts/TriplexExtraboldOldstyle.woff") format("woff"), url("fonts/TriplexExtraboldOldstyle.otf") format("opentype");
+}
+.pulse-scale {
+  animation-name: pulse-scale;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.pulse-right {
+  animation-name: pulse-right;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.pulse-filter-neg {
+  animation-name: pulse-filter-neg;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.pulse-filter-pos {
+  animation-name: pulse-filter-pos;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.shake {
+  animation-name: shake;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+.events-none, .events-none * {
+  pointer-events: none !important;
+}
+
+body#soft {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body#soft * {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  font-size: 45px;
+  line-height: 55px;
+  color: #392E1D;
+}
+body#soft p b {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+}
+body#soft .scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+body#soft .scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+body#soft .btn {
+  cursor: pointer;
+}
+body#soft .btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  background: black;
+  border-radius: 100% 100% 90px 90px;
+  box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body#soft .btn .bg {
+  background-size: 100% 100% !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body#soft .btn p {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  text-transform: capitalize;
+  color: #000;
+  font-size: 30px;
+  text-align: center;
+  line-height: 125px;
+  position: absolute;
+  width: 100%;
+}
+body#soft .btn.inactive {
+  pointer-events: none !important;
+}
+body#soft .btn:hover {
+  transform: scale(1.1) !important;
+  filter: brightness(1.2);
+}
+body#soft .btn:active {
+  transform: scale(1.05) !important;
+  filter: brightness(1.1);
+}
+body#soft .ease, body#soft .ease * {
+  transition: all ease-in-out 0.2s;
+}
+body#soft main {
+  background-color: #fff;
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+}
+body#soft main #soft-loader {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10%;
+  height: 20%;
+  max-width: 80px;
+  max-height: 80px;
+}
+body#soft main #soft-loader div {
+  background-image: url(../img/global/loader.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+body#soft main #soft-loader div i {
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 100px;
+  display: none;
+}
+body#soft main #soft-pages {
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
+body#soft main #soft-pages .soft-page {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(2);
+}
+body#soft main #soft-pages .soft-current-page {
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  display: block;
+}
+body#soft main #soft-pages .soft-current-page .logo {
+  position: absolute;
+  width: 450px;
+  height: 240px;
+  margin: auto;
+  left: 5px;
+  right: 0;
+}
+body#soft main #soft-pages .soft-current-page#splash-screen {
+  background-image: none;
+  background-color: #fff;
+}
+body#soft main #soft-pages .soft-current-page#splash-screen .logo-aprende-brasil {
+  background-image: url(../img/global/splashscreen/logo_aprende_brasil.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 300px;
+  max-height: 130px;
+  width: 40%;
+  height: 12%;
+  margin: auto;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#start {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+body#soft main #soft-pages .soft-current-page#start .logo-game {
+  opacity: 0;
+  transform: scale(0);
+  background-image: url(../img/01_capa/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1920px;
+  height: 1080px;
+  display: inline-block;
+}
+body#soft main #soft-pages .soft-current-page#start .btn-next {
+  transform: scale(0);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: -450px;
+  left: 0;
+  right: 0;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#start .btn-next::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#start .btn-next .bg {
+  background-image: url(../img/01_capa/botao_jogar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#intro {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page#intro .soft-scaled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body#soft main #soft-pages .soft-current-page#intro .soft-scaled .container {
+  width: 1008px;
+  height: 315px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body#soft main #soft-pages .soft-current-page#intro .soft-scaled .container .bg-intro {
+  background-image: url(../img/02_abertura/box.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 1008px;
+  height: 315px;
+  left: -3000px;
+  opacity: 0;
+}
+body#soft main #soft-pages .soft-current-page#intro .soft-scaled .container .content {
+  background-image: url(../img/02_abertura/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0;
+  transform: scale(0);
+  width: 770px;
+  height: 315px;
+}
+body#soft main #soft-pages .soft-current-page#char-selection {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page#char-selection .soft-scaled {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body#soft main #soft-pages .soft-current-page#char-selection .header {
+  background-image: url(../img/00_main/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: -500vw;
+  width: 2000vw;
+  height: 0;
+}
+body#soft main #soft-pages .soft-current-page#char-selection .title {
+  background-image: url(../img/03_personagens/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left !important;
+  width: 100vw;
+  height: 61px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  margin-top: 60px;
+  opacity: 0;
+}
+body#soft main #soft-pages .soft-current-page#char-selection .char-container .char {
+  width: 340px;
+  height: 520px;
+  background-position: bottom center !important;
+  transform-origin: center bottom;
+  transform: scale(0);
+  opacity: 0;
+}
+body#soft main #soft-pages .soft-current-page#char-selection .char-container .char.char-f {
+  background-image: url(../img/03_personagens/f.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#char-selection .char-container .char.char-m {
+  background-image: url(../img/03_personagens/m.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#char-selection .btn-char {
+  transform: scale(0);
+  margin: auto;
+  top: 0;
+  bottom: -450px;
+  right: 0;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#char-selection .btn-char::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#char-selection .btn-char .bg {
+  background-image: url(../img/01_capa/botao_jogar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#cart {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page#cart .soft-scaled {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body#soft main #soft-pages .soft-current-page#cart .header {
+  background-image: url(../img/00_main/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: -500vw;
+  width: 2000vw;
+  height: 0;
+}
+body#soft main #soft-pages .soft-current-page#cart .title {
+  background-image: url(../img/04_carrinho/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left !important;
+  width: 100vw;
+  height: 61px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  margin-top: 60px;
+  opacity: 0;
+}
+body#soft main #soft-pages .soft-current-page#cart .cart-container .cart {
+  background-image: url(../img/04_carrinho/carrinho.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 340px;
+  height: 520px;
+  background-position: bottom center !important;
+  transform-origin: center bottom;
+  transform: scale(0);
+  opacity: 0;
+}
+body#soft main #soft-pages .soft-current-page#cart .btn-cart {
+  transform: scale(0);
+  margin: auto;
+  top: 0;
+  bottom: -450px;
+  right: 0;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#cart .btn-cart::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#cart .btn-cart .bg {
+  background-image: url(../img/01_capa/botao_jogar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#list {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page#list .soft-scaled {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+body#soft main #soft-pages .soft-current-page#list .header {
+  background-image: url(../img/00_main/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: -500vw;
+  width: 2000vw;
+  height: 0;
+}
+body#soft main #soft-pages .soft-current-page#list .title {
+  background-image: url(../img/05_lista/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left !important;
+  width: 100%;
+  height: 61px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  margin-top: 60px;
+  opacity: 0;
+}
+body#soft main #soft-pages .soft-current-page#list .list {
+  width: 1388px;
+  height: 650px;
+  display: flex;
+  flex-direction: row;
+}
+body#soft main #soft-pages .soft-current-page#list .list .list-bg {
+  background-image: url(../img/05_lista/box.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1388px;
+  height: 650px;
+  position: absolute;
+  z-index: -10;
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna {
+  padding-top: 115px;
+  width: 470px;
+  margin-left: 104px;
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item {
+  height: 53px;
+  display: flex;
+  flex-direction: row;
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(1) {
+  margin-left: calc(230px - 15px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(2) {
+  margin-left: calc(230px - 30px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(3) {
+  margin-left: calc(230px - 45px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(4) {
+  margin-left: calc(230px - 60px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(5) {
+  margin-left: calc(230px - 75px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(6) {
+  margin-left: calc(230px - 90px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(7) {
+  margin-left: calc(230px - 105px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(8) {
+  margin-left: calc(230px - 120px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(9) {
+  margin-left: calc(230px - 135px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(10) {
+  margin-left: calc(230px - 150px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item .mark {
+  width: 45px;
+  height: 47px;
+  margin-right: 15px;
+  margin-top: 5px;
+  background-image: url(../img/05_lista/check_nao_pego.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item .mark[selected] {
+  background-image: url(../img/05_lista/check_pego.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#list .btn-gameplay {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  margin: auto;
+  right: 370px;
+  bottom: 130px;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#list .btn-gameplay::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#list .btn-gameplay .bg {
+  background-image: url(../img/07_pre-caixa/botao_ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .soft-scaled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .message {
+  width: 1388px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .message-bg {
+  opacity: 0;
+  transform: scale(0);
+  background-image: url(../img/07_pre-caixa/box.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1147px;
+  height: 480px;
+  position: absolute;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .message-text {
+  opacity: 0;
+  transform: scale(0);
+  background-image: url(../img/07_pre-caixa/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 686px;
+  height: 275px;
+  position: absolute;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .btn-checkout {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  margin: auto;
+  width: 349px;
+  height: 139px;
+  bottom: 240px;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .btn-checkout::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .btn-checkout .bg {
+  background-image: url(../img/07_pre-caixa/botao_ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay {
+  background-image: url(../img/06_cenario/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-list {
+  transform: scale(0);
+  opacity: 0;
+  background-image: url(../img/06_cenario/icone_lista.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 175px;
+  height: 186px;
+  position: absolute;
+  left: 0;
+  top: 250px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-list::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras {
+  pointer-events: auto !important;
+  background-image: url(../img/06_cenario/prateleiras.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 5502px;
+  height: 1080px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars {
+  pointer-events: none !important;
+  position: absolute;
+  bottom: 100px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char {
+  width: 671px;
+  height: 585px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char.char-f[data-frame="0"] {
+  background-image: url(../img/06_cenario/chars/f_1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char.char-f[data-frame="1"] {
+  background-image: url(../img/06_cenario/chars/f_2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char.char-m[data-frame="0"] {
+  background-image: url(../img/06_cenario/chars/m_1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char.char-m[data-frame="1"] {
+  background-image: url(../img/06_cenario/chars/m_2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile {
+  width: 318px;
+  height: 188px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile .profile-f {
+  position: absolute;
+  transform: scale(0);
+  opacity: 0;
+  background-image: url(../img/06_cenario/personagem_f.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 318px;
+  height: 188px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile .profile-m {
+  position: absolute;
+  transform: scale(0);
+  opacity: 0;
+  background-image: url(../img/06_cenario/personagem_m.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 318px;
+  height: 188px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item {
+  opacity: 0;
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  pointer-events: auto !important;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.abacate {
+  left: 1190px;
+  top: 350px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.alface {
+  left: 633px;
+  top: 478px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.banana {
+  left: 1380px;
+  top: 480px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.batata {
+  left: 838px;
+  top: 342px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.beterraba {
+  left: 710px;
+  top: 598px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.bife {
+  left: 4079px;
+  top: 491px;
+  height: 100px;
+  width: 400px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.biscoito {
+  left: 2200px;
+  top: 374px;
+  height: 70px;
+  width: 180px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.bolo {
+  left: 1953px;
+  top: 298px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.brocolis {
+  left: 570px;
+  top: 600px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.carne {
+  left: 4080px;
+  top: 357px;
+  height: 110px;
+  width: 390px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.cenoura {
+  left: 610px;
+  top: 340px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.coca {
+  left: 3463px;
+  top: 613px;
+  height: 90px;
+  width: 230px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.frango {
+  left: 4077px;
+  top: 606px;
+  width: 390px;
+  height: 100px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.goiaba {
+  left: 1170px;
+  top: 600px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.iogurte {
+  left: 2738px;
+  top: 508px;
+  height: 100px;
+  width: 300px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.leite {
+  width: 260px;
+  left: 2684px;
+  top: 347px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.limao {
+  left: 1410px;
+  top: 350px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.maca {
+  left: 1180px;
+  top: 490px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.mexirica {
+  left: 1422px;
+  top: 590px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.milho {
+  left: 860px;
+  top: 598px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.pao {
+  width: 390px;
+  left: 1848px;
+  top: 516px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.peixe {
+  left: 4753px;
+  top: 525px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.peixe.i-2 {
+  left: 5133px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.queijo {
+  left: 2725px;
+  top: 628px;
+  height: 90px;
+  width: 340px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.rosquinha {
+  left: 2266px;
+  top: 527px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.salmao {
+  left: 4946px;
+  top: 525px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.suco-laranja {
+  left: 3463px;
+  top: 354px;
+  height: 110px;
+  width: 200px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.suco-limao {
+  left: 3595px;
+  top: 488px;
+  height: 100px;
+  width: 190px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.suco-uva {
+  left: 3401px;
+  top: 490px;
+  height: 100px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.tomate {
+  left: 860px;
+  top: 486px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.uva {
+  left: 1290px;
+  top: 590px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item {
+  pointer-events: none !important;
+  position: absolute;
+  transform: scale(0);
+  opacity: 0;
+  width: 140px;
+  height: 140px;
+  transform: translate(-50%, -50%);
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.bolo {
+  width: 200px;
+  height: 200px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.abacate {
+  background-image: url(../img/08_caixa/alimentos/abacate.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.alface {
+  background-image: url(../img/08_caixa/alimentos/alface.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.banana {
+  background-image: url(../img/08_caixa/alimentos/banana.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.batata {
+  background-image: url(../img/08_caixa/alimentos/batata.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.beterraba {
+  background-image: url(../img/08_caixa/alimentos/beterraba.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.bife {
+  background-image: url(../img/08_caixa/alimentos/bife.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.biscoito {
+  background-image: url(../img/08_caixa/alimentos/biscoito.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.bolo {
+  background-image: url(../img/08_caixa/alimentos/bolo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.brocolis {
+  background-image: url(../img/08_caixa/alimentos/brocolis.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.carne {
+  background-image: url(../img/08_caixa/alimentos/carne.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.cenoura {
+  background-image: url(../img/08_caixa/alimentos/cenoura.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.coca {
+  background-image: url(../img/08_caixa/alimentos/coca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.frango {
+  background-image: url(../img/08_caixa/alimentos/frango.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.goiaba {
+  background-image: url(../img/08_caixa/alimentos/goiaba.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.iogurte {
+  background-image: url(../img/08_caixa/alimentos/iogurte.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.leite {
+  background-image: url(../img/08_caixa/alimentos/leite.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.limao {
+  background-image: url(../img/08_caixa/alimentos/limao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.maca {
+  background-image: url(../img/08_caixa/alimentos/maca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.mexirica {
+  background-image: url(../img/08_caixa/alimentos/mexirica.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.milho {
+  background-image: url(../img/08_caixa/alimentos/milho.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.pao {
+  background-image: url(../img/08_caixa/alimentos/pao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.peixe {
+  background-image: url(../img/08_caixa/alimentos/peixe.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.queijo {
+  background-image: url(../img/08_caixa/alimentos/queijo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.rosquinha {
+  background-image: url(../img/08_caixa/alimentos/rosquinha.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.salmao {
+  background-image: url(../img/08_caixa/alimentos/salmao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.suco-laranja {
+  background-image: url(../img/08_caixa/alimentos/suco-laranja.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.suco-limao {
+  background-image: url(../img/08_caixa/alimentos/suco-limao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.suco-uva {
+  background-image: url(../img/08_caixa/alimentos/suco-uva.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.tomate {
+  background-image: url(../img/08_caixa/alimentos/tomate.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.uva {
+  background-image: url(../img/08_caixa/alimentos/uva.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-next {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: 40px;
+  bottom: 40px;
+  margin: auto;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-next::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-next .bg {
+  background-image: url(../img/07_pre-caixa/botao_ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-prev {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  margin: auto;
+  top: auto;
+  left: 40px;
+  right: auto;
+  bottom: 40px;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-prev::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-prev .bg {
+  background-image: url(../img/07_pre-caixa/botao_ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: scaleX(-1);
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page.checkout {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page.checkout .btn::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page.checkout .header {
+  background-image: url(../img/00_main/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: -500vw;
+  width: 2000vw;
+  height: 0;
+}
+body#soft main #soft-pages .soft-current-page.checkout .title {
+  background-position: center left !important;
+  width: 100vw;
+  height: 61px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  margin-top: 60px;
+  opacity: 0;
+}
+#checkout-items .title {
+  background-image: url(../img/08_caixa/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#checkout-payment .title {
+  background-image: url(../img/09_escolher-pagamento/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#checkout-end .title {
+  background-image: url(../img/10_jogar-novamente/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body#soft main #soft-pages .soft-current-page.checkout .soft-scaled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body#soft main #soft-pages .soft-current-page.checkout .table {
+  pointer-events: none;
+  background-image: url(../img/08_caixa/mesa.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  left: -500vw;
+  width: 2000vw;
+  height: 323px;
+  position: absolute;
+  bottom: 0;
+}
+body#soft main #soft-pages .soft-current-page.checkout .cashier {
+  pointer-events: none;
+  background-image: url(../img/08_caixa/caixa.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 791px;
+  height: 451px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 323px;
+}
+body#soft main #soft-pages .soft-current-page.checkout .scanner {
+  pointer-events: none;
+  opacity: 0;
+  background-image: url(../img/08_caixa/caixa_leitor_ativo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 794px;
+  height: 514px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 323px;
+}
+body#soft main #soft-pages .soft-current-page.checkout .cart-icon {
+  pointer-events: none;
+  background-image: url(../img/08_caixa/icone_carrinho.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 151px;
+  height: 107px;
+  position: absolute;
+  left: 20px;
+  bottom: 265px;
+}
+#checkout-end .cart-icon {
+  display: none;
+}
+
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area {
+  position: absolute;
+  width: 1650px;
+  height: 250px;
+  bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content {
+  flex: 1;
+}
+.item {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  display: inline-block;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+.item:hover {
+  transform: scale(1.2);
+}
+.item.abacate {
+  background-image: url(../img/08_caixa/alimentos/abacate.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.alface {
+  background-image: url(../img/08_caixa/alimentos/alface.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.banana {
+  background-image: url(../img/08_caixa/alimentos/banana.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.batata {
+  background-image: url(../img/08_caixa/alimentos/batata.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.beterraba {
+  background-image: url(../img/08_caixa/alimentos/beterraba.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.bife {
+  background-image: url(../img/08_caixa/alimentos/bife.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.biscoito {
+  background-image: url(../img/08_caixa/alimentos/biscoito.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.bolo {
+  background-image: url(../img/08_caixa/alimentos/bolo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.brocolis {
+  background-image: url(../img/08_caixa/alimentos/brocolis.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.carne {
+  background-image: url(../img/08_caixa/alimentos/carne.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.cenoura {
+  background-image: url(../img/08_caixa/alimentos/cenoura.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.coca {
+  background-image: url(../img/08_caixa/alimentos/coca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.frango {
+  background-image: url(../img/08_caixa/alimentos/frango.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.goiaba {
+  background-image: url(../img/08_caixa/alimentos/goiaba.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.iogurte {
+  background-image: url(../img/08_caixa/alimentos/iogurte.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.leite {
+  background-image: url(../img/08_caixa/alimentos/leite.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.limao {
+  background-image: url(../img/08_caixa/alimentos/limao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.maca {
+  background-image: url(../img/08_caixa/alimentos/maca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.mexirica {
+  background-image: url(../img/08_caixa/alimentos/mexirica.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.milho {
+  background-image: url(../img/08_caixa/alimentos/milho.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.pao {
+  background-image: url(../img/08_caixa/alimentos/pao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.peixe {
+  background-image: url(../img/08_caixa/alimentos/peixe.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.queijo {
+  background-image: url(../img/08_caixa/alimentos/queijo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.rosquinha {
+  background-image: url(../img/08_caixa/alimentos/rosquinha.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.salmao {
+  background-image: url(../img/08_caixa/alimentos/salmao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.suco-laranja {
+  background-image: url(../img/08_caixa/alimentos/suco-laranja.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.suco-limao {
+  background-image: url(../img/08_caixa/alimentos/suco-limao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.suco-uva {
+  background-image: url(../img/08_caixa/alimentos/suco-uva.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.tomate {
+  background-image: url(../img/08_caixa/alimentos/tomate.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item.uva {
+  background-image: url(../img/08_caixa/alimentos/uva.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body#soft main #soft-pages .soft-current-page#checkout-items .btn {
+  position: absolute;
+  width: 67px;
+  height: 79px;
+  background-size: 67px 79px;
+  bottom: 120px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .btn.btn-left {
+  background-image: url(../img/08_caixa/voltar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 20px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .btn.btn-right {
+  background-image: url(../img/08_caixa/ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 20px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-payment .value-container {
+  opacity: 0;
+  transform: scale(0);
+  background-image: url(../img/09_escolher-pagamento/valor_devido.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 400px;
+  height: 121px;
+  position: absolute;
+  right: 440px;
+  top: 265px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-payment .value {
+  position: absolute;
+  right: 470px;
+  top: 280px;
+  width: 250px;
+  height: 90px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 75px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-payment .btn {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  bottom: 60px;
+  width: 392px;
+  height: 217px;
+  background-position: center bottom !important;
+}
+body#soft main #soft-pages .soft-current-page#checkout-payment .btn.btn-left {
+  background-image: url(../img/09_escolher-pagamento/pagar_dinheiro.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 500px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-payment .btn.btn-right {
+  background-image: url(../img/09_escolher-pagamento/pagar_cartao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 500px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-end .btn {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  bottom: 60px;
+  width: 392px;
+  height: 217px;
+  background-position: center bottom !important;
+}
+body#soft main #soft-pages .soft-current-page#checkout-end .btn.btn-left {
+  background-image: url(../img/10_jogar-novamente/Sair.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 500px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-end .btn.btn-right {
+  background-image: url(../img/10_jogar-novamente/jogar_novamente.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 500px;
+}
+body#soft .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.5);
+}
+body#soft .overlay .wrap-scaled .content-box {
+  background-image: url(../img/content-box-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 78%;
+  max-width: 950px;
+  margin: auto;
+  padding: 90px;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+body#soft .overlay .wrap-scaled .content-box h2 {
+  text-transform: uppercase;
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  font-size: 60px;
+  display: inline-block;
+  margin-bottom: 45px;
+  color: #FDDE01;
+  width: 100%;
+  border-bottom: 4px solid #fff;
+  padding-bottom: 20px;
+}
+body#soft .overlay .wrap-scaled .content-box > div * {
+  font-size: 35px;
+  line-height: 55px;
+  color: #fff;
+}
+body#soft .overlay .wrap-scaled .content-box > div * h3 {
+  font-size: 45px;
+}
+body#soft .overlay .wrap-scaled .content-box > div * span {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  text-transform: uppercase;
+}
+body#soft .overlay .wrap-scaled .content-box > div * strong {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  font-size: 40px;
+  display: inline-block;
+  padding: 10px 0;
+  text-transform: initial;
+  color: #FDDE01;
+}
+body#soft .overlay .wrap-scaled .content-box img {
+  margin: 20px auto;
+  display: block;
+}
+body#soft .overlay .wrap-scaled .content-box .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 45px;
+}
+body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next {
+  width: 135px;
+  height: 145px;
+  margin: auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev .bg, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next .bg {
+  position: absolute;
+  width: 135px;
+  height: 145px;
+  background-image: url(../img/global/generic-btn/generic-btn-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev p, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next p {
+  color: #004AC6;
+  line-height: 122px;
+}
+body#soft .overlay#exit-home .wrap-scaled .content-box {
+  max-width: 720px;
+}
+body#soft .overlay#credits .wrap-scaled .content-box .btn-next {
+  display: none;
+}
+body#soft #top-buttons {
+  position: absolute;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+body#soft #top-buttons .buttons {
+  position: absolute;
+  text-align: center;
+  pointer-events: all;
+  right: 35px;
+  top: 25px;
+  transform-origin: top right;
+}
+body#soft #top-buttons .buttons .icon {
+  position: absolute !important;
+  width: 25px;
+  height: 25px;
+  z-index: 10;
+  margin: auto;
+  top: -2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body#soft #top-buttons .buttons > div {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin: 0 2px;
+  position: relative;
+}
+body#soft #top-buttons .buttons > div::before {
+  width: 80%;
+  height: 65%;
+  border-radius: 70% 70% 30px 30px;
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.5);
+  top: 7px;
+}
+body#soft #top-buttons .buttons .btn-home {
+  display: none;
+}
+body#soft #top-buttons .buttons .btn-home .bg {
+  background-image: url(../img/global/generic-btn/generic-btn-6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-home .icon {
+  background-image: url(../img/global/top-buttons/icon-home.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-credits .bg {
+  background-image: url(../img/global/generic-btn/generic-btn-8.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-credits .icon {
+  background-image: url(../img/global/top-buttons/icon-credits.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-sound.sound-on .bg {
+  background-image: url(../img/global/generic-btn/generic-btn-8.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-sound.sound-on .icon {
+  background-image: url(../img/global/top-buttons/icon-sound-on.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-sound.sound-off .bg {
+  background-image: url(../img/global/generic-btn/generic-btn-8.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-sound.sound-off .icon {
+  background-image: url(../img/global/top-buttons/icon-sound-off.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-fullscreen .bg {
+  background-image: url(../img/global/generic-btn/generic-btn-8.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-fullscreen .icon {
+  background-image: url(../img/global/top-buttons/icon-fullscreen-on.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons.no-home {
+  width: 118px;
+}
+body#soft #top-buttons .buttons.no-home .btn-home {
+  transform: scale(0);
+  display: none;
+}
+body#soft #top-buttons .buttons.no-home .btn-sound {
+  margin-left: -2px;
+}
+body#soft #device-rotate {
+  background-image: url(../img/global/device-rotate.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 50%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+body#soft.fullscreen .btn-fullscreen .icon {
+  background-image: url("global/top-buttons/icon_fullscreen_off.png") !important;
+}
+body#soft.iOS .btn-fullscreen {
+  display: none !important;
+}

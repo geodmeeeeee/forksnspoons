@@ -184,6 +184,7 @@ const games=[
 {title:"Subway Surfers",img:"images/Subway Surfers.png",url:"games/Subway Surfers/index.html",cat:"all"},
 {title:"Super Mario 64",img:"images/Super Mario 64.png",url:"games/Super Mario 64/index.html",cat:"all"},
 {title:"Super Star Car",img:"images/Super Star Car.png",url:"games/Super Star Car/index.html",cat:"all"},
+{title:"Supermarket Simulator",img:"images/Supermarket Simulator.png",url:"games/Supermarket Simulator/index.html",cat:"all"},
 {title:"Survival Karts",img:"images/Survival Karts.png",url:"games/Survival Karts/index.html",cat:"all"},
 {title:"Survival Race",img:"images/Survival Race.png",url:"games/Survival Race/index.html",cat:"all"},
 {title:"Tanuki Sunset",img:"images/tanuki sunset.jpg",url:"games/Tanuki Sunset/index.html",cat:"all"},
