@@ -44,6 +44,7 @@ const games=[
 {title:"60 Second Burger Run",img:"images/60 Second Burger Run.png",url:"games/60 Second Burger Run/index.html",cat:"all"},
 {title:"99Balls",img:"images/99Balls.png",url:"games/99Balls/index.html",cat:"all"},
 {title:"2048",img:"images/2048.png",url:"games/2048/index.html",cat:"all"},
+{title:"A Dance Of Fire And Ice",img:"images/A Dance Of Fire And Ice.png",url:"games/A Dance Of Fire And Ice/index.html",cat:"all"},
 {title:"A Small World Cup",img:"images/A Small World Cup.png",url:"games/A Small World Cup/index.html",cat:"all"},
 {title:"Ace Attorney (all Games) (DS)",img:"images/Ace Attorney.png",url:"games/Ace Attorney (all games) (NDS)/index.html",cat:"all"},
 {title:"Achievement Unlocked",img:"images/Achievement Unlocked.png",url:"games/Achievement Unlocked/index.html",cat:"all"},
