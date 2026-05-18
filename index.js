@@ -163,6 +163,7 @@ const games=[
 {title:"Pixel Gun Survival",img:"images/Pixel Gun Survival.png",url:"games/Pixel Gun Survival/index.html",cat:"all"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"all"},
 {title:"Rainbow Road Polytrack",img:"images/Rainbow Road Polytrack.png",url:"games/Polytrack but mario/index.html",cat:"all"},
+{title:"Ragdoll Hit",img:"images/Ragdoll Hit.png",url:"games/Ragdoll Hit/index.html",cat:"all"},
 {title:"Retro Bowl",img:"images/Retro Bowl.png",url:"games/Retro Bowl/index.html",cat:"all"},
 {title:"Riddle School",img:"images/Riddle School.png",url:"games/Riddle School/index.html",cat:"all"},
 {title:"Riddle School 2",img:"images/Riddle School 2.png",url:"games/Riddle School 2/index.html",cat:"all"},
