@@ -42,7 +42,6 @@ const games=[
 {title:"2 Minute Football",img:"images/2 minute football.png",url:"games/2 minute football/index.html",cat:"all"},
 {title:"3D.city",img:"images/3D.city.png",url:"games/3D.city/index.html",cat:"all"},
 {title:"60 Second Burger Run",img:"images/60 Second Burger Run.png",url:"games/60 Second Burger Run/index.html",cat:"all"},
-{title:"99Balls",img:"images/99Balls.png",url:"games/99Balls/index.html",cat:"all"},
 {title:"2048",img:"images/2048.png",url:"games/2048/index.html",cat:"all"},
 {title:"A Dance Of Fire And Ice",img:"images/A Dance Of Fire And Ice.png",url:"games/A Dance Of Fire And Ice/index.html",cat:"all"},
 {title:"A Small World Cup",img:"images/A Small World Cup.png",url:"games/A Small World Cup/index.html",cat:"all"},
