@@ -223,6 +223,7 @@ const games=[
 {title:"Worlds Hardest Game 3",img:"images/Worlds Hardest Game 3.png",url:"games/Worlds Hardest Game 3/index.html",cat:"all"},
 {title:"Worlds Hardest Game 4",img:"images/Worlds Hardest Game 4.png",url:"games/Worlds Hardest Game 4/index.html",cat:"all"},
 {title:"xx142-b2.exe",img:"images/xx142-b2.exe.png",url:"games/xx142-b2.exe/index.html",cat:"all"},
+{title:"You VS 100 Skibidi",img:"images/You VS 100 Skibidi.png",url:"games/You VS 100 Skibidi/index.html",cat:"all"},
 ]
 
 const movies=[
