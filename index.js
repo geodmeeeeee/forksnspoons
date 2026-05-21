@@ -132,6 +132,7 @@ const games=[
 {title:"Icy Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"all"},
 {title:"Iron Lung",img:"images/Iron Lung.png",url:"games/Iron Lung/index.html",cat:"all"},
 {title:"Jelly Mario",img:"images/Jelly Mario.png",url:"games/Jelly Mario/index.html",cat:"all"},
+{title:"Jumbo Mario",img:"images/Jumbo Mario.png",url:"games/Jumbo Mario/index.html",cat:"all"},
 {title:"Jumping Shell",img:"images/Jumping Shell.png",url:"games/Jumping Shell/index.html",cat:"all"},
 {title:"Kour.io",img:"images/Kour.png",url:"games/Kour.io/index.html",cat:"all"},
 {title:"Leader Strike",img:"images/Leader Strike.png",url:"games/Leader Strike/index.html",cat:"all"},
