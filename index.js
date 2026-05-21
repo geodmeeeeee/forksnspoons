@@ -138,6 +138,7 @@ const games=[
 {title:"Learn To Fly",img:"images/Learn To Fly.png",url:"games/Learn To Fly/index.html",cat:"all"},
 {title:"Learn To Fly 2",img:"images/Learn To Fly 2.png",url:"games/Learn To Fly 2/index.html",cat:"all"},
 {title:"Learn To Fly 3",img:"images/Learn To Fly 3.png",url:"games/Learn To Fly 3/index.html",cat:"all"},
+{title:"Lets Surf",img:"images/Lets Surf.png",url:"games/Lets Surf/index.html",cat:"all"},
 {title:"Minecraft 1.8.8",img:"images/Minecraft 1.8.8.png",url:"games/Minecraft 1.8.8/index.html",cat:"all"},
 {title:"Minecraft 1.12",img:"images/Minecraft 1.12.png",url:"games/Minecraft 1.12/index.html",cat:"all"},
 {title:"Minecraft Beta 1.3",img:"images/Minecraft Beta 1.3.png",url:"games/Minecraft Beta 1.3/index.html",cat:"all"},
