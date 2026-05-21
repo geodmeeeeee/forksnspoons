@@ -202,6 +202,7 @@ const games=[
 {title:"Temple Run 2",img:"images/Temple Run 2.png",url:"games/Temple Run 2/index.html",cat:"all"},
 {title:"Ten Minutes Till Dawn",img:"images/Ten Minutes Till Dawn.png",url:"games/Ten Minutes Till Dawn/index.html",cat:"all"},
 {title:"The Binding Of Issac",img:"images/The Binding Of Issac.png",url:"games/The Binding Of Issac/index.html",cat:"all"},
+{title:"The Final Earth 2",img:"images/The Final Earth 2.png",url:"games/The Final Earth 2/index.html",cat:"all"},
 {title:"The Impossible Quiz",img:"images/The Impossible Quiz.png",url:"games/The Impossible Quiz/index.html",cat:"all"},
 {title:"The Impossible Quiz 2",img:"images/The Impossible Quiz 2.png",url:"games/The Impossible Quiz 2/index.html",cat:"all"},
 {title:"There Is No Game",img:"images/There Is No Game.png",url:"games/There Is No Game/index.html",cat:"all"},
