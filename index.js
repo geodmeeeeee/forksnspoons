@@ -101,6 +101,7 @@ const games=[
 {title:"Duck Life 2",img:"images/Duck Life 2.png",url:"games/Duck Life 2/index.html",cat:"all"},
 {title:"Duck Life 3 Evolution",img:"images/Duck Life 3.png",url:"games/Duck Life 3/index.html",cat:"all"},
 {title:"Duck Life 4",img:"images/Duck Life 4.png",url:"games/Duck Life 4/index.html",cat:"all"},
+{title:"Duck Life Treasure Hunt",img:"images/Duck Life Treasure Hunt.png",url:"games/Duck Life Treasure Hunt/index.html",cat:"all"},
 {title:" The Fancy Pants Adventure",img:"images/Fancy Pants Adventure.png",url:"games/Fancy Pants Adventure/index.html",cat:"all"},
 {title:"FireBoy And WaterGirl 2 In The Light Temple",img:"images/Fire Boy Water Girl 2.png",url:"games/Fireboy And Water Girl 2 Light temple/index.html",cat:"all"},
 {title:"FireBoy And WaterGirl 3 In The Ice Temple",img:"images/fireboy and watergirl 3.png",url:"games/Fireboy And Watergirl 3/index.html",cat:"all"},
