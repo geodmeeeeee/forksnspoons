@@ -61,6 +61,7 @@ const games=[
 {title:"Bad Ice Cream",img:"images/Bad Ice Cream.png",url:"games/Bad Ice Cream/index.html",cat:"all"},
 {title:"Bad Ice Cream 2",img:"images/Bad Ice Cream 2.png",url:"games/Bad Ice Cream 2/index.html",cat:"all"},
 {title:"Bad Ice Cream 3",img:"images/Bad Ice Cream 3.png",url:"games/Bad Ice Cream 3/index.html",cat:"all"},
+{title:"Bad Piggies",img:"images/Bad Piggies.png",url:"games/Bad Piggies/index.html",cat:"all"},
 {title:"Basket Random",img:"images/Basket Random.png",url:"games/Basket Random/index.html",cat:"all"},
 {title:"BasketBall Stars",img:"images/Basketball Stars.png",url:"games/BasketBall Stars/index.html",cat:"all"},
 {title:"Bee Swarm Simulator",img:"images/Bee Swarm Simulator.png",url:"games/Bee Swarm Simulator/index.html",cat:"all"},
