@@ -131,6 +131,7 @@ const games=[
 {title:"Hobo 7 Heaven",img:"images/Hobo 7 Heaven.png",url:"games/Hobo 7 Heaven/index.html",cat:"all"},
 {title:"House Of Hazards",img:"images/House Of Hazards.png",url:"games/House Of Hazards/index.html",cat:"all"},
 {title:"Icy Dodo",img:"images/Icy Dodo.png",url:"games/Icy Dodo/index.html",cat:"all"},
+{title:"Idle Football Manager",img:"images/Idle Football Manager.png",url:"games/Idle Football Manager/index.html",cat:"all"},
 {title:"Into Space 2",img:"images/Into Space 2.png",url:"games/Into Space 2/index.html",cat:"all"},
 {title:"Iron Lung",img:"images/Iron Lung.png",url:"games/Iron Lung/index.html",cat:"all"},
 {title:"Jelly Mario",img:"images/Jelly Mario.png",url:"games/Jelly Mario/index.html",cat:"all"},
