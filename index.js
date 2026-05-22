@@ -121,6 +121,7 @@ const games=[
 {title:"Henry Stickman Breaking The Bank",img:"images/Breaking The Bank.png",url:"games/Henry Stickman Breaking The Bank/index.html",cat:"all"},
 {title:"Henry Stickman Escaping The Prison",img:"images/Henry Stickman Escaping The Prison.png",url:"games/Henry Stickman Escaping The Prison/index.html",cat:"all"},
 {title:"Henry Stickman Fleeing The Complex",img:"images/Henry Stickman Fleeing The Complex.png",url:"games/Henry Stickman Fleeing The Complex/index.html",cat:"all"},
+{title:"Henry Stickman Infiltrating The Airship",img:"images/Henry Stickman Infiltrating The Airship.png",url:"games/Henry Stickman Infiltrating The Airship/index.html",cat:"all"},
 {title:"Henry Stickman Stealing The Diamond",img:"images/Henry Stickman Stealing The Diamond.png",url:"games/Henry Stickman Stealing The Diamond/index.html",cat:"all"},
 {title:"High Stakes",img:"images/High Stakes.png",url:"games/High Stakes/index.html",cat:"all"},
 {title:"Hobo 1",img:"images/Hobo 1.png",url:"games/Hobo 1/index.html",cat:"all"},
