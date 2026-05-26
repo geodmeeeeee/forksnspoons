@@ -246,6 +246,7 @@ const games=[
 ]
 
 const movies=[
+{title:"Angry Birds Movie",img:"images/Angry Birds Movie.png",url:"movies/Angry Birds Movie/index.html",cat:"all"},
 {title:"Bee Movie",img:"images/Bee.png",url:"movies/Bee Movie/index.html",cat:"all"},
 {title:"Shrek",img:"images/Shrek.png",url:"movies/shrek/index.html",cat:"all"},
 {title:"Spiderman Into The Spiderverse",img:"images/Spider Man Into The Spider Verse.png",url:"movies/Spider Man Into The Spider Verse/index.html",cat:"all"},
