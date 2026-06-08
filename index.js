@@ -177,6 +177,7 @@ const games=[
 {title:"Papas TacoMia",img:"images/Papas TacoMia.png",url:"games/Papas TacoMia/index.html",cat:"all"},
 {title:"Papas Wingeria",img:"images/Papas Wingeria.png",url:"games/Papas Wingeria/index.html",cat:"all"},
 {title:"Papery Planes",img:"images/Papery Planes.png",url:"games/Papery Planes/index.html",cat:"all"},
+{title:"Parkour Race",img:"images/Parkour Race.png",url:"games/Parkour Race/index.html",cat:"all"},
 {title:"Pixel Gun Survival",img:"images/Pixel Gun Survival.png",url:"games/Pixel Gun Survival/index.html",cat:"all"},
 {title:"Polytrack",img:"images/polytrack.jpeg",url:"games/Polytrack/index.html",cat:"all"},
 {title:"Rainbow Road Polytrack",img:"images/Rainbow Road Polytrack.png",url:"games/Polytrack but mario/index.html",cat:"all"},
