@@ -128,6 +128,7 @@ const games=[
 {title:"Henry Stickman Infiltrating The Airship",img:"images/Henry Stickman Infiltrating The Airship.png",url:"games/Henry Stickman Infiltrating The Airship/index.html",cat:"all"},
 {title:"Henry Stickman Stealing The Diamond",img:"images/Henry Stickman Stealing The Diamond.png",url:"games/Henry Stickman Stealing The Diamond/index.html",cat:"all"},
 {title:"High Stakes",img:"images/High Stakes.png",url:"games/High Stakes/index.html",cat:"all"},
+{title:"Highway Bike Simulator",img:"images/Highway Bike Simulator.png",url:"games/Highway Bike Simulator/index.html",cat:"all"},
 {title:"Hobo 1",img:"images/Hobo 1.png",url:"games/Hobo 1/index.html",cat:"all"},
 {title:"Hobo 2 Prison Brawl",img:"images/Hobo 2.png",url:"games/Hobo 2 Prison Brawl/index.html",cat:"all"},
 {title:"Hobo 3 Wanted",img:"images/Hobo 3.png",url:"games/Hobo 3 Wanted/index.html",cat:"all"},
