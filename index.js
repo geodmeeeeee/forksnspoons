@@ -108,6 +108,7 @@ const games=[
 {title:"Fireboy And Watergirl 4 Crystal Temple",img:"images/fireboy n watergirl4.png",url:"games/Fireboy And Watergirl 4 Crystal Temple/index.html",cat:"all"},
 {title:"Five Nights At Epsteins",img:"images/Five Nights At Epsteins.png",url:"games/Five Nights At Epsteins/index.html",cat:"all"},
 {title:"Flick Goal",img:"images/Flick Goal.png",url:"games/Flick Goal/index.html",cat:"all"},
+{title:"Funny Mad Racing",img:"images/Funny Mad Racing.png",url:"games/Funny Mad Racing/index.html",cat:"all"},
 {title:"Fluidism",img:"images/Fluidism.png",url:"games/Fluidism/index.html",cat:"all"},
 {title:"Funny Shooter",img:"images/Funny Shooter.png",url:"games/Funny Shooter/index.html",cat:"all"},
 {title:"Geometry Dash",img:"images/GD.png",url:"games/Geometry Dash/index.html",cat:"all"},
