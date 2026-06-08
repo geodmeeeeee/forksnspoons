@@ -1,0 +1,14 @@
+{
+"companyName": "1stGameStudio",
+"productName": "TM Driver",
+"dataUrl": "Car Game.data.unityweb",
+"wasmCodeUrl": "Car Game.wasm.code.unityweb",
+"wasmFrameworkUrl": "Car Game.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "Car Game.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"}
+}
