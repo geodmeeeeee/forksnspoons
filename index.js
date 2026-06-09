@@ -40,6 +40,7 @@ document.documentElement.classList.add("macos-optimized")
 const games=[
 {title:"1v1.lol",img:"images/1v1.lol.png",url:"games/1v1.lol/index.html",cat:"all"},
 {title:"2 Minute Football",img:"images/2 minute football.png",url:"games/2 minute football/index.html",cat:"all"},
+{title:"3D Moto Simulator",img:"images/3D Moto Simulator.png",url:"games/3D Moto Simulator/index.html",cat:"all"},
 {title:"3D.city",img:"images/3D.city.png",url:"games/3D.city/index.html",cat:"all"},
 {title:"4th And Goal",img:"images/4th And Goal.png",url:"games/4th And Goal/index.html",cat:"all"},
 {title:"40xEscape",img:"images/40xEscape.png",url:"games/40xEscape/index.html",cat:"all"},
