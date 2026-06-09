@@ -85,6 +85,7 @@ const games=[
 {title:"Choppy Orc",img:"images/Choppy Orc.png",url:"games/Choppy Orc/index.html",cat:"all"},
 {title:"Christmas Horror 2025",img:"images/Christmas Horror 2025.png",url:"games/Christmas Horror 2025/index.html",cat:"all"},
 {title:"Cluster Rush",img:"images/Cluster Rush.png",url:"games/Cluster Rush/index.html",cat:"all"},
+{title:"Color Tunnel 2",img:"images/Color Tunnel 2.png",url:"games/Color Tunnel 2/index.html",cat:"all"},
 {title:"Core Ball",img:"images/Core Ball.png",url:"games/Core Ball/index.html",cat:"all"},
 {title:"Crazy Cars",img:"images/Crazy Cars.png",url:"games/Crazy Cars/index.html",cat:"all"},
 {title:"Crazy Cattle 3D",img:"images/Crazy Cattle 3D.png",url:"games/Crazy Cattle 3D/index.html",cat:"all"},
